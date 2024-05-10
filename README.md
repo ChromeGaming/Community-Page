@@ -72,6 +72,11 @@ Check out the [project website](https://gamesphere-multiplayer.github.io/Communi
 
 ## Contribution
 
+### Code of Conduct
+
+Our community follows the Contributor Covenant Code of Conduct. You can read it [here](CONTRIBUTING.md).
+
+
 ### How to Make a PR in a Project 🟢
 
 If you are interested in contributing to this project, here's how you can get started:
