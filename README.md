@@ -30,6 +30,21 @@ Welcome to the Chrome Gaming Community Page! This online space within the Chrome
 #### Leaderboard
 ![Leaderboard](leaderboard.png)
 
+## Table of Contents
+
+1. [Chrome Gaming Community Page](#chrome-gaming-community-page)
+    1.1 [About Our Project 💻](#about-our-project-)
+    1.2 [Chrome Gaming Community Page](#chrome-gaming-community-page-1)
+        1.2.1 [Homepage](#homepage)
+        1.2.2 [Leaderboard](#leaderboard)
+    1.3 [What You'll Find Here:](#what-youll-find-here)
+2. [Project Website](#project-website)
+    2.1 [How to Get Involved:](#how-to-get-involved)
+    2.2 [How to Make a PR in a Project 🟢](#how-to-make-a-pr-in-a-project-)
+3. [License](#license)
+4. [Contact Us:](#contact-us)
+
+
 ### What You'll Find Here:
 
 - **Discussion Forums:** Engage with fellow gamers in lively discussions about your favorite games, upcoming releases, gaming hardware, and more.
