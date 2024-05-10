@@ -8,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 /* Global reset and setting default font family to Poppins. */
 
 .nav {
@@ -19,47 +20,67 @@
   background: #252525;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* Navigation bar styling. */
 
+/* navigation bar font size transition styling*/
+.nav-links li a {
+  transition: font-size 0.3s;
+}
+
+/* navigation bar hover styling*/
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: #161618;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation bar styling. */
 .nav,
 .nav .nav-links {
   display: flex;
   align-items: center;
 }
+
 /* Flex display for navigation links. */
 
 .nav {
   justify-content: space-between;
 }
+
 /* Aligning navigation elements. */
 
 a {
   color: #fff;
   text-decoration: none;
 }
+
 /* Styling anchor tags. */
 
 .nav .logo {
   font-size: 28px;
   font-weight: 500;
 }
+
 /* Styling for the logo in the navigation bar. */
 
 .nav .nav-links {
   column-gap: 20px;
   list-style: none;
 }
+
 /* Styling for navigation links. */
 
 .nav .nav-links a {
   transition: all 0.2s linear;
 }
+
 /* Transition effect for navigation links. */
 
 .nav.openSearch .nav-links a {
   opacity: 0;
   pointer-events: none;
 }
+
 /* Styling for navigation links when search is open. */
 
 .nav .search-icon {
@@ -67,6 +88,7 @@ a {
   font-size: 20px;
   cursor: pointer;
 }
+
 /* Styling for search icon in navigation bar. */
 
 .nav .search-box {
@@ -79,12 +101,14 @@ a {
   pointer-events: none;
   transition: all 0.2s linear;
 }
+
 /* Styling for search box in navigation bar. */
 
 .nav.openSearch .search-box {
   opacity: 1;
   pointer-events: auto;
 }
+
 /* Styling for search box when search is open. */
 
 .search-box .search-icon {
@@ -95,6 +119,7 @@ a {
   color: #181919;
   transform: translateY(-50%);
 }
+
 /* Styling for search icon within search box. */
 
 .search-box input {
@@ -106,12 +131,14 @@ a {
   background-color: #fff;
   padding: 0 15px 0 45px;
 }
+
 /* Styling for input field within search box. */
 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
   display: none;
 }
+
 /* Styling for navigation open and close buttons. */
 
 /* Styling for centering images. */
@@ -186,19 +213,24 @@ a {
   margin-bottom: 10px;
   background-size: cover;
 }
+
 /* Individual social media icons styling. */
 .youtube {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3670/3670147.png');
 }
+
 .linkedin {
   background-image: url('https://cdn-icons-png.flaticon.com/128/145/145807.png');
 }
+
 .facebook {
   background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
 }
+
 .twitter {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3670/3670151.png');
 }
+
 .instagram {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3955/3955024.png');
 }
@@ -368,6 +400,7 @@ h3 {
   .nav {
     padding: 15px 100px;
   }
+
   .nav .search-box {
     right: 150px;
   }
@@ -377,6 +410,7 @@ h3 {
   .nav {
     padding: 15px 50px;
   }
+
   .nav .search-box {
     right: 100px;
     max-width: 400px;
@@ -387,16 +421,20 @@ h3 {
   .image {
     display: none;
   }
+
   .nav .navOpenBtn,
   .nav .navCloseBtn {
     display: block;
   }
+
   .popup {
     margin-top: 200px;
   }
+
   .nav {
     padding: 15px 20px;
   }
+
   .nav .nav-links {
     position: fixed;
     top: 0;
@@ -412,14 +450,17 @@ h3 {
     transition: all 0.4s ease;
     z-index: 100;
   }
+
   .nav.openNav .nav-links {
     left: 0;
   }
+
   .nav .navOpenBtn {
     color: #fff;
     font-size: 20px;
     cursor: pointer;
   }
+
   .nav .navCloseBtn {
     position: absolute;
     top: 20px;
@@ -428,6 +469,7 @@ h3 {
     font-size: 20px;
     cursor: pointer;
   }
+
   .nav .search-box {
     top: calc(100% + 10px);
     max-width: calc(100% - 20px);
@@ -439,65 +481,73 @@ h3 {
 
 
 @media screen and (min-width: 48rem) {
+
   h2,
   h3,
   .h6 {
-      margin-bottom: 1.5rem;
-      color: #029fcb;
+    margin-bottom: 1.5rem;
+    color: #029fcb;
   }
 }
 
 
 @media screen and (min-width: 48rem) {
   .banner {
-      padding: 0.625rem 1.5rem;
+    padding: 0.625rem 1.5rem;
   }
 }
+
 .banner.featured {
   display: none;
   background-color: #fff;
 }
+
 .banner.featured p {
   font-size: 0.8125rem;
   line-height: 1.5rem;
   margin: 0;
   color: #02b3e4;
 }
+
 @media screen and (min-width: 48rem) {
   .banner.featured p {
-      font-size: 1rem;
-      line-height: 1.75rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 }
 
 @media screen and (min-width: 30rem) {
   .banner--close {
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -moz-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      -o-transform: translateY(-50%);
-      transform: translateY(-50%);
-      width: 0.875rem;
-      height: 0.875rem;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 0.875rem;
+    height: 0.875rem;
   }
 }
+
 @media screen and (min-width: 48rem) {
   .remodal {
-      padding-top: 4.5rem;
-      padding-bottom: 4.5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 }
+
 @media screen and (min-width: 48rem) {
   .remodal {
-      padding-left: 3rem;
-      padding-right: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
+
 .remodal label {
   display: none;
 }
+
 .remodal-close {
   top: 0;
   right: 0;
@@ -511,43 +561,55 @@ h3 {
   transition: opacity 0.3s ease;
   background: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_close_dark-c7c6a31cb37c841e14b44a8c1a7b5e81447b9442d94fdea8bcf66cfea18d1a13.svg) no-repeat center;
 }
+
 .remodal-close:hover {
   opacity: 0.7;
 }
+
 .remodal-overlay {
   background: rgba(46, 61, 73, 0.95);
 }
+
 .page-leaderboard {
   background-color: #fafbfc;
 }
+
 .page-leaderboard .hero {
   background-image: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/hero-leaderboard-b861e1752ed28ae950fcfccd51008fe7f4d158a08c68e909201f46e6086992ad.jpg);
 }
+
 .page-leaderboard .leaderboard-progress {
   clear: both;
 }
+
 .page-leaderboard .leaderboard-progress .contain {
   padding: 3em 1.5em 2em 1.5em;
 }
+
 @media (min-width: 70em) {
   .page-leaderboard .leaderboard-progress .contain {
-      padding: 6em 0 4.5em 0;
+    padding: 6em 0 4.5em 0;
   }
 }
+
 .page-leaderboard .leaderboard-progress p {
   max-width: 48.5em;
   margin: 0 auto;
 }
+
 .page-leaderboard .ranking {
   clear: both;
 }
+
 .page-leaderboard .ranking .contain {
   padding: 0 1.5em;
 }
+
 .page-leaderboard .ranking .ranking-table {
   max-width: 66em;
   margin: 0 auto;
 }
+
 .page-leaderboard .ranking .ranking-table-body {
   box-shadow: 0 0 0.75em 0 rgba(46, 60, 73, 0.12);
   border-radius: 0.375rem;
@@ -556,63 +618,76 @@ h3 {
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-body {
-      max-height: 31.125em;
+    max-height: 31.125em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-header-row {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 1.125em;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-header-row {
-      padding-top: 1.875em;
+    padding-top: 1.875em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-header-data {
   text-align: center;
   align-self: center;
 }
+
 .page-leaderboard .ranking .ranking-table-header-data:first-child {
   width: 20%;
 }
+
 @media (min-width: 48em) {
   .page-leaderboard .ranking .ranking-table-header-data:first-child {
-      width: 15%;
+    width: 15%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-header-data:nth-child(2) {
   padding-left: 9%;
   text-align: left;
   width: 50%;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-header-data:nth-child(2) {
-      padding-left: 6.3%;
+    padding-left: 6.3%;
   }
 }
+
 @media (min-width: 48em) {
   .page-leaderboard .ranking .ranking-table-header-data:nth-child(2) {
-      padding-left: 9%;
-      width: 55%;
+    padding-left: 9%;
+    width: 55%;
   }
 }
+
 @media (min-width: 70em) {
   .page-leaderboard .ranking .ranking-table-header-data:nth-child(2) {
-      padding-left: 4%;
+    padding-left: 4%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-header-data:nth-child(3) {
   width: 30%;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-header-data:nth-child(3) {
-      width: 25%;
+    width: 25%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-row {
   display: flex;
   flex-direction: row;
@@ -621,15 +696,18 @@ h3 {
   padding-bottom: .875em;
   background-color: #fff;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-row {
-      padding-top: 1.125em;
-      padding-bottom: 1.125em;
+    padding-top: 1.125em;
+    padding-bottom: 1.125em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-row:nth-child(even) {
   background-color: #fafbfc;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-1,
 .page-leaderboard .ranking .ranking-table-row-leader-2,
 .page-leaderboard .ranking .ranking-table-row-leader-3 {
@@ -643,14 +721,17 @@ h3 {
   border-radius: 0.375rem;
   margin-bottom: 1.25em;
 }
+
 @media (min-width: 33em) {
+
   .page-leaderboard .ranking .ranking-table-row-leader-1,
   .page-leaderboard .ranking .ranking-table-row-leader-2,
   .page-leaderboard .ranking .ranking-table-row-leader-3 {
-      padding-top: 1.125em;
-      padding-bottom: 1.125em;
+    padding-top: 1.125em;
+    padding-bottom: 1.125em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
 .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
 .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
@@ -658,13 +739,16 @@ h3 {
   justify-content: center;
   width: 20%;
 }
+
 @media (min-width: 48em) {
+
   .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
   .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
   .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
-      width: 15%;
+    width: 15%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
 .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
 .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
@@ -672,92 +756,111 @@ h3 {
   height: 2.875em;
   width: 2.875em;
 }
+
 @media (min-width: 33em) {
+
   .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
   .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
   .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
-      margin-top: -1.563em;
-      height: 3.875em;
-      width: 3.875em;
+    margin-top: -1.563em;
+    height: 3.875em;
+    width: 3.875em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-1 {
   border: solid 0.125em #ecc81a;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold {
   background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-gold-c49052bfa07f36621f16dbe77f7fc36cbafd72ff088ea970256ff998be05687b.svg) no-repeat;
   background-size: contain;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-2 {
   border: solid 0.125em #dbe2e8;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver {
   background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-silver-d099c5dd916c167c3ba4716c8968a819f317daaef1901c8e8bae6c6932852faa.svg) no-repeat;
   background-size: contain;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-3 {
   border: solid 0.125em #dfdfd1;
 }
+
 .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
   background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-bronze-d0f15d413800257442c8d4b2d5239cfe28c9fd9594f863ab1fad5258f8d1d5eb.svg) no-repeat;
   background-size: contain;
 }
+
 .page-leaderboard .ranking .ranking-table-data {
   align-self: center;
   color: #525c65;
   font-size: 1em;
 }
+
 .page-leaderboard .ranking .ranking-table-data:first-child {
   text-align: center;
   width: 20%;
   color: #525c65;
   font-weight: 600;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-data:first-child {
-      font-size: 1.25em;
+    font-size: 1.25em;
   }
 }
+
 @media (min-width: 48em) {
   .page-leaderboard .ranking .ranking-table-data:first-child {
-      width: 15%;
+    width: 15%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
   color: #2e3d49;
   width: 55%;
   font-size: .875em;
   padding-left: 9%;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
-      font-size: 1em;
+    font-size: 1em;
   }
 }
+
 @media (min-width: 48em) {
   .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
-      font-size: 1em;
-      width: 55%;
+    font-size: 1em;
+    width: 55%;
   }
 }
+
 @media (min-width: 70em) {
   .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
-      font-size: 1em;
-      padding-left: 4%;
+    font-size: 1em;
+    padding-left: 4%;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) {
   font-size: .875em;
   text-align: center;
   width: 25%;
   padding-right: 4%;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-data:nth-child(3) {
-      padding-right: 0%;
-      font-size: 1em;
+    padding-right: 0%;
+    font-size: 1em;
   }
 }
+
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) .complete {
   margin: -1.25em auto;
   transform: translateY(18%);
@@ -766,10 +869,10 @@ h3 {
   width: 3em;
   height: 3em;
 }
+
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-data:nth-child(3) .complete {
-      width: 3.5em;
-      height: 3.5em;
+    width: 3.5em;
+    height: 3.5em;
   }
 }
-
