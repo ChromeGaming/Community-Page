@@ -118,6 +118,11 @@ Alternatively, you can use GitHub Desktop for a more streamlined process:
 
 **Note:** Make sure you have a fork of the original repository in your GitHub account and that you make your changes in that forked repository before creating a pull request.
 
+## License
+
+This project is licensed under the Apache License, Version 2.0 - see the [LICENSE](LICENSE) file for details.
+
+
 ## Contact Us:
 
 Have questions, feedback, or suggestions? Contact our community moderators or administrators for assistance.
