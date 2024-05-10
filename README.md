@@ -25,10 +25,10 @@
 
 Welcome to the Chrome Gaming Community Page! This online space within the Chrome browser is where gamers come together to connect, discuss games, share content, get updates, troubleshoot issues, join events, and interact with developers. Consider this your one-stop hub for all things gaming-related in the Chrome ecosystem.
 #### Homepage
-![Homepage](community_page1.png)
+![Homepage](homepage.png)
 
 #### Leaderboard
-![Leaderboard](community_page2.png)
+![Leaderboard](leaderboard.png)
 
 ### What You'll Find Here:
 
@@ -43,6 +43,10 @@ Welcome to the Chrome Gaming Community Page! This online space within the Chrome
 - **Events & Tournaments:** Join exciting gaming events, tournaments, and challenges hosted within the Chrome gaming community. Compete against other players, earn rewards, and showcase your skills.
 
 - **Developer Interaction:** Connect directly with game developers, provide feedback, suggest improvements, and participate in Q&A sessions. Help shape the future of gaming on Chrome.
+
+## Project Website
+
+Check out the [project website](https://gamesphere-multiplayer.github.io/Community-Page/) for more information.
 
 ### How to Get Involved:
 
