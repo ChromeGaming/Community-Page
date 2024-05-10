@@ -33,19 +33,14 @@ Welcome to the Chrome Gaming Community Page! This online space within the Chrome
 ## Table of Contents
 
 1. [Chrome Gaming Community Page](#chrome-gaming-community-page)
-    1.1 [About Our Project 💻](#about-our-project-)
-    1.2 [Chrome Gaming Community Page](#chrome-gaming-community-page-1)
-        1.2.1 [Homepage](#homepage)
-        1.2.2 [Leaderboard](#leaderboard)
-    1.3 [What You'll Find Here:](#what-youll-find-here)
 2. [Project Website](#project-website)
-    2.1 [How to Get Involved:](#how-to-get-involved)
-    2.2 [How to Make a PR in a Project 🟢](#how-to-make-a-pr-in-a-project-)
-3. [License](#license)
-4. [Contact Us:](#contact-us)
+3. [Features](#features)
+4. [Contribution](#contribution)
+5. [License](#license)
+6. [Contact Us:](#contact-us)
 
 
-### What You'll Find Here:
+## Features:
 
 - **Discussion Forums:** Engage with fellow gamers in lively discussions about your favorite games, upcoming releases, gaming hardware, and more.
 
@@ -74,6 +69,8 @@ Check out the [project website](https://gamesphere-multiplayer.github.io/Communi
 4. **Stay Updated:** Don't miss out on important announcements, events, and updates. Keep an eye on the community page, and subscribe to notifications to stay in the loop.
 
 5. **Be Respectful:** Remember to treat your fellow gamers with respect and courtesy. This is a diverse community with members from all walks of life. Let's foster a positive and inclusive environment for everyone.
+
+## Contribution
 
 ### How to Make a PR in a Project 🟢
 
