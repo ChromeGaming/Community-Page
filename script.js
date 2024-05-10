@@ -21,30 +21,33 @@ navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const discordButton = document.getElementById("discord-button");
+  const discordPopup = document.getElementById("discord-popup");
 
-document.addEventListener("DOMContentLoaded", function() {
-  const discordButton = document.getElementById('discord-button');
-  const discordPopup = document.getElementById('discord-popup');
-  const closeBtn = document.getElementById('close-btn');
-
-  discordButton.addEventListener('click', function() {
-    discordPopup.style.display = 'block';
+  const closeBtn = document.getElementById("close-btn");
+  discordButton.addEventListener("click", function () {
+    discordPopup.style.display = "block";
   });
 
-  closeBtn.addEventListener('click', function() {
-    discordPopup.style.display = 'none';
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-  const discordPopup = document.getElementById('discord-popup');
-  const closeBtn = document.getElementById('close-btn');
-
-  discordButton.addEventListener('click', function() {
-    discordPopup.style.display = 'block';
-  });
-
-  closeBtn.addEventListener('click', function() {
-    discordPopup.style.display = 'none';
+  closeBtn.addEventListener("click", function () {
+    discordPopup.style.display = "none";
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const discordPopup = document.getElementById("discord-popup");
+  const closeBtn = document.getElementById("close-btn");
+
+  discordButton.addEventListener("click", function () {
+    discordPopup.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", function () {
+    discordPopup.style.display = "none";
+  });
+});
+function removediv(element)
+{
+  element.remove();
+}
