@@ -21,30 +21,33 @@ navCloseBtn.addEventListener("click", () => {
   nav.classList.remove("openNav");
 });
 
-
+//Fixed this discord button issue
 document.addEventListener("DOMContentLoaded", function() {
   const discordButton = document.getElementById('discord-button');
   const discordPopup = document.getElementById('discord-popup');
   const closeBtn = document.getElementById('close-btn');
-
-  discordButton.addEventListener('click', function() {
-    discordPopup.style.display = 'block';
-  });
 
   closeBtn.addEventListener('click', function() {
     discordPopup.style.display = 'none';
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  const discordPopup = document.getElementById('discord-popup');
-  const closeBtn = document.getElementById('close-btn');
 
-  discordButton.addEventListener('click', function() {
-    discordPopup.style.display = 'block';
+document.addEventListener("DOMContentLoaded", function() {
+  const uploadButton = document.getElementById('rotate');
+  const fileInput = document.getElementById('fileInput');
+
+  uploadButton.addEventListener('click', function() {
+    // Trigger click on the hidden file input
+    fileInput.click();
   });
 
-  closeBtn.addEventListener('click', function() {
-    discordPopup.style.display = 'none';
+  fileInput.addEventListener('change', function() {
+    // Get the selected file
+    const file = fileInput.files[0];
+    
+    // You can now upload the file using AJAX, fetch API, or any other method
+    // For simplicity, let's just log the file details
+    console.log('Selected file:', file);
   });
 });
