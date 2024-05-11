@@ -33,21 +33,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  const uploadButton = document.getElementById('rotate');
-  const fileInput = document.getElementById('fileInput');
-
-  uploadButton.addEventListener('click', function() {
-    // Trigger click on the hidden file input
-    fileInput.click();
-  });
-
-  fileInput.addEventListener('change', function() {
-    // Get the selected file
-    const file = fileInput.files[0];
-    
-    // You can now upload the file using AJAX, fetch API, or any other method
-    // For simplicity, let's just log the file details
-    console.log('Selected file:', file);
-  });
-});
