@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   closeBtn.addEventListener('click', function() {
-    discordPopup.style.display = 'none';
+    discordPopup.remove();
   });
 });
 
