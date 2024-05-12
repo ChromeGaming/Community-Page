@@ -48,3 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
     discordPopup.style.display = 'none';
   });
 });
+const success = ()=>{
+  alert("You have successfully Subscribed!");
+}
