@@ -17,6 +17,7 @@
   left: 0;
   width: 100%;
   padding: 15px 200px;
+  background: #252525;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -28,7 +29,7 @@
 /* navigation bar hover styling*/
 .nav-links li a:hover {
   text-decoration: underline;
-  color: #000000;
+  color: #161618;
   font-size: 20px;
   font-weight: bold;
 }
@@ -38,15 +39,18 @@
 .nav .nav-links {
   display: flex;
   align-items: center;
+}
+
+/* Flex display for navigation links. */
+
+.nav {
   justify-content: space-between;
 }
 
-h1 p {
-  color: #000000;
-}
 /* Aligning navigation elements. */
+
 a {
-  color: #161618;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -60,7 +64,7 @@ a {
 /* Styling for the logo in the navigation bar. */
 
 .nav .nav-links {
-  column-gap: 30px;
+  column-gap: 20px;
   list-style: none;
 }
 
@@ -80,6 +84,7 @@ a {
 /* Styling for navigation links when search is open. */
 
 .nav .search-icon {
+  color: #fff;
   font-size: 20px;
   cursor: pointer;
 }
@@ -111,7 +116,7 @@ a {
   left: 15px;
   top: 50%;
   left: 15px;
-  color: #000000;
+  color: #181919;
   transform: translateY(-50%);
 }
 
@@ -123,7 +128,7 @@ a {
   border: none;
   outline: none;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 0 15px 0 45px;
 }
 
@@ -135,38 +140,6 @@ a {
 }
 
 /* Styling for navigation open and close buttons. */
-
-/* Styling body transition for light and dark mode */
-
-body {
-  transition: background-color 0.3s ease;
-  padding: 25px;
-}
-
-.light-mode {
-  background-color: #ffffff;
-  color: #161618;
-}
-.dark-mode {
-  background-color: #161618;
-  color: white;
-}
-
-.dark-mode a {
-  color: white;
-}
-.dark-mode #theme-toggle {
-  color: #ffffff;
-}
-.toggle-container {
-  display: flex;
-  align-items: center;
-}
-#theme-toggle {
-  border: none;
-  cursor: pointer;
-  font-size: 30px;
-}
 
 /* Styling for centering images. */
 .center {
@@ -215,18 +188,14 @@ body {
   display: block;
   margin-top: 20px;
   background-color: #fff;
-  color: #000000;
+  color: #7289DA;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-.dark-mode .discord-link {
-  color: #000000;
-}
-
 .discord-link:hover {
-  background-color: #000000;
+  background-color: #f1f1f1;
 }
 
 /* Styling for social icons. */
@@ -247,23 +216,23 @@ body {
 
 /* Individual social media icons styling. */
 .youtube {
-  background-image: url("https://cdn-icons-png.flaticon.com/128/3670/3670147.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/128/3670/3670147.png');
 }
 
 .linkedin {
-  background-image: url("https://cdn-icons-png.flaticon.com/128/145/145807.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/128/145/145807.png');
 }
 
 .facebook {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png");
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
 }
 
 .twitter {
-  background-image: url("https://cdn-icons-png.flaticon.com/128/3670/3670151.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/128/3670/3670151.png');
 }
 
 .instagram {
-  background-image: url("https://cdn-icons-png.flaticon.com/128/3955/3955024.png");
+  background-image: url('https://cdn-icons-png.flaticon.com/128/3955/3955024.png');
 }
 
 /* Styling for rotate button. */
@@ -327,13 +296,13 @@ body {
 .text-div p {
   font-size: 16px;
   line-height: 1.6;
-  color: #161618;
+  color: white;
 }
 
 .text-div h1,
 h2,
 h3 {
-  color: #161618;
+  color: white;
 }
 
 /* Styling for footer. */
@@ -346,6 +315,7 @@ h3 {
 }
 
 .footer-row .footer-col h4 {
+  color: #fff;
   font-size: 1.2rem;
   font-weight: 400;
 }
@@ -385,7 +355,7 @@ h3 {
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #7489c6;
+  border: 1px solid #7489C6;
   caret-color: #fff;
   color: #fff;
   padding-left: 10px;
@@ -509,7 +479,9 @@ h3 {
   }
 }
 
+
 @media screen and (min-width: 48rem) {
+
   h2,
   h3,
   .h6 {
@@ -517,6 +489,7 @@ h3 {
     color: #029fcb;
   }
 }
+
 
 @media screen and (min-width: 48rem) {
   .banner {
@@ -586,8 +559,7 @@ h3 {
   cursor: pointer;
   position: absolute;
   transition: opacity 0.3s ease;
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_close_dark-c7c6a31cb37c841e14b44a8c1a7b5e81447b9442d94fdea8bcf66cfea18d1a13.svg)
-    no-repeat center;
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_close_dark-c7c6a31cb37c841e14b44a8c1a7b5e81447b9442d94fdea8bcf66cfea18d1a13.svg) no-repeat center;
 }
 
 .remodal-close:hover {
@@ -598,8 +570,12 @@ h3 {
   background: rgba(46, 61, 73, 0.95);
 }
 
+.page-leaderboard {
+  background-color: #fafbfc;
+}
+
 .page-leaderboard .hero {
-  background-image: url(50fcfccd51008fe7https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/hero-leaderboard-b861e1752ed28ae9f4d158a08c68e909201f46e6086992ad.jpg);
+  background-image: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/hero-leaderboard-b861e1752ed28ae950fcfccd51008fe7f4d158a08c68e909201f46e6086992ad.jpg);
 }
 
 .page-leaderboard .leaderboard-progress {
@@ -716,8 +692,8 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 0.875em;
-  padding-bottom: 0.875em;
+  padding-top: .875em;
+  padding-bottom: .875em;
   background-color: #fff;
 }
 
@@ -738,8 +714,8 @@ h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 0.875em;
-  padding-bottom: 0.875em;
+  padding-top: .875em;
+  padding-bottom: .875em;
   background-color: #fff;
   box-shadow: 0 0 0.75em 0 rgba(46, 60, 73, 0.12);
   border-radius: 0.375rem;
@@ -747,6 +723,7 @@ h3 {
 }
 
 @media (min-width: 33em) {
+
   .page-leaderboard .ranking .ranking-table-row-leader-1,
   .page-leaderboard .ranking .ranking-table-row-leader-2,
   .page-leaderboard .ranking .ranking-table-row-leader-3 {
@@ -755,76 +732,36 @@ h3 {
   }
 }
 
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-1
-  .ranking-table-data-leader-1,
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-2
-  .ranking-table-data-leader-2,
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-3
-  .ranking-table-data-leader-3 {
+.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
+.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
+.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
   display: flex;
   justify-content: center;
   width: 20%;
 }
 
 @media (min-width: 48em) {
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-1
-    .ranking-table-data-leader-1,
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-2
-    .ranking-table-data-leader-2,
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-3
-    .ranking-table-data-leader-3 {
+
+  .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
+  .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
+  .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
     width: 15%;
   }
 }
 
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-1
-  .ranking-table-data-leader-1
-  .medal-gold,
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-2
-  .ranking-table-data-leader-2
-  .medal-silver,
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-3
-  .ranking-table-data-leader-3
-  .medal-bronze {
+.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
+.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
+.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
   margin-top: -1.313em;
   height: 2.875em;
   width: 2.875em;
 }
 
 @media (min-width: 33em) {
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-1
-    .ranking-table-data-leader-1
-    .medal-gold,
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-2
-    .ranking-table-data-leader-2
-    .medal-silver,
-  .page-leaderboard
-    .ranking
-    .ranking-table-row-leader-3
-    .ranking-table-data-leader-3
-    .medal-bronze {
+
+  .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
+  .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
+  .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
     margin-top: -1.563em;
     height: 3.875em;
     width: 3.875em;
@@ -835,13 +772,8 @@ h3 {
   border: solid 0.125em #ecc81a;
 }
 
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-1
-  .ranking-table-data-leader-1
-  .medal-gold {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-gold-c49052bfa07f36621f16dbe77f7fc36cbafd72ff088ea970256ff998be05687b.svg)
-    no-repeat;
+.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-gold-c49052bfa07f36621f16dbe77f7fc36cbafd72ff088ea970256ff998be05687b.svg) no-repeat;
   background-size: contain;
 }
 
@@ -849,13 +781,8 @@ h3 {
   border: solid 0.125em #dbe2e8;
 }
 
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-2
-  .ranking-table-data-leader-2
-  .medal-silver {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-silver-d099c5dd916c167c3ba4716c8968a819f317daaef1901c8e8bae6c6932852faa.svg)
-    no-repeat;
+.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-silver-d099c5dd916c167c3ba4716c8968a819f317daaef1901c8e8bae6c6932852faa.svg) no-repeat;
   background-size: contain;
 }
 
@@ -863,13 +790,8 @@ h3 {
   border: solid 0.125em #dfdfd1;
 }
 
-.page-leaderboard
-  .ranking
-  .ranking-table-row-leader-3
-  .ranking-table-data-leader-3
-  .medal-bronze {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-bronze-d0f15d413800257442c8d4b2d5239cfe28c9fd9594f863ab1fad5258f8d1d5eb.svg)
-    no-repeat;
+.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-bronze-d0f15d413800257442c8d4b2d5239cfe28c9fd9594f863ab1fad5258f8d1d5eb.svg) no-repeat;
   background-size: contain;
 }
 
@@ -901,7 +823,7 @@ h3 {
 .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
   color: #2e3d49;
   width: 55%;
-  font-size: 0.875em;
+  font-size: .875em;
   padding-left: 9%;
 }
 
@@ -926,7 +848,7 @@ h3 {
 }
 
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) {
-  font-size: 0.875em;
+  font-size: .875em;
   text-align: center;
   width: 25%;
   padding-right: 4%;
@@ -942,8 +864,7 @@ h3 {
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) .complete {
   margin: -1.25em auto;
   transform: translateY(18%);
-  background: url(https://github.com/GameSphere-MultiPlayer/GameSphere/assets/98798977/fe253e0d-b619-477e-a8de-b10b785f0bd1)
-    no-repeat;
+  background: url(https://github.com/GameSphere-MultiPlayer/GameSphere/assets/98798977/fe253e0d-b619-477e-a8de-b10b785f0bd1) no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
