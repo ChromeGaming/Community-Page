@@ -37,6 +37,7 @@ a {
   color: #fff;
   text-decoration: none;
 }
+
 /* Styling anchor tags. */
 
 .nav .logo {
@@ -54,6 +55,7 @@ a {
 .nav .nav-links a {
   transition: all 0.2s linear;
 }
+
 /* Transition effect for navigation links. */
 
 .nav.openSearch .nav-links a {
@@ -186,6 +188,10 @@ a {
   margin-bottom: 10px;
   background-size: cover;
 }
+.social-icon:hover{
+  transform: scale(1.2);
+  margin: 15px 0 15px 0;
+}
 /* Individual social media icons styling. */
 .youtube {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3670/3670147.png');
@@ -201,6 +207,9 @@ a {
 }
 .instagram {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3955/3955024.png');
+}
+.instagram:hover{
+  transform: scale(1.2);
 }
 
 /* Styling for rotate button. */
@@ -828,7 +837,10 @@ h3 {
 .faq-title {
   margin: 0 35px 0 0;
 }
-
+.faq-title:hover{
+  color: #2ecc71;
+  transform: scale(1.1);
+}
 .faq-text {
   display: none;
   margin: 30px 0 0;
@@ -853,6 +865,10 @@ h3 {
   right: 30px;
   top: 30px;
   width: 30px;
+}
+.faq-toggle:hover{
+  transform: scale(1.8);
+  color: whitesmoke;
 }
 .faq-toggle .fa-times,
 .faq.active .faq-toggle .fa-chevron-down {
