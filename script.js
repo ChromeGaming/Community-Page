@@ -48,6 +48,40 @@ document.addEventListener("DOMContentLoaded", function() {
     discordPopup.style.display = 'none';
   });
 });
-const success = ()=>{
-  alert("You have successfully Subscribed!");
+const success = () => {
+  showAlert('You have successfully subscribed!', 'success');
 }
+
+const showAlert = (message, type) => {
+  const alertBox = document.getElementById('customAlert');
+  const alertText = document.getElementById('alertText');
+
+  alertText.textContent = message;
+
+  if (type === 'success') {
+      alertBox.style.borderColor = '#4CAF50';
+      alertText.style.color = '#4CAF50';
+  } else {
+      alertBox.style.borderColor = '#f44336';
+      alertText.style.color = '#f44336';
+  }
+
+  alertBox.classList.add('show');
+
+  document.getElementById('closeAlert').addEventListener('click', () => {
+      alertBox.classList.remove('show');
+  });
+}
+
+const subscriptionForm = document.getElementById('subscriptionForm');
+const emailInput = document.getElementById('emailInput');
+
+subscriptionForm.addEventListener('submit', function(event) {
+  if (!emailInput.checkValidity()) {
+      showAlert('Please enter a valid email address.', 'error');
+      emailInput.focus();
+      event.preventDefault();
+  } else {
+      success();
+  }
+});
