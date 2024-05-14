@@ -768,13 +768,16 @@
           exclusive offers.
         </p>
         <!-- Text for newsletter subscription. -->
-        <form action="#">
-          <!-- Form for newsletter subscription. -->
-          <input type="text" placeholder="Your email" required>
-          <!-- Input field for email. -->
-          <button type="submit">SUBSCRIBE</button>
-          <!-- Button for submitting subscription. -->
+        <form id="subscriptionForm" action="#">
+            <input id="emailInput" type="email" placeholder="Your email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+            <button id="submitButton" type="submit">SUBSCRIBE</button>
         </form>
+        
+        <div id="customAlert" class="alert">
+            <span id="alertText"></span>
+            <button id="closeAlert">&times;</button>
+        </div>
+        
         <div class="icons">
           <!-- Icons section. -->
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>

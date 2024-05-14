@@ -1,7 +1,42 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
+.alert {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
+.alert.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#alertText {
+  display: block;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+#closeAlert {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #4CAF50;
+}
 * {
   margin: 0;
   padding: 0;
