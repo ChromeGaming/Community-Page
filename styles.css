@@ -174,7 +174,7 @@ a {
 .social-icons {
   position: fixed;
   top: 50%;
-  left: 10px;
+  left: 15px;
   transform: translateY(-50%);
   z-index: 999;
 }
@@ -185,6 +185,7 @@ a {
   height: 40px;
   margin-bottom: 10px;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 /* Individual social media icons styling. */
 .youtube {
@@ -203,6 +204,9 @@ a {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3955/3955024.png');
 }
 
+.social-icon:hover{
+  transform: scale(1.4);
+}
 /* Styling for rotate button. */
 #rotate {
   vertical-align: top;
