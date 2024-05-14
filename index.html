@@ -24,6 +24,12 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <!-- Link to the fontawesome icons file. -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
     <!-- Link to the Unicons CSS file. -->
     <script src="script.js" defer></script>
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
@@ -34,7 +40,7 @@
       <!-- Navigation section. -->
       <i class="uil uil-bars navOpenBtn"></i>
       <!-- Icon for opening navigation menu. -->
-      <a href="#" class="logo">Chrome Gaming</a>
+      <a class="logo">Chrome Gaming</a>
       <!-- Logo of the website. -->
 
       <ul class="nav-links">
@@ -53,8 +59,9 @@
       <div class="search-box">
         <i class="uil uil-search search-icon"></i>
         <!-- Icon for search functionality within the search box. -->
-        <input type="text" placeholder="Search here..." />
+        <input type="text" id="searchResult" placeholder="Search here..." />
         <!-- Input field for search functionality. -->
+        <div class="searching_results"></div>
       </div>
       <div class="toggle-container">
         <i class="bi bi-toggle-off" id="theme-toggle"></i>
@@ -173,7 +180,10 @@
         <br />
         <!-- Placeholder text. -->
         <div style="display: flex">
-          <i style="font-size: 30px" class="bi bi-tv-fill"></i>
+          <i
+            style="font-size: 30px; color: rgb(0, 0, 0)"
+            class="bi bi-tv-fill"
+          ></i>
           &nbsp;&nbsp;
           <!-- Icon for TV display. -->
           <h3 style="margin-top: 10px">Create a Issue on GitHub..</h3>
@@ -185,7 +195,10 @@
         </p>
         <!-- Placeholder text. -->
         <div style="display: flex">
-          <i style="font-size: 30px" class="bi bi-tv-fill"></i>
+          <i
+            style="font-size: 30px; color: rgb(0, 0, 0)"
+            class="bi bi-tv-fill"
+          ></i>
           &nbsp;&nbsp;
           <!-- Icon for TV display. -->
           <h3 style="margin-top: 10px">Code and Upload it..</h3>
@@ -648,26 +661,48 @@
             helpful tips, and exclusive offers.
           </p>
           <!-- Text for newsletter subscription. -->
-          <form action="#">
-            <!-- Form for newsletter subscription. -->
-            <input type="text" placeholder="Your email" required />
-            <!-- Input field for email. -->
-            <button type="submit">SUBSCRIBE</button>
-            <!-- Button for submitting subscription. -->
+          <form id="subscriptionForm" action="#">
+            <input
+              id="emailInput"
+              type="email"
+              placeholder="Your email"
+              required
+              pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+            />
+            <button id="submitButton" type="submit">SUBSCRIBE</button>
           </form>
+
+          <div id="customAlert" class="alert">
+            <span id="alertText"></span>
+            <button id="closeAlert">&times;</button>
+          </div>
+
           <div class="icons">
             <!-- Icons section. -->
-            <i class="fa-brands fa-facebook-f"></i>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
             <!-- Facebook icon. -->
-            <i class="fa-brands fa-twitter"></i>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
             <!-- Twitter icon. -->
-            <i class="fa-brands fa-linkedin"></i>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             <!-- LinkedIn icon. -->
-            <i class="fa-brands fa-github"></i>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
             <!-- GitHub icon. -->
           </div>
         </div>
       </div>
     </section>
+    <footer
+      class="footer-text"
+      style="
+        text-align: center;
+        color: rgba(0, 131, 245, 0.769);
+        margin-bottom: 10px;
+        font-size: 12px;
+      "
+    >
+      <!-- Footer section. -->
+      &copy; 2024-All rights reserved.<br />
+      Made with ❤️ of <b>Chrome Gaming</b>
+    </footer>
   </body>
 </html>

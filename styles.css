@@ -1,7 +1,42 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
+.alert {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border: 2px solid #4caf50;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
+.alert.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#alertText {
+  display: block;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+#closeAlert {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #4caf50;
+}
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +46,16 @@
 
 /* Global reset and setting default font family to Poppins. */
 
+body {
+  position: relative;
+}
+
 .nav {
-  /* Styling for the navigation bar. */
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 15px 200px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff; /* Change the background color as needed */
 }
 
 /* navigation bar font size transition styling*/
@@ -34,15 +72,22 @@
 }
 
 /* Navigation bar styling. */
-.nav,
-.nav .nav-links {
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
+.nav-links li {
+  margin-right: 20px; /* Adjust spacing between navigation links */
+}
+
+.nav-links li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation link */
+}
 h1 p {
-  color: #000000;
+  color: #ffffff;
 }
 /* Aligning navigation elements. */
 a {
@@ -60,7 +105,7 @@ a {
 /* Styling for the logo in the navigation bar. */
 
 .nav .nav-links {
-  column-gap: 30px;
+  column-gap: 20px;
   list-style: none;
 }
 
@@ -125,9 +170,33 @@ a {
   border-radius: 6px;
   background-color: #ffffff;
   padding: 0 15px 0 45px;
+  border-bottom-left-radius: 0px;
 }
 
 /* Styling for input field within search box. */
+
+/* searching Results */
+.nav.openSearch .searching_results {
+  position: absolute;
+  width: 25rem;
+  height: 20rem;
+  background-color: white;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* searching Results */
+
+.nav.openSearch .searching_results div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid;
+  align-items: center;
+}
 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
@@ -158,6 +227,9 @@ body {
 .dark-mode #theme-toggle {
   color: #ffffff;
 }
+.dark-mode nav {
+  background-color: #252525;
+}
 .toggle-container {
   display: flex;
   align-items: center;
@@ -185,14 +257,13 @@ body {
 
 /* Styling for popups. */
 .popup {
-  margin-top: 170px;
   position: fixed;
-  top: 50%;
-  right: 10px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
   width: 250px;
   background-color: #292a2f;
   padding: 20px;
-  transform: translateY(-50%);
   transition: right 0.5s ease-in-out;
   border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
 }
@@ -204,10 +275,10 @@ body {
 
 #close-btn {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 10px;
+  right: 20px;
   cursor: pointer;
-  color: #fff;
+  color: #f5f5f6;
   font-size: 20px;
 }
 
@@ -226,15 +297,16 @@ body {
 }
 
 .discord-link:hover {
-  background-color: #000000;
+  background-color: #0056b3;
 }
 
 /* Styling for social icons. */
 .social-icons {
   position: fixed;
   top: 50%;
-  left: 10px;
+  left: 15px;
   transform: translateY(-50%);
+  z-index: 999;
 }
 
 .social-icon {
@@ -243,6 +315,7 @@ body {
   height: 40px;
   margin-bottom: 10px;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 
 /* Individual social media icons styling. */
@@ -266,14 +339,17 @@ body {
   background-image: url("https://cdn-icons-png.flaticon.com/128/3955/3955024.png");
 }
 
+.social-icon:hover {
+  transform: scale(1.4);
+}
 /* Styling for rotate button. */
 #rotate {
   vertical-align: top;
-  transform: rotate(7deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+  transform: rotate(7deg) translate(50px, -80px);
+  -ms-transform: rotate(90deg) translate(50px, -80px);
+  -moz-transform: rotate(90deg) translate(50px, -80px);
+  -webkit-transform: rotate(90deg) translate(50px, -80px);
+  -o-transform: rotate(90deg) translate(50px, -80px);
 }
 
 /* Styling for container holding image and text. */
@@ -283,13 +359,15 @@ body {
 
 .image-div {
   position: relative;
-  flex: 1;
+  height: fit-content;
 }
 
 .image-div img {
   width: 100%;
   height: auto;
   display: block;
+  padding-left: 50px;
+  margin-left: 100px;
 }
 
 /* Styling for download button. */
@@ -304,7 +382,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 990;
 }
 
 .download-button:hover {
@@ -313,29 +391,33 @@ body {
 
 /* Styling for text div. */
 .text-div {
-  margin-right: 130px;
   flex: 1;
   padding: 20px;
+  padding-left: 30px;
 }
 
 .text-div h2 {
   margin-top: 0;
   font-size: 24px;
-  color: #333;
 }
 
 .text-div p {
   font-size: 16px;
   line-height: 1.6;
-  color: #161618;
 }
 
-.text-div h1,
-h2,
-h3 {
-  color: #161618;
+/* About page */
+/* About page */
+.container-fluid,
+.row {
+  --mdb-gutter-x: 0;
 }
-
+.para {
+  font-size: larger;
+}
+.heading {
+  color: #029fcb;
+}
 /* Styling for footer. */
 .footer .footer-row {
   display: flex;
@@ -418,11 +500,11 @@ h3 {
 }
 
 .footer-col .icons i {
-  color: #afb6c7;
+  color: rgba(0, 131, 245, 0.769);
 }
 
 .footer-col .icons i:hover {
-  color: #fff;
+  color: rgb(204, 22, 198);
 }
 
 /* Responsive styling. */
@@ -444,6 +526,24 @@ h3 {
   .nav .search-box {
     right: 100px;
     max-width: 400px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-div img {
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .text-div {
+    max-width: 500px;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0 40px;
+  }
+  .text-div h2:nth-child(1) {
+    text-align: center;
   }
 }
 
@@ -954,4 +1054,17 @@ h3 {
     width: 3.5em;
     height: 3.5em;
   }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c4d2e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#743db8, #c535db);
+  border-radius: 10px;
 }
