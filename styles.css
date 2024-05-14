@@ -45,6 +45,10 @@
 }
 /* Global reset and setting default font family to Poppins. */
 
+body{
+  position: relative;
+}
+
 .nav {
   /* Styling for the navigation bar. */
   top: 0;
@@ -140,8 +144,33 @@ a {
   border-radius: 6px;
   background-color: #fff;
   padding: 0 15px 0 45px;
+  border-bottom-left-radius:0px ;
 }
 /* Styling for input field within search box. */
+
+
+/* searching Results */
+.nav.openSearch .searching_results{
+   position: absolute;
+   width: 25rem;
+   height: 20rem;
+   background-color: white;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+/* searching Results */
+
+.nav.openSearch .searching_results div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid;
+  align-items: center;
+}
 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
