@@ -1080,3 +1080,102 @@ body {
   border-radius: 10px;
 }
 
+/* Toggle share button with media links*/
+.icons {
+  position: absolute;
+  top: calc(100% - 50vh);
+  right: calc(100% - 30vw); 
+  transform: translateX(50%);
+  z-index: 2;
+}
+
+.socials-menu {
+	opacity: 0;	
+	transition: opacity 0.5s;
+}
+
+.active > .socials-menu {
+	opacity: 1;	
+}
+
+.share-button {
+	position: absolute;
+	border: none;
+	cursor: pointer;
+	z-index: 2;
+	transition: all 0.4s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 4rem;
+	height: 4rem;
+	background-color: var(--background);
+	border-radius: 50%;
+	outline: 2px solid white;
+	outline-offset: 3px;
+}
+.active .share-button, .share-button:hover {
+	background-color: var(#00C896);
+	transform: scale(1.03);
+}
+
+.social {
+	position: absolute;
+	list-style: none;
+	transition: all 0.5s ease-in-out;
+	display: grid;
+	cursor: pointer;
+	place-items: center;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	outline: 2px solid white;
+	outline-offset: 3px;
+}
+
+.social a {
+	display: grid;
+	cursor: pointer;
+	place-items: center;
+}
+
+.social:hover img {
+    transform: scale(1.10);
+}
+
+.active .social:nth-child(1) {
+	transform: translateX(-5rem);
+}
+
+
+.active .social:nth-child(1) {
+	background: radial-gradient(
+        circle at 30% 107%, #fdf497 0%, 
+        #fdf497 5%, #fd5949 45%,
+        #d6249f 60%,#285AEB 90%
+    ); 
+}
+
+.active .social:nth-child(2) {
+	transform: translateY(-5rem);
+}
+
+.active .social:nth-child(2){
+	background-color: #1D9BF0;
+}
+
+.active .social:nth-child(3) {
+	transform: translateX(5rem);
+}
+
+.active .social:nth-child(3){
+	background: grey; 
+}
+
+.active .social:nth-child(4) {
+	transform: translateY(5rem);
+}
+
+.active .social:nth-child(4){
+	background-color: #007bff;
+}
