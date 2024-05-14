@@ -373,6 +373,9 @@ h3 {
   color: #fff;
 }
 
+.rank{
+  height: 3.4rem;
+}
 /* Responsive styling. */
 @media screen and (max-width: 1160px) {
   .nav {
