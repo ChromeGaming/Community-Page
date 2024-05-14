@@ -518,6 +518,9 @@ body {
   color: rgb(204, 22, 198);
 }
 
+.rank{
+  height: 3.4rem;
+}
 /* Responsive styling. */
 @media screen and (max-width: 1160px) {
   .nav {
@@ -1053,11 +1056,14 @@ body {
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) .complete {
   margin: -1.25em auto;
   transform: translateY(18%);
+
+  background: url(medal.png) no-repeat;
+
   background: url(https://github.com/GameSphere-MultiPlayer/GameSphere/assets/98798977/fe253e0d-b619-477e-a8de-b10b785f0bd1)
     no-repeat;
   background-size: contain;
-  width: 3em;
-  height: 3em;
+  width: 3em; 
+   height: 3em;
 }
 
 @media (min-width: 33em) {
