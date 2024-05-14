@@ -28,7 +28,7 @@
 /* navigation bar hover styling*/
 .nav-links li a:hover {
   text-decoration: underline;
-  color: #000000;
+  color: #bb18bb;
   font-size: 20px;
   font-weight: bold;
 }
