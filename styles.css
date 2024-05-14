@@ -871,3 +871,15 @@ h3 {
   }
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c4d2e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background:linear-gradient(#743db8,#c535db);
+  border-radius: 10px;
+}
