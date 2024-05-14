@@ -1,7 +1,42 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
+.alert {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
+.alert.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#alertText {
+  display: block;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+#closeAlert {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #4CAF50;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +44,10 @@
   font-family: "Poppins", sans-serif;
 }
 /* Global reset and setting default font family to Poppins. */
+
+body{
+  position: relative;
+}
 
 .nav {
   /* Styling for the navigation bar. */
@@ -105,8 +144,33 @@ a {
   border-radius: 6px;
   background-color: #fff;
   padding: 0 15px 0 45px;
+  border-bottom-left-radius:0px ;
 }
 /* Styling for input field within search box. */
+
+
+/* searching Results */
+.nav.openSearch .searching_results{
+   position: absolute;
+   width: 25rem;
+   height: 20rem;
+   background-color: white;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+   overflow-x: hidden;
+}
+/* searching Results */
+
+.nav.openSearch .searching_results div{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 0.1rem solid;
+  align-items: center;
+}
 
 .nav .navOpenBtn,
 .nav .navCloseBtn {
@@ -131,14 +195,13 @@ a {
 
 /* Styling for popups. */
 .popup {
-  margin-top: 170px;
   position: fixed;
-  top: 50%;
-  right: 10px;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
   width: 250px;
   background-color: #292a2f;
   padding: 20px;
-  transform: translateY(-50%);
   transition: right 0.5s ease-in-out;
   border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
 }
@@ -175,8 +238,9 @@ a {
 .social-icons {
   position: fixed;
   top: 50%;
-  left: 10px;
+  left: 15px;
   transform: translateY(-50%);
+  z-index: 999;
 }
 
 .social-icon {
@@ -185,6 +249,7 @@ a {
   height: 40px;
   margin-bottom: 10px;
   background-size: cover;
+  transition: transform 0.2s ease;
 }
 /* Individual social media icons styling. */
 .youtube {
@@ -203,14 +268,17 @@ a {
   background-image: url('https://cdn-icons-png.flaticon.com/128/3955/3955024.png');
 }
 
+.social-icon:hover{
+  transform: scale(1.4);
+}
 /* Styling for rotate button. */
 #rotate {
   vertical-align: top;
-  transform: rotate(7deg);
-  -ms-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+  transform: rotate(7deg) translate(50px, -80px);
+  -ms-transform: rotate(90deg) translate(50px, -80px);
+  -moz-transform: rotate(90deg) translate(50px, -80px);
+  -webkit-transform: rotate(90deg) translate(50px, -80px);
+  -o-transform: rotate(90deg) translate(50px, -80px);
 }
 
 /* Styling for container holding image and text. */
@@ -220,13 +288,15 @@ a {
 
 .image-div {
   position: relative;
-  flex: 1;
+  height: fit-content;
 }
 
 .image-div img {
   width: 100%;
   height: auto;
   display: block;
+  padding-left: 50px; 
+  margin-left: 100px
 }
 
 /* Styling for download button. */
@@ -241,7 +311,7 @@ a {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 990;
 }
 
 .download-button:hover {
@@ -250,9 +320,9 @@ a {
 
 /* Styling for text div. */
 .text-div {
-  margin-right: 130px;
   flex: 1;
   padding: 20px;
+  padding-left: 30px;
 }
 
 .text-div h2 {
@@ -393,6 +463,24 @@ h3 {
   .nav .search-box {
     right: 100px;
     max-width: 400px;
+  }
+  .container{
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-div img{
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .text-div {
+    max-width: 500px;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0 40px;
+  }
+  .text-div h2:nth-child(1){
+    text-align: center;
   }
 }
 
@@ -786,3 +874,15 @@ h3 {
   }
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #c4d2e5;
+}
+
+::-webkit-scrollbar-thumb {
+  background:linear-gradient(#743db8,#c535db);
+  border-radius: 10px;
+}

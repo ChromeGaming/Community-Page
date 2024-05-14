@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,35 @@
     <!-- Title of the webpage displayed on the browser tab. -->
     <link rel="stylesheet" href="styles.css" />
     <!-- Link to an external CSS file for styling. -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chrome Gaming | Home </title>
+  <!-- Title of the webpage displayed on the browser tab. -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Link to an external CSS file for styling. -->
+  
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Link to the Bootstrap icons CSS file. -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Link to Google Fonts for custom font styles. -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <!-- Link to the fontawesome icons file. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  <!-- Link to the Unicons CSS file. -->
+  <script src="script.js" defer></script>
+  <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
+</head>
+<body style="background-color: #161618 ;" class="page-leaderboard">
+  <!-- Body of the webpage. Background color set inline. -->
+  <nav class="nav">
+    <!-- Navigation section. -->
+    <i class="uil uil-bars navOpenBtn"></i>
+    <!-- Icon for opening navigation menu. -->
+    <a href="#" class="logo">Chrome Gaming</a>
+    <!-- Logo of the website. -->
+ 
 
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -23,6 +53,7 @@
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
 </head>
 
+
 <body style="background-color: #161618 ;" class="page-leaderboard">
     <!-- Body of the webpage. Background color set inline. -->
     <nav class="nav">
@@ -31,6 +62,18 @@
         <!-- Icon for opening navigation menu. -->
         <a href="#" class="logo">Chrome Gaming</a>
         <!-- Logo of the website. -->
+
+    <i class="uil uil-search search-icon" id="searchIcon"></i>
+    <!-- Icon for search functionality. -->
+    <div class="search-box">
+      <i class="uil uil-search search-icon"></i>
+      <!-- Icon for search functionality within the search box. -->
+      <input type="text" id="searchResult" placeholder="Search here..." />
+      <!-- Input field for search functionality. -->
+      <div class="searching_results"></div>
+    </div>
+  </nav>
+
 
         <ul class="nav-links">
             <!-- Unordered list for navigation links. -->
@@ -92,6 +135,39 @@
         <a href="https://www.instagram.com/chromegamingon/" target="_blank" class="social-icon instagram"></a>
         <!-- Instagram icon link. -->
         <!-- Add more social media icons as needed -->
+
+  <div class="container" style="margin-bottom: 40px;">
+    <!-- Container for content. -->
+    <div class="image-div">
+      <!-- Division for images. -->
+      <img style="height: 400px; width: auto;" src="BANNER.png" alt="Game Upload">
+      <!-- Image element for uploading a game banner. -->
+      <button id="rotate" style="font-size: 18px;" class="download-button">Upload <i class="bi bi-box-arrow-in-down"></i></button>
+      <!-- Button for uploading a game with icon. -->
+    </div>
+    <div class="text-div">
+      <!-- Division for text content. -->
+      <h2 style="color: antiquewhite;"><i class="bi bi-bar-chart-line"></i> PROCEDURE <i class="bi bi-box-arrow-in-right"></i></h2>
+      <!-- Heading for procedure. -->
+      <h1>How i am being able to <br> upload game?</h1>
+      <!-- Subheading for game upload procedure. -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      <!-- Placeholder text. -->
+      <div style="display: flex;"><i style="font-size: 30px; color: aliceblue;" class="bi bi-tv-fill"></i> &nbsp;&nbsp;
+        <!-- Icon for TV display. -->
+        <h3 style="margin-top: 10px;"> Create a Issue on GitHub..</h3>
+        <!-- Text for TV display. -->
+      </div>
+      <p style="margin-left: 60px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <!-- Placeholder text. -->
+      <div style="display: flex;"><i style="font-size: 30px; color: aliceblue;" class="bi bi-tv-fill"></i> &nbsp;&nbsp;
+        <!-- Icon for TV display. -->
+        <h3 style="margin-top: 10px;"> Code and Upload it..</h3>
+        <!-- Text for TV display. -->
+      </div>
+      <p style="margin-left: 60px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <!-- Placeholder text. -->
+
     </div>
 
     <!--<div class="alan-btn"></div>-->
@@ -728,6 +804,7 @@
   </script>
   </script>-->
 
+
     <hr>
     <!-- Horizontal line separator. -->
     <section class="footer">
@@ -807,7 +884,93 @@
         </div>
     </section>
 
-
+  <hr>
+  <!-- Horizontal line separator. -->
+  <section class="footer">
+    <!-- Footer section. -->
+    <div class="footer-row">
+      <!-- Row within the footer. -->
+      <div class="footer-col">
+        <!-- Column within the footer. -->
+        <h4>Info</h4>
+        <!-- Heading for info section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Compressions</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Collection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Second column within the footer. -->
+        <h4>Explore</h4>
+        <!-- Heading for explore section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Free Designs</a></li>
+          <li><a href="#">Latest Designs</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Popular Designs</a></li>
+          <li><a href="#">Art Skills</a></li>
+          <li><a href="#">New Uploads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Third column within the footer. -->
+        <h4>Legal</h4>
+        <!-- Heading for legal section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Customer Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Fourth column within the footer. -->
+        <h4>Newsletter</h4>
+        <!-- Heading for newsletter section. -->
+        <p>
+          Subscribe to our newsletter for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+        <!-- Text for newsletter subscription. -->
+        <form id="subscriptionForm" action="#">
+            <input id="emailInput" type="email" placeholder="Your email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+">
+            <button id="submitButton" type="submit">SUBSCRIBE</button>
+        </form>
+        
+        <div id="customAlert" class="alert">
+            <span id="alertText"></span>
+            <button id="closeAlert">&times;</button>
+        </div>
+        
+        <div class="icons">
+          <!-- Icons section. -->
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <!-- Facebook icon. -->
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <!-- Twitter icon. -->
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- LinkedIn icon. -->
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+          <!-- GitHub icon. -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-text" style="text-align: center;color: rgba(240, 248, 255, 0.769); margin-bottom: 10px; font-size: 12px;">
+    <!-- Footer section. -->
+    &copy; 2024-All rights reserved.<br>
+    Made with ❤️ of <b>Chrome Gaming</b>
+  </footer>
+ 
 </body>
 
 </html>
