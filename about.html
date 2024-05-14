@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chrome Gaming | Home </title>
+  <!-- Title of the webpage displayed on the browser tab. -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Link to an external CSS file for styling. -->
+  
+
+  <!-- Unicons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Link to the Bootstrap icons CSS file. -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- Link to Google Fonts for custom font styles. -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <!-- Link to the Unicons CSS file. -->
+  <script src="script.js" defer></script>
+  <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
+  <!-- Bootstrap css-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+
+
+  <style>
+    
+.nav {
+  /* Styling for the navigation bar. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 200px;
+  background: #252525;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Navigation bar styling. */
+
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+/* Flex display for navigation links. */
+
+.nav {
+  justify-content: space-between;
+}
+/* Aligning navigation elements. */
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+/* Styling anchor tags. */
+
+.nav .logo {
+  font-size: 28px;
+  font-weight: 500;
+}
+/* Styling for the logo in the navigation bar. */
+
+.nav .nav-links {
+  column-gap: 20px;
+  list-style: none;
+}
+/* Styling for navigation links. */
+
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+/* Transition effect for navigation links. */
+
+.nav.openSearch .nav-links a {
+  opacity: 0;
+  pointer-events: none;
+}
+/* Styling for navigation links when search is open. */
+ul{
+  margin-bottom: 0rem;
+}
+.nav .search-icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* Styling for search icon in navigation bar. */
+
+
+  </style>
+</head>
+<body style="background-color: #161618 ;" class="page-leaderboard">
+  <!-- Body of the webpage. Background color set inline. -->
+  <nav class="nav">
+    <!-- Navigation section. -->
+    <i class="uil uil-bars navOpenBtn"></i>
+    <!-- Icon for opening navigation menu. -->
+    <a href="#" class="logo">Chrome Gaming</a>
+    <!-- Logo of the website. -->
+
+    <ul class="nav-links">
+      <!-- Unordered list for navigation links. -->
+      <i class="uil uil-times navCloseBtn"></i>
+      <!-- Icon for closing navigation menu. -->
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Play Games</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contribute</a></li>
+    </ul>
+
+    <i class="uil uil-search search-icon" id="searchIcon"></i>
+    <!-- Icon for search functionality. -->
+    <div class="search-box">
+      <i class="uil uil-search search-icon"></i>
+      <!-- Icon for search functionality within the search box. -->
+      <input type="text" placeholder="Search here..." />
+      <!-- Input field for search functionality. -->
+    </div>
+  </nav>
+
+
+  <!-- About content -->
+  <section>
+    <div class="container-fluid pt-5 pt-md-5 ">
+        <div class="container pt-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <img class="img-fluid mb-4 mb-lg-0" src="Fauget.gif" alt="" />
+                </div>
+                <div class="col-lg-7 ">
+                    <div class="px-md-5">
+
+                        <h1
+                            class="text-uppercase heading fw-bold mb-3 letter-spacing font1 animate__animated animate__fadeIn animate__infinite infinite animate__slower	5s">
+                            Welcome to Chrome Gaming
+                        </h1>
+                        <p class="para text-white">
+                          A Chrome gaming community page is an online space within the Chrome browser where gamers connect, discuss games, share content, get updates, troubleshoot issues, join events, and interact with developers. It's a hub for all things gaming-related in the Chrome ecosystem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<!--END About content  -->
+
+ 
+
+  <div class="social-icons">
+    <!-- Section for social media icons. -->
+    <a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
+    <!-- YouTube icon link. -->
+    <a href="https://www.linkedin.com/company/chromegaming" target="_blank" class="social-icon linkedin"></a>
+    <!-- LinkedIn icon link. -->
+    <a href="https://www.facebook.com/profile.php?id=61558763492008" target="_blank" class="social-icon facebook"></a>
+    <!-- Facebook icon link. -->
+    <a href="https://twitter.com" target="_blank" class="social-icon twitter"></a>
+    <!-- Twitter icon link. -->
+    <a href="https://www.instagram.com/chromegamingon/" target="_blank" class="social-icon instagram"></a>
+    <!-- Instagram icon link. -->
+    <!-- Add more social media icons as needed -->
+  </div>
+
+ 
+
+
+
+  
+
+
+
+  <hr>
+  <!-- Horizontal line separator. -->
+  <section class="footer">
+    <!-- Footer section. -->
+    <div class="footer-row">
+      <!-- Row within the footer. -->
+      <div class="footer-col">
+        <!-- Column within the footer. -->
+        <h4 class="text-center">Info</h4>
+        <!-- Heading for info section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Compressions</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Collection</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Second column within the footer. -->
+        <h4 class="text-center">Explore</h4>
+        <!-- Heading for explore section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Free Designs</a></li>
+          <li><a href="#">Latest Designs</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Popular Designs</a></li>
+          <li><a href="#">Art Skills</a></li>
+          <li><a href="#">New Uploads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Third column within the footer. -->
+        <h4 class="text-center">Legal</h4>
+        <!-- Heading for legal section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Customer Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Fourth column within the footer. -->
+        <h4 class="text-center">Newsletter</h4>
+        <!-- Heading for newsletter section. -->
+        <p>
+          Subscribe to our newsletter for a weekly dose
+          of news, updates, helpful tips, and
+          exclusive offers.
+        </p>
+        <!-- Text for newsletter subscription. -->
+        <form action="#">
+          <!-- Form for newsletter subscription. -->
+          <input type="text" placeholder="Your email" required>
+          <!-- Input field for email. -->
+          <button type="submit">SUBSCRIBE</button>
+          <!-- Button for submitting subscription. -->
+        </form>
+        <div class="icons">
+          <!-- Icons section. -->
+          <i class="fa-brands fa-facebook-f"></i>
+          <!-- Facebook icon. -->
+          <i class="fa-brands fa-twitter"></i>
+          <!-- Twitter icon. -->
+          <i class="fa-brands fa-linkedin"></i>
+          <!-- LinkedIn icon. -->
+          <i class="fa-brands fa-github"></i>
+          <!-- GitHub icon. -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  
+</body>
+</html>

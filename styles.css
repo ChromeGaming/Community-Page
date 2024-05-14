@@ -342,7 +342,17 @@ h2,
 h3 {
   color: white;
 }
-
+/* About page */
+/* About page */
+.container-fluid,.row {
+  --mdb-gutter-x: 0;
+}
+.para{
+  font-size: larger;
+}
+.heading{
+  color: #029fcb;
+}
 /* Styling for footer. */
 .footer .footer-row {
   display: flex;
