@@ -55,7 +55,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #ffffff; /* Change the background color as needed */
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(19, 18, 18, 0.1);
 }
 
 /* navigation bar font size transition styling*/
@@ -165,12 +166,17 @@ a {
 .search-box input {
   height: 100%;
   width: 100%;
-  border: none;
+  border: #0056b3;
   outline: none;
   border-radius: 6px;
-  background-color: #ffffff;
+  background-color: gray;
   padding: 0 15px 0 45px;
   border-bottom-left-radius: 0px;
+  color: rgb(255, 255, 255);
+}
+
+.dark-mode .search-box input {
+  background-color: #161618;
 }
 
 /* Styling for input field within search box. */
@@ -188,6 +194,11 @@ a {
   overflow-x: hidden;
 }
 /* searching Results */
+
+.dark-mode .searching_results {
+  background-color: white;
+  color: #000000;
+}
 
 .nav.openSearch .searching_results div {
   width: 100%;
