@@ -85,12 +85,14 @@ const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
 searchIcon.addEventListener("click", () => {
+  // console.log(searchIcon.classList);
   nav.classList.toggle("openSearch");
   nav.classList.remove("openNav");
   if (searchResult.value.length === 0) {
     resultContainer.style.display = "none";
   }
   if (nav.classList.contains("openSearch")) {
+    searchIcon.style.marginLeft = '10vw';
     return searchIcon.classList.replace("uil-search", "uil-times");
   }
   searchIcon.classList.replace("uil-times", "uil-search");
