@@ -149,16 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
     discordPopup.style.display = "none";
   });
 });
-
-
-// Scription for FAQS Section 
-const toggles = document.querySelectorAll(".faq-toggle");
-
-toggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    toggle.parentElement.classList.toggle("active");
-  });
-=======
 const success = () => {
   showAlert("You have successfully subscribed!", "success");
 };
@@ -195,5 +185,4 @@ subscriptionForm.addEventListener("submit", function (event) {
   } else {
     success();
   }
-
 });
