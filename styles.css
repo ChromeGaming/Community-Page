@@ -219,14 +219,6 @@ a {
   align-items: center;
 }
 
-/* .searching_results .innerdiv{
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0.5rem;
-  align-items: center;
-} */
-
 .nav .navOpenBtn,
 .nav .navCloseBtn {
   display: none;
