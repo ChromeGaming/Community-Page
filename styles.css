@@ -223,32 +223,103 @@ body {
   padding: 25px;
 }
 
-.light-mode {
+body.light-mode {
   background-color: #ffffff;
   color: #161618;
 }
-.dark-mode {
+
+body.dark-mode {
   background-color: #161618;
   color: white;
 }
 
-.dark-mode a {
+body.dark-mode a {
   color: white;
 }
-.dark-mode #theme-toggle {
-  color: #ffffff;
-}
-.dark-mode nav {
+
+body.dark-mode nav {
   background-color: #252525;
 }
-.toggle-container {
+
+/* Switch Container */
+.switch-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  height: 30px; /* Adjusted height */
+  width: 45px; /* Adjusted width */
 }
-#theme-toggle {
-  border: none;
+
+/* Hidden Checkbox */
+.switch-checkbox {
+  display: none;
+}
+
+/* Switch Label */
+.switch-label {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
   cursor: pointer;
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.switch-label .sun-icon,
+.switch-label .moon-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, color 0.3s ease;
+  user-select: none;
+}
+
+.switch-label .sun-icon {
+  color: #f39c12;
+}
+
+.switch-label .moon-icon {
+  color: #bdc3c7;
+  opacity: 0;
+  left: 1px;
+}
+
+/* Switch Button */
+.switch-button {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Checkbox Checked State */
+.switch-checkbox:checked + .switch-label {
+  background-color: #161618;
+}
+
+.switch-checkbox:checked + .switch-label .sun-icon {
+  opacity: 0;
+}
+
+.switch-checkbox:checked + .switch-label .moon-icon {
+  opacity: 1;
+}
+
+.switch-checkbox:checked + .switch-label .switch-button {
+  transform: translateX(15px);
+  background-color: #252525;
 }
 
 /* Styling for centering images. */

@@ -81,7 +81,6 @@ searchResult.addEventListener("input", () => {
   }
 });
 
-const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
 searchIcon.addEventListener("click", () => {
@@ -98,20 +97,28 @@ searchIcon.addEventListener("click", () => {
 
 // page start with dark mode
 
-body.classList.add("dark-mode");
-// Toggle between "toggle off and toggle on"//
+document.addEventListener('DOMContentLoaded', () => {
+  const switchCheckbox = document.getElementById('switch');
+  const currentTheme = localStorage.getItem('theme');
 
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-  body.classList.toggle("light-mode");
-
-  if (body.classList.contains("light-mode")) {
-    toggleButton.classList.remove("bi-toggle-off");
-    toggleButton.classList.add("bi-toggle-on");
-  } else {
-    toggleButton.classList.remove("bi-toggle-on");
-    toggleButton.classList.add("bi-toggle-off");
+  if (currentTheme) {
+      document.body.classList.add(currentTheme);
+      if (currentTheme === 'dark-mode') {
+          switchCheckbox.checked = true;
+      }
   }
+
+  switchCheckbox.addEventListener('change', () => {
+      if (switchCheckbox.checked) {
+          document.body.classList.remove('light-mode');
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark-mode');
+      } else {
+          document.body.classList.remove('dark-mode');
+          document.body.classList.add('light-mode');
+          localStorage.setItem('theme', 'light-mode');
+      }
+  });
 });
 
 navOpenBtn.addEventListener("click", () => {

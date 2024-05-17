@@ -30,6 +30,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <!-- Link to the Google icons  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- Link to the Unicons CSS file. -->
     <script src="script.js" defer></script>
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
@@ -63,9 +66,15 @@
         <!-- Input field for search functionality. -->
         <div class="searching_results"></div>
       </div>
-      <div class="toggle-container">
-        <i class="bi bi-toggle-off" id="theme-toggle"></i>
-      </div>
+      <div class="switch-container">
+          <input type="checkbox" id="switch" class="switch-checkbox">
+          <label for="switch" class="switch-label">
+              <div class="switch-button">
+                  <span class="material-icons sun-icon">wb_sunny</span>
+                  <span class="material-icons moon-icon">brightness_2</span>
+              </div>
+          </label>
+        </div>      
     </nav>
 
     <section class="image">
