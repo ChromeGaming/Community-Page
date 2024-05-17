@@ -68,38 +68,12 @@ searchResult.addEventListener("input", () => {
     );
     resultContainer.innerHTML = "";
 
-    // Will raise another issue for this one!
-    // // For adding 'NAME' & 'RANK' heading.
-    // const div = document.createElement("div");
-    // const p = document.createElement("p");
-    // const span = document.createElement("span");
-    // p.textContent = `NAME`;
-    // span.textContent = `RANK`;
-    // p.style.fontWeight = '600';
-    // p.style.marginRight =  '3.5vw';
-    // span.style.fontWeight = '600';
-    // span.style.paddingLeft =  '1vw';
-    // div.appendChild(p);
-    // div.appendChild(span);
-    // resultContainer.appendChild(div);
-
     // Adding results.
     result.forEach((item, index) => {
       const div = document.createElement("div");
-      // div.setAttribute('id','outerdiv');
-
-      // const div1 = document.createElement("div");
       const p = document.createElement("p");
-      // div1.appendChild(p);
-
-      // const div2 = document.createElement("div");
       const span = document.createElement("span");
-      // div2.appendChild(span);
-
-      // div1.setAttribute('class','innerdiv');
-      // div2.setAttribute('class','innerdiv');
-
-
+ 
       p.textContent = item.name;
       span.textContent = item.place;
       div.appendChild(p);
@@ -113,7 +87,6 @@ const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
 
 searchIcon.addEventListener("click", () => {
-  // console.log(searchIcon.classList);
   nav.classList.toggle("openSearch");
   nav.classList.remove("openNav");
   if (searchResult.value.length === 0) {
