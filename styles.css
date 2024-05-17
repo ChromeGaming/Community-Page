@@ -376,7 +376,7 @@ body {
 /* Styling for container holding image and text. */
 .container {
   display: flex;
-  margin-bottom: 40px
+  margin-bottom: 40px; /* removed from inline styling in HTML file */
 }
 
 .image-div {
