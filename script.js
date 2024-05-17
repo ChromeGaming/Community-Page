@@ -68,10 +68,12 @@ searchResult.addEventListener("input", () => {
     );
     resultContainer.innerHTML = "";
 
+    // Adding results.
     result.forEach((item, index) => {
       const div = document.createElement("div");
       const p = document.createElement("p");
       const span = document.createElement("span");
+ 
       p.textContent = item.name;
       span.textContent = item.place;
       div.appendChild(p);
@@ -91,6 +93,7 @@ searchIcon.addEventListener("click", () => {
     resultContainer.style.display = "none";
   }
   if (nav.classList.contains("openSearch")) {
+    searchIcon.style.marginLeft = '8vw';
     return searchIcon.classList.replace("uil-search", "uil-times");
   }
   searchIcon.classList.replace("uil-times", "uil-search");
@@ -99,6 +102,7 @@ searchIcon.addEventListener("click", () => {
 // page start with dark mode
 
 body.classList.add("dark-mode");
+// console.log(body.classList);
 // Toggle between "toggle off and toggle on"//
 
 toggleButton.addEventListener("click", () => {

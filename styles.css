@@ -123,18 +123,29 @@ a {
   pointer-events: none;
 }
 
-/* Styling for navigation links when search is open. */
+/* Some style on hover over searchicon */
+#searchIcon:hover{
+  height: 30px;
+  width: 30px;
+  background-color: rgb(93, 92, 92);
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+/* Styling for navigation links when search is open. */
 .nav .search-icon {
   font-size: 20px;
   cursor: pointer;
 }
 
-/* Styling for search icon in navigation bar. */
 
+/* Styling for search icon in navigation bar. */
 .nav .search-box {
   position: absolute;
-  right: 250px;
+  right: 270px;
   height: 45px;
   max-width: 555px;
   width: 100%;
@@ -156,7 +167,6 @@ a {
   position: absolute;
   left: 15px;
   top: 50%;
-  left: 15px;
   color: #000000;
   transform: translateY(-50%);
 }
@@ -366,6 +376,7 @@ body {
 /* Styling for container holding image and text. */
 .container {
   display: flex;
+  margin-bottom: 40px; /* removed from inline styling in HTML file */
 }
 
 .image-div {
