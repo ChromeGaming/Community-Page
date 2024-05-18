@@ -709,17 +709,17 @@ body {
   background: rgba(46, 61, 73, 0.95);
 }
 
-.page-leaderboard .hero {
+/* .page-leaderboard .hero {
   background-image: url(50fcfccd51008fe7https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/hero-leaderboard-b861e1752ed28ae9f4d158a08c68e909201f46e6086992ad.jpg);
-}
+} */
 
-.page-leaderboard .leaderboard-progress {
+/* .page-leaderboard .leaderboard-progress {
   clear: both;
-}
+} */
 
-.page-leaderboard .leaderboard-progress .contain {
+/* .page-leaderboard .leaderboard-progress .contain {
   padding: 3em 1.5em 2em 1.5em;
-}
+} */
 
 @media (min-width: 70em) {
   .page-leaderboard .leaderboard-progress .contain {
@@ -748,7 +748,7 @@ body {
 .page-leaderboard .ranking .ranking-table-body {
   box-shadow: 0 0 0.75em 0 rgba(46, 60, 73, 0.12);
   border-radius: 0.375rem;
-  border: solid 0.063em #dbe2e8;
+  border: solid 2px purple;
   max-height: 24.625em;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
@@ -756,7 +756,7 @@ body {
 
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-body {
-    max-height: 31.125em;
+    max-height: 41.125em;
   }
 }
 
@@ -830,8 +830,15 @@ body {
   padding-top: 0.875em;
   padding-bottom: 0.875em;
   background-color: #fff;
+  transition:background-color 0.9s,width 0.6s,font-size 0.6s;
 }
-
+.page-leaderboard .ranking .ranking-table-row:hover{
+  background-color: pink;
+  box-shadow: 0px 0px 10px purple;
+  width: 101%;
+  font-size: large;
+  cursor:pointer;
+}
 @media (min-width: 33em) {
   .page-leaderboard .ranking .ranking-table-row {
     padding-top: 1.125em;
@@ -842,7 +849,10 @@ body {
 .page-leaderboard .ranking .ranking-table-row:nth-child(even) {
   background-color: #fafbfc;
 }
-
+.page-leaderboard .ranking .ranking-table-row:nth-child(even):hover{
+  cursor:pointer;
+  background-color: pink;
+}
 .page-leaderboard .ranking .ranking-table-row-leader-1,
 .page-leaderboard .ranking .ranking-table-row-leader-2,
 .page-leaderboard .ranking .ranking-table-row-leader-3 {
@@ -855,6 +865,29 @@ body {
   box-shadow: 0 0 0.75em 0 rgba(46, 60, 73, 0.12);
   border-radius: 0.375rem;
   margin-bottom: 1.25em;
+  transition: background-color 1s, font-weight 1s, font-size 1s;
+}
+
+.page-leaderboard .ranking .ranking-table-row-leader-1:hover{
+  background-color: gold;
+  height: 6vw;
+  font-size: large;
+  font-weight: 800;
+  cursor:pointer;
+}
+.page-leaderboard .ranking .ranking-table-row-leader-2:hover{
+  background-color: silver;
+  height: 6vw;
+  font-size: large;
+  font-weight: 800;
+  cursor:pointer;
+}
+.page-leaderboard .ranking .ranking-table-row-leader-3:hover{
+  background-color: goldenrod;
+  height: 6vw;
+  font-size: large;
+  font-weight: 800;
+  cursor:pointer;
 }
 
 @media (min-width: 33em) {
