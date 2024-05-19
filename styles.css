@@ -870,21 +870,21 @@ body {
 
 .page-leaderboard .ranking .ranking-table-row-leader-1:hover{
   background-color: gold;
-  height: 6vw;
+  height: 10%;
   font-size: large;
   font-weight: 800;
   cursor:pointer;
 }
 .page-leaderboard .ranking .ranking-table-row-leader-2:hover{
   background-color: silver;
-  height: 6vw;
+  height: 10%;
   font-size: large;
   font-weight: 800;
   cursor:pointer;
 }
 .page-leaderboard .ranking .ranking-table-row-leader-3:hover{
   background-color: goldenrod;
-  height: 6vw;
+  height: 10%;
   font-size: large;
   font-weight: 800;
   cursor:pointer;
@@ -976,7 +976,7 @@ body {
 }
 
 .page-leaderboard .ranking .ranking-table-row-leader-1 {
-  border: solid 0.125em #ecc81a;
+  border: solid 2px gold;
 }
 
 .page-leaderboard
@@ -990,7 +990,7 @@ body {
 }
 
 .page-leaderboard .ranking .ranking-table-row-leader-2 {
-  border: solid 0.125em #dbe2e8;
+  border: solid 2px silver;
 }
 
 .page-leaderboard
@@ -1004,7 +1004,7 @@ body {
 }
 
 .page-leaderboard .ranking .ranking-table-row-leader-3 {
-  border: solid 0.125em #dfdfd1;
+  border: solid 2px goldenrod;
 }
 
 .page-leaderboard
