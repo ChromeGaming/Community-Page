@@ -379,6 +379,10 @@ body {
   display: block;
   padding-left: 50px;
   margin-left: 100px;
+  height: 400px;
+  width: auto;
+  padding-left: 50px;
+  margin-left: 100px;
 }
 
 /* Styling for download button. */
@@ -1085,8 +1089,8 @@ body {
   position: absolute;
   /*top: calc(100% - 50vh);
   right: calc(100% - 30vw); */
-  top: calc(100% - 70vh);
-  right: calc(100% - 75vw);
+  bottom: 420px;
+  right: 175px;
   transform: translateX(50%);
   z-index: 2;
 }
@@ -1198,8 +1202,6 @@ body {
 @media (max-width: 768px) {
   .icons{
     position: absolute;
-     top: calc(100% - 60vh);
-  right: calc(100% - 65vw);
   }
 }
 
