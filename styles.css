@@ -1139,8 +1139,8 @@ body {
 	place-items: center;
 }
 
-.social:hover img {
-    transform: scale(1.10);
+.social li a {
+  transition: font-size 0.3s;
 }
 
 .active .social:nth-child(1) {
@@ -1149,11 +1149,7 @@ body {
 
 
 .active .social:nth-child(1) {
-	background: radial-gradient(
-        circle at 30% 107%, #fdf497 0%, 
-        #fdf497 5%, #fd5949 45%,
-        #d6249f 60%,#285AEB 90%
-    ); 
+	background: #7289da; 
 }
 
 .active .social:nth-child(2) {
@@ -1161,7 +1157,7 @@ body {
 }
 
 .active .social:nth-child(2){
-	background-color: #1D9BF0;
+	background-color: #3a76f0;
 }
 
 .active .social:nth-child(3) {
@@ -1177,5 +1173,5 @@ body {
 }
 
 .active .social:nth-child(4){
-	background-color: #007bff;
+	background-color: #ff4500;
 }
