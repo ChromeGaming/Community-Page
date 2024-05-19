@@ -277,11 +277,11 @@ body {
   right: 20px;
   bottom: 20px;
   z-index: 999;
-  width: 250px;
+  min-width: 30%;
   background-color: #292a2f;
   padding: 20px;
   transition: right 0.5s ease-in-out;
-  border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%;
+  border-radius: 10px;
 }
 
 .popup-content {
@@ -383,7 +383,7 @@ body {
   height: auto;
   display: block;
   padding-left: 50px;
-  margin-left: 100px;
+  margin-left: 70px;
   height: 400px;
   width: auto;
   padding-left: 50px;
