@@ -1,6 +1,10 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
+
+body{
+  padding: 16px !important;
+}
 .alert {
   opacity: 0;
   visibility: hidden;
@@ -157,7 +161,8 @@ a {
   left: 15px;
   top: 50%;
   left: 15px;
-  color: #000000;
+  /* color: #000000; */
+  color: white;
   transform: translateY(-50%);
 }
 
