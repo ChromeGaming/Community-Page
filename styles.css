@@ -1149,7 +1149,7 @@ body {
 
 
 .active .social:nth-child(1) {
-	background: #7289da; 
+	background: #7289da !important; 
 }
 
 .active .social:nth-child(2) {
@@ -1157,7 +1157,7 @@ body {
 }
 
 .active .social:nth-child(2){
-	background-color: #3a76f0;
+	background-color: #3a76f0 !important;
 }
 
 .active .social:nth-child(3) {
@@ -1165,7 +1165,7 @@ body {
 }
 
 .active .social:nth-child(3){
-	background: grey; 
+	background: grey !important; 
 }
 
 .active .social:nth-child(4) {
@@ -1173,5 +1173,38 @@ body {
 }
 
 .active .social:nth-child(4){
-	background-color: #ff4500;
+	background-color: #ff4500 !important;
+}
+
+.light-mode .social {
+	outline: 2px solid black;
+}
+
+.light-mode .share-button {
+	outline: 2px solid black;
+  color: black;
+}
+
+.light-mode .share-button svg path{
+  color: black; 
+  stroke: #000000;
+}
+.light-mode .share-button svg .box{
+  stroke: white;
+}
+
+@media (max-width: 768px) {
+  .icons{
+    position: absolute;
+     top: calc(100% - 60vh);
+  right: calc(100% - 65vw);
+  }
+}
+
+@media (max-width: 480px) {
+  .icons{
+    position: absolute;
+    top: calc(100% - 50vh);
+    right: calc(100% - 75vw);
+  }
 }
