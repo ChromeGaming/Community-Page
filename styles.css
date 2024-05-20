@@ -225,15 +225,16 @@ body {
 
 .light-mode {
   background-color: #ffffff;
-  color: #161618;
+  color: #000000;
 }
 .dark-mode {
   background-color: #161618;
-  color: white;
+  color: rgb(255, 255, 255);
+  
 }
 
 .dark-mode a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .dark-mode #theme-toggle {
   color: #ffffff;
@@ -241,6 +242,9 @@ body {
 .dark-mode nav {
   background-color: #252525;
 }
+/* .footer {
+  color: rgb(255, 255, 255);
+} */
 .toggle-container {
   display: flex;
   align-items: center;
@@ -443,6 +447,7 @@ body {
   font-weight: 400;
 }
 
+
 .footer-col .links {
   margin-top: 20px;
 }
@@ -452,20 +457,20 @@ body {
   margin-bottom: 10px;
 }
 
-.footer-col .links li a {
+/* .footer-col .links li a {
   text-decoration: none;
-  color: #bfbfbf;
-}
+  color: #ff0000ce;
+} */
 
 .footer-col .links li a:hover {
-  color: #fff;
+  color: #ffd105;
 }
 
-.footer-col p {
+/* .footer-col p {
   margin: 20px 0;
-  color: #bfbfbf;
+  color: #ff0000;
   max-width: 300px;
-}
+} */
 
 .footer-col form {
   display: flex;
@@ -478,7 +483,7 @@ body {
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #7489c6;
+  border: 1px solid #758fdd;
   caret-color: #fff;
   color: #fff;
   padding-left: 10px;
@@ -489,7 +494,7 @@ body {
 }
 
 .footer-col form button {
-  background: #fff;
+  background: #ffd105;
   outline: none;
   border: none;
   padding: 10px 15px;
