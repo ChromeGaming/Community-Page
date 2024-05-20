@@ -108,9 +108,13 @@ toggleButton.addEventListener("click", () => {
   if (body.classList.contains("light-mode")) {
     toggleButton.classList.remove("bi-toggle-off");
     toggleButton.classList.add("bi-toggle-on");
-  } else {
+    document.getElementById("menuBarsColor").style.color = "black";
+    document.querySelectorAll("a").forEach((link)=>link.style.color = "black");
+    } else {
     toggleButton.classList.remove("bi-toggle-on");
     toggleButton.classList.add("bi-toggle-off");
+    document.getElementById("menuBarsColor").style.color = "white";
+    document.querySelectorAll("a").forEach((link)=>link.style.color = "white");
   }
 });
 
