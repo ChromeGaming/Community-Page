@@ -55,6 +55,7 @@ body {
 }
 
 .nav {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -376,16 +377,16 @@ body {
 .image-div {
   position: relative;
   height: fit-content;
+  max-width: 80%;
 }
 
 .image-div img {
-  width: 100%;
+  max-width: 80%;
   height: auto;
   display: block;
   padding-left: 50px;
   margin-left: 70px;
   height: 400px;
-  width: auto;
   padding-left: 50px;
   margin-left: 100px;
 }
