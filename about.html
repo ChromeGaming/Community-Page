@@ -32,7 +32,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 200px;
+  padding: 10px 20px;
   background: #252525;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -59,6 +59,7 @@ a {
 .nav .logo {
   font-size: 28px;
   font-weight: 500;
+  /* padding-left: 2rem; */
 }
 /* Styling for the logo in the navigation bar. */
 
@@ -97,17 +98,17 @@ ul{
     <!-- Navigation section. -->
     <i class="uil uil-bars navOpenBtn"></i>
     <!-- Icon for opening navigation menu. -->
-    <a href="#" class="logo">Chrome Gaming</a>
+    <a class="logo"><img src="logo.png " style="height: 2.5rem; padding-top: 0.4rem;" alt=""></a>
     <!-- Logo of the website. -->
 
     <ul class="nav-links">
       <!-- Unordered list for navigation links. -->
       <i class="uil uil-times navCloseBtn"></i>
       <!-- Icon for closing navigation menu. -->
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="#">Play Games</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="#">Contribute</a></li>
     </ul>
 
@@ -116,8 +117,12 @@ ul{
     <div class="search-box">
       <i class="uil uil-search search-icon"></i>
       <!-- Icon for search functionality within the search box. -->
-      <input type="text" placeholder="Search here..." />
+      <input type="text" id="searchResult" placeholder="Search here..." />
       <!-- Input field for search functionality. -->
+      <div class="searching_results"></div>
+    </div>
+    <div class="toggle-container">
+      <i class="bi bi-toggle-off" id="theme-toggle"></i>
     </div>
   </nav>
 
