@@ -225,16 +225,15 @@ body {
 
 .light-mode {
   background-color: #ffffff;
-  color: #000000;
+  color: #161618;
 }
 .dark-mode {
   background-color: #161618;
-  color: rgb(255, 255, 255);
-  
+  color: white;
 }
 
 .dark-mode a {
-  color: rgb(255, 255, 255);
+  color: white;
 }
 .dark-mode #theme-toggle {
   color: #ffffff;
@@ -242,9 +241,6 @@ body {
 .dark-mode nav {
   background-color: #252525;
 }
-/* .footer {
-  color: rgb(255, 255, 255);
-} */
 .toggle-container {
   display: flex;
   align-items: center;
@@ -447,7 +443,6 @@ body {
   font-weight: 400;
 }
 
-
 .footer-col .links {
   margin-top: 20px;
 }
@@ -457,20 +452,20 @@ body {
   margin-bottom: 10px;
 }
 
-/* .footer-col .links li a {
+.footer-col .links li a {
   text-decoration: none;
-  color: #ff0000ce;
-} */
-
-.footer-col .links li a:hover {
-  color: #ffd105;
+  color: #bfbfbf;
 }
 
-/* .footer-col p {
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
   margin: 20px 0;
-  color: #ff0000;
+  color: #bfbfbf;
   max-width: 300px;
-} */
+}
 
 .footer-col form {
   display: flex;
@@ -483,7 +478,7 @@ body {
   background: none;
   width: 100%;
   outline: none;
-  border: 1px solid #758fdd;
+  border: 1px solid #7489c6;
   caret-color: #fff;
   color: #fff;
   padding-left: 10px;
@@ -494,7 +489,7 @@ body {
 }
 
 .footer-col form button {
-  background: #ffd105;
+  background: #fff;
   outline: none;
   border: none;
   padding: 10px 15px;
