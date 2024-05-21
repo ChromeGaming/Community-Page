@@ -1305,3 +1305,28 @@ h3 {
     right: calc(100% - 75vw);
   }
 }
+
+
+.logo_image{
+  margin-top: 50px;
+}
+
+.logo_head1{
+  color: #029FCb;
+  letter-spacing: 6px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.logo_head{
+  font-size: 60px; 
+  text-align: center;
+}
+
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
