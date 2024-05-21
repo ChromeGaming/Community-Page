@@ -1156,6 +1156,10 @@ h3 {
   background: linear-gradient(#743db8, #c535db);
   border-radius: 10px;
 }
+.nav .search-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #ffffff; /* Change to white */
 
 /* Toggle share button with media links*/
 .icons {
