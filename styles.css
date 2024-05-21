@@ -174,14 +174,17 @@ a {
   border: #0056b3;
   outline: none;
   border-radius: 6px;
-  background-color: gray;
+  background: #cecccc;
   padding: 0 15px 0 45px;
   border-bottom-left-radius: 0px;
-  color: rgb(255, 255, 255);
+  color: rgb(5, 5, 5);
+  caret-color: #000000;
 }
 
 .dark-mode .search-box input {
   background-color: #161618;
+  caret-color: #ffffff;
+  color: #ffffff;
 }
 
 /* Styling for input field within search box. */
@@ -189,7 +192,7 @@ a {
 /* searching Results */
 .nav.openSearch .searching_results {
   position: absolute;
-  width: 25rem;
+  width: 100%;
   height: 20rem;
   background-color: white;
   margin: auto;
@@ -208,10 +211,12 @@ a {
 .nav.openSearch .searching_results div {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 0.5rem;
   border-bottom: 0.1rem solid;
   align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .nav .navOpenBtn,
@@ -513,8 +518,10 @@ h3 {
   padding-left: 10px;
 }
 
+
 .footer-col input::placeholder {
   color: #ccc;
+  cursor: default;
 }
 
 .footer-col form button {
@@ -527,6 +534,7 @@ h3 {
   font-weight: 500;
   transition: 0.2s ease;
 }
+
 
 .footer-col form button:hover {
   background: #cecccc;

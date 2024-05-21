@@ -66,18 +66,23 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
+    console.log(result)
     resultContainer.innerHTML = "";
-
-    result.forEach((item, index) => {
-      const div = document.createElement("div");
-      const p = document.createElement("p");
-      const span = document.createElement("span");
-      p.textContent = item.name;
-      span.textContent = item.place;
-      div.appendChild(p);
-      div.appendChild(span);
-      resultContainer.appendChild(div);
-    });
+    if (result.length !== 0){
+      result.forEach((item, index) => {
+        const div = document.createElement("div");
+        const p = document.createElement("p");
+        const span = document.createElement("span");
+        p.textContent = item.name;
+        span.textContent = item.place;
+        div.appendChild(p);
+        div.appendChild(span);
+        resultContainer.appendChild(div);
+      });
+    }
+    else{
+      resultContainer.style.display = "none";
+    }
   }
 });
 
