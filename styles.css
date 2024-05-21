@@ -268,6 +268,16 @@ body {
   margin-right: auto;
 }
 
+
+.container {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+ }
+ 
+
+
 /* Styling for Discord button container. */
 .discord-button-container {
   position: fixed;
@@ -464,6 +474,8 @@ h3 {
   color: #029fcb;
 }
 /* Styling for footer. */
+
+
 .footer .footer-row {
   display: flex;
   flex-wrap: wrap;
