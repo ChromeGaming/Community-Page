@@ -66,18 +66,23 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
+    console.log(result)
     resultContainer.innerHTML = "";
-
-    result.forEach((item, index) => {
-      const div = document.createElement("div");
-      const p = document.createElement("p");
-      const span = document.createElement("span");
-      p.textContent = item.name;
-      span.textContent = item.place;
-      div.appendChild(p);
-      div.appendChild(span);
-      resultContainer.appendChild(div);
-    });
+    if (result.length !== 0){
+      result.forEach((item, index) => {
+        const div = document.createElement("div");
+        const p = document.createElement("p");
+        const span = document.createElement("span");
+        p.textContent = item.name;
+        span.textContent = item.place;
+        div.appendChild(p);
+        div.appendChild(span);
+        resultContainer.appendChild(div);
+      });
+    }
+    else{
+      resultContainer.style.display = "none";
+    }
   }
 });
 
@@ -108,9 +113,13 @@ toggleButton.addEventListener("click", () => {
   if (body.classList.contains("light-mode")) {
     toggleButton.classList.remove("bi-toggle-off");
     toggleButton.classList.add("bi-toggle-on");
-  } else {
+    document.getElementById("menuBarsColor").style.color = "black";
+    document.querySelectorAll("a").forEach((link)=>link.style.color = "black");
+    } else {
     toggleButton.classList.remove("bi-toggle-on");
     toggleButton.classList.add("bi-toggle-off");
+    document.getElementById("menuBarsColor").style.color = "white";
+    document.querySelectorAll("a").forEach((link)=>link.style.color = "white");
   }
 });
 
@@ -185,6 +194,7 @@ subscriptionForm.addEventListener("submit", function (event) {
   } else {
     success();
   }
+
 });
 // start
 // Get the button:
@@ -206,3 +216,4 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0; 
 }
+
