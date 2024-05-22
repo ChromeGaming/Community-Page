@@ -33,8 +33,47 @@
     <!-- Link to the Unicons CSS file. -->
     <script src="script.js" defer></script>
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
+    <!-- Preloader Style-->
+    <style>
+      .preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  transition: opacity 5s, visibility 5s;
+  z-index: 1000;
+}
+.preloader--hidden{
+  opacity: 0;
+  visibility: hidden;
+}
+.preloader img{
+  height: 200px;
+  width: 200px;
+  border-radius: 1000px;
+}
+    </style>
   </head>
   <body class="page-leaderboard">
+    <div class="preloader">
+      <img class="center" src="Fauget.gif" alt="" />
+    </div>
+    <script>
+      window.addEventListener("load", () => {
+const loader = document.querySelector(".preloader");
+
+loader.classList.add("preloader--hidden");
+
+loader.addEventListener("transitionend", () => {
+document.body.removeChild(loader);
+});
+});
+    </script>
     <!-- Body of the webpage. Background color set inline. -->
     <nav class="nav">
       <!-- Navigation section. -->
