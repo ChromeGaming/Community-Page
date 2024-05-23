@@ -1330,3 +1330,129 @@ h3 {
   font-weight: 400;
   font-style: normal;
 }
+
+/* .line{
+  padding: 80px 0;
+  background-color: rgb(49, 50, 54);
+  height: 800px;
+  display: flex;
+  flex-direction: row;
+  padding-left: 180px;
+} */
+.line_main{
+  /* width: 1050px; */
+  margin: 0 50px;
+  margin-bottom: 50px;
+  /* margin-right: 170px; */
+  /* background-color: red; */
+}
+.line1{
+  /* color: white; */
+  font-size: 35px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  /* margin: 0 50px */
+}
+.line2{
+  width: 200px;
+  /* margin: 0 50px */
+}
+.line3{
+  /* color: white; */
+  padding-top: 20px;
+  font-size: 20px;
+  /* margin: 0 50px */
+}
+.line4{
+  display: flex;
+  flex-direction: row;
+}
+.line41{
+  width: 150px;
+  /* background-color: yellow; */
+  height: 500px;
+  margin-top: 60px;
+  text-align: right;
+  /* color: rgb(185,185,185); */
+}
+
+.timeline{
+  position: relative;
+  margin-top: 60px;
+  /* color: white; */
+  padding-top: 1px;
+  padding-bottom: 40px;
+  /* background-color: red; */
+}
+.timeline::after{
+  content: '';
+  position: absolute;
+  width: 1.5px;
+  background-color: yellow;
+  top: 0;
+  bottom: 0;
+  left: 5.5%;
+}
+.container1 {
+  margin-top: 40px;
+  padding: 0 40px;
+  position: relative;
+  width: 550px;
+  font-size: 17px;
+}
+
+.container1::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 39.6%;
+  background-color: yellow;
+  border: 2px solid yellow;
+  top: 0;
+  border-radius: 50%;
+}
+
+.right {
+  left: 7.5%;
+}
+
+.right::after {
+  left: -16px;
+}
+.image_part{
+  margin: 50px 0 0 150px;
+}
+.image_part img{
+  height: 270px;
+  padding-top: 30px;
+  width: 470px;
+}
+/* .line_pic{
+  width: 330px;
+} */
+.line_img{
+  width: 100%;
+  height: auto;
+}
+@media (max-width:1300px){
+  .image_part{
+    display: none;
+  }
+  .container1{
+    width: auto;
+  }
+  .right{
+    left: 6.5%;
+  }
+}
+@media (max-width: 800px){
+  .right{
+    left: 7.0%;
+  }
+}
+@media (max-width: 600px){
+  .right{
+    left: 8.7%;
+  }
+}
