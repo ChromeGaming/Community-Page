@@ -1,0 +1,24 @@
+name: "Issue Auto Labeler"
+
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+
+steps:
+  -name: Get Token
+  id: get_workflow_token
+  uses: peter-murray/workflow-application-token-action@v1
+  with:
+    application_id: ${{ secrets.AUTOMATOR_APP_ID }}
+    application_private_key: ${{ secrets.AUTOMATOR_PRIVATE_KEY }} I
+    -name: Label Issue
+    uses: github/issue-labeler@v2.0
+    with:
+      repo-token: "${{ steps.get_workflow_token.outputs.token }}"
+      configuration-path: .github/labeler.yml
+
+enable-versioned-regex: 0
