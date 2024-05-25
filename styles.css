@@ -61,6 +61,11 @@ body {
   padding: 10px 20px;
   background-color: #ffffff;
   box-shadow: 0 4px 10px rgba(19, 18, 18, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
 }
 
 /* navigation bar font size transition styling*/
