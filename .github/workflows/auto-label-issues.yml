@@ -1,0 +1,24 @@
+name: Auto Label GSSoC Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Add GSSoC Label
+        uses: actions/github-script@v3
+        with:
+          script: |
+            github.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['gssoc']
+            });
