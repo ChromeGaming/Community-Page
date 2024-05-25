@@ -1,5 +1,5 @@
 name: 🪲 Bug Report 
-description: Report your bug by filling teh information given below
+description: Report your bug by filling the information given below
 title: "[Bug]: "
 
 body:
@@ -12,7 +12,7 @@ body:
     attributes:
       label: Give a brief about the bug ✍️
       description: Enter a brief description about the bug report
-      placeholder: Please include a summary, also include relevant motivation and context. 
+      placeholder: Please include a summary, also include relevant motivation and context.
       value: "Description"
     validations:
       required: true
@@ -21,16 +21,16 @@ body:
     attributes:
       label: What is the expected behavior? 🤔
       description: Enter the expected behavior of bug
-      placeholder: Please include a summary, also include relevant motivation and context. 
+      placeholder: Please include a summary, also include relevant motivation and context.
       value: "Description"
     validations:
       required: true
   - type: textarea
     id: instructions
     attributes:
-      label: Provide step by step information reproduce the bug 📄
-      description: Enter the description on how you plan to find the bug's solution
-      placeholder: Please include a summary, also include relevant motivation and context. 
+      label: Provide step by step information to reproduce the bug 📄
+      description: Enter the description on how to reproduce the bug
+      placeholder: Please include a summary, also include relevant motivation and context.
       value: "Description"
     validations:
       required: true
@@ -48,5 +48,5 @@ body:
       label: Code of Conduct
       description: By submitting this issue, you agree to follow our [CODE OF CONDUCT](https://github.com/GameSphere-MultiPlayer/Community-Page/blob/main/.github/CODE_OF_CONDUCT.md)
       options:
-        - label: I follow [CONTRIBUTING GUIDELINE]() of this project.
+        - label: I follow the [CONTRIBUTING GUIDELINE](https://github.com/GameSphere-MultiPlayer/Community-Page/blob/main/.github/CONTRIBUTING_GUIDELINE.md) of this project.
           required: true
