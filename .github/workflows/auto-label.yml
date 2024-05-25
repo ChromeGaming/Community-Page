@@ -22,5 +22,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issue.number,
-              labels: labelsToAdd
+              labels: gssoc
             });
