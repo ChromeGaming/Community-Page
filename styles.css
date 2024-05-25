@@ -1330,3 +1330,296 @@ h3 {
   font-weight: 400;
   font-style: normal;
 }
+
+/* styling for product.html page */
+    
+/* 
+      .float-container
+      {
+        border: 2px solid black;
+        width: 50%;
+        height: 400px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+ .game_div
+{
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  flex-wrap: nowrap; */ 
+  
+  /* white-space: pre-line; */
+
+
+    /* justify-content: start;
+  animation: example;
+  animation-duration: 2s;
+  animation-iteration-count:infinite;
+} 
+
+.float-child{
+  width: 80px;
+  border-radius: 75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(0.28, -0.03, 0, .99);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.float-child > .game_div 
+{
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+@keyframes example {
+  from{box-shadow: 5px 5px 10px black;  }
+  to{box-shadow: 5px 5px 10px rgba(35, 236, 13, 0.505);}
+}
+
+
+/* Product page  */
+
+/* THE MAINCONTAINER HOLDS EVERYTHING */
+/* .maincontainer{
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  background: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+} */
+
+/* THE CARD HOLDS THE FRONT AND BACK FACES */
+/* .thecard{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+} */
+
+/* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+/* .thecard:hover{
+  transform: rotateY(180deg);
+} */
+
+/* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+ /* .thefront{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #ffc728;
+  color: #000;
+} */
+
+/* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+/* .theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: #fafafa;
+  color: #333;
+  text-align: center;
+  transform: rotateY(180deg);
+} */
+
+
+/*This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+/* .thefront h1, .theback h1{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.thefront p, .theback p{
+  font-family: 'zilla slab', sans-serif;
+  padding: 30px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+} */
+
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #161618;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #161618;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.image {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.text {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.float-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.float-child {
+  flex: 1;
+  margin: 10px;
+  min-width: 300px;
+}
+
+.game_div {
+  
+  height: 100%;
+  background-color: #161618;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(185, 183, 183, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game_div p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game_div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px #D22CEB;
+}
+
+.game-title {
+  color: green;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.game-description {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.text button{
+  border-radius: 10px;
+  padding: 13px;
+  margin: 10px;
+}
+
+
+#gameButton2{
+  margin-top: 82px ! important;
+}
+
+.play-button,
+.contribute-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  /* border: 2px solid #D22CEB; */
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  
+}
+
+.play-button {
+  background-color: white;
+  color: black;
+}
+
+#gameButton{
+  margin-top: 57px;
+}
+
+#gameButton2{
+  margin-top: 104px;
+}
+
+.game_div button:hover {
+  cursor: pointer;
+  background-color: #d3ccd4;
+  color: black;
+  transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.contribute-button {
+  background-color: white;
+  color: black;
+  /* border: 3px solid rgb(150, 160, 150); */
+}
+
+/* .contribute-button:hover {
+  background-color: green;
+  color: white;
+} */
+
+/* light mode game content color */
+.light-mode p{
+  color: rgb(247, 241, 247);
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
