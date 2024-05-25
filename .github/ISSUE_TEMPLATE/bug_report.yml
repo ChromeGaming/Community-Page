@@ -1,6 +1,7 @@
 name: 🪲 Bug Report 
 description: Report your bug by filling the information given below
 title: "[Bug]: "
+Labels: "[gssoc]"
 
 body:
   - type: markdown
