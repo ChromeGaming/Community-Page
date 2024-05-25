@@ -1,3 +1,7 @@
+name: 🪲 Bug Report 
+description: Report your bug by filling the information given below
+title: "[Bug]: "
+
 body:
   - type: markdown
     attributes:
@@ -16,7 +20,7 @@ body:
     id: behaviors
     attributes:
       label: What is the expected behavior? 🤔
-      description: Enter the expected behavior of bug
+      description: Enter the expected behavior of the bug
       placeholder: Please include a summary, also include relevant motivation and context. 
       value: "Description"
     validations:
@@ -24,8 +28,8 @@ body:
   - type: textarea
     id: instructions
     attributes:
-      label: Provide step by step information reproduce the bug 📄
-      description: Enter the description on how you plan to find the bug's solution
+      label: Provide step by step information to reproduce the bug 📄
+      description: Enter the description of how you plan to find the bug's solution
       placeholder: Please include a summary, also include relevant motivation and context. 
       value: "Description"
     validations:
