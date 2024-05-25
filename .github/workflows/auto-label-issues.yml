@@ -1,25 +1,32 @@
-name: Auto Label GSSoC Issues
+name: Auto-label on Bug Report
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  labeler:
+  auto-label:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Check if issue is a Bug Report
+        run: |
+          IS_BUG_REPORT=$(jq -r '.issue.body | contains("bug-description")' $GITHUB_EVENT_PATH)
+          if [ "$IS_BUG_REPORT" = true ]; then
+            echo "::set-output name=is_bug_report::true"
+          else
+            echo "::set-output name=is_bug_report::false"
+          fi
 
-      - name: Add GSSoC Label
-        uses: actions/github-script@v3
+      - name: Add labels if issue is a Bug Report
+        if: ${{ steps.auto-label.outputs.is_bug_report == 'true' }}
+        uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            github.issues.addLabels({
+            const labelsToAdd = ["GSSoC", "Bug"];
+            await github.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              labels: ['gssoc']
+              labels: labelsToAdd
             });
