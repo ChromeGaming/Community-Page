@@ -1,7 +1,3 @@
-name: 🪲 Bug Report 
-description: Report your bug by filling teh information given below
-title: "[Bug]: "
-
 body:
   - type: markdown
     attributes:
@@ -50,3 +46,10 @@ body:
       options:
         - label: I follow [CONTRIBUTING GUIDELINE]() of this project.
           required: true
+  - type: checkboxes
+    id: labels
+    attributes:
+      label: Labels
+      options:
+        - label: GSSoC
+        - label: Bug
