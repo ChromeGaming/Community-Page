@@ -1,7 +1,6 @@
 name: 🪲 Bug Report 
 description: Report your bug by filling the information given below
 title: "[Bug]: "
-Labels: "[gssoc]"
 
 body:
   - type: markdown
@@ -51,4 +50,12 @@ body:
       options:
         - label: I follow [CONTRIBUTING GUIDELINE]() of this project.
           required: true
-
+  - type: checkboxes
+    id: labels
+    attributes:
+      label: Labels
+      options:
+        - label: GSSoC
+          default: true
+        - label: Bug
+          default: true
