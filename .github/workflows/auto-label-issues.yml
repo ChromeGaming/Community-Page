@@ -15,6 +15,7 @@ jobs:
       - name: Add GSSoC Label
         uses: actions/github-script@v3
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             github.issues.addLabels({
               owner: context.repo.owner,
