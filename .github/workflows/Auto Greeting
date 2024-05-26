@@ -3,27 +3,11 @@ name: Auto Greeting
 on:
   issues:
     types: [opened]
-  pull_request:
-    types: [opened]
 
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if issue or PR is opened by a contributor
-        id: check-contributor
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const response = await github.request('GET /repos/{owner}/{repo}/collaborators/{username}', {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              username: context.payload.issue.user.login
-            });
-            return response.status === 204;
-      
       - name: Greet Contributor
-        if: steps.check-contributor.outputs.result == 'true'
         run: |
-          echo "Hi there, Thanks for opening this issue or pull request! We'll get back to you as soon as possible."
+          echo "Hi there! Thanks for opening this issue. We appreciate your contribution and will look into it as soon as possible."
