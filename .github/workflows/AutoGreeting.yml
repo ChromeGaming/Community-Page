@@ -16,7 +16,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issueComment = context.issue.number ? `Hi @${context.payload.issue.user.login},\n\nThanks for opening this issue! We appreciate your contribution and will get back to you as soon as possible.` : `Hi @${context.payload.pull_request.user.login},\n\nThanks for opening this pull request! We appreciate your contribution and will get back to you as soon as possible.`;
+            const issueComment = context.issue.number ? `Hey @${commentAuthor} ! \n Thanks for opening this issue. We appreciate your contribution and will look into it as soon as possible.  \n Don’t Forget to star our [Community Page](https://github.com/GameSphere-MultiPlayer/Community-Page)\n Make sure you join our [Discord](https://discord.gg/rZb46cCMmK), we have created separate channals for all projects...`;
             await github.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
