@@ -1,4 +1,4 @@
-name: Auto-label on Bug Report
+name: Auto-label on Any Issue
 
 on:
   issues:
@@ -8,22 +8,12 @@ jobs:
   auto-label:
     runs-on: ubuntu-latest
     steps:
-      - name: Check if issue is a Bug Report
-        run: |
-          IS_BUG_REPORT=$(jq -r '.issue.body | contains("bug-description")' $GITHUB_EVENT_PATH)
-          if [ "$IS_BUG_REPORT" = true ]; then
-            echo "::set-output name=is_bug_report::true"
-          else
-            echo "::set-output name=is_bug_report::false"
-          fi
-
-      - name: Add labels if issue is a Bug Report
-        if: ${{ steps.auto-label.outputs.is_bug_report == 'true' }}
+      - name: Add labels to any new issue
         uses: actions/github-script@v4
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const labelsToAdd = ["GSSoC", "Bug"];
+            const labelsToAdd = ["gssoc"];
             await github.issues.addLabels({
               owner: context.repo.owner,
               repo: context.repo.repo,
