@@ -235,7 +235,7 @@ body {
 
 .light-mode {
   background-color: #ffffff;
-  color: #161618;
+  color: black;
 }
 .dark-mode {
   background-color: #161618;
@@ -1456,4 +1456,8 @@ h3 {
     z-index: 1;
     width: 50%;
   }
+}
+
+.discord-link{
+  color: black;
 }
