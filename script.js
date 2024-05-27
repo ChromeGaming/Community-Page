@@ -76,7 +76,7 @@ async function getContributors(repoName, page = 1) {
   var data = []
   var size = contributorsList.length
   for (var i = 0; i < size; i++) {
-    data.push({ place: i + 1, name: (contributorsList[i].login==undefined)? contributorsList[i].name : contributorsList[i].login});
+    data.push({ place: i + 1, name: (contributorsList[i].login == undefined) ? contributorsList[i].name : contributorsList[i].login });
   }
   console.log(data)
 
@@ -187,8 +187,10 @@ searchResult.addEventListener("input", () => {
   }
 });
 
-const toggleButton = document.getElementById("theme-toggle");
+
 const body = document.body;
+
+const toggleButton = document.getElementById("theme-toggle");
 
 searchIcon.addEventListener("click", () => {
   nav.classList.toggle("openSearch");
@@ -205,9 +207,18 @@ searchIcon.addEventListener("click", () => {
 // page start with dark mode
 
 body.classList.add("dark-mode");
+const theme = localStorage.getItem("theme");
+if (theme === "light") {
+  switchTheme();
+  body.classList.remove("dark-mode");
+}
 // Toggle between "toggle off and toggle on"//
-
 toggleButton.addEventListener("click", () => {
+  switchTheme();
+});
+
+
+function switchTheme() {
   body.classList.toggle("dark-mode");
   body.classList.toggle("light-mode");
 
@@ -222,7 +233,14 @@ toggleButton.addEventListener("click", () => {
     document.getElementById("menuBarsColor").style.color = "white";
     document.querySelectorAll("a").forEach((link) => link.style.color = "white");
   }
-});
+
+  // saving the theme preference for the user in local storage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+}
 
 navOpenBtn.addEventListener("click", () => {
   nav.classList.add("openNav");
