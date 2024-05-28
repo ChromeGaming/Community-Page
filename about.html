@@ -25,6 +25,9 @@
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nova+Cut&family=Press+Start+2P&family=Protest+Guerrilla&family=Sixtyfour&family=Stalinist+One&family=Turret+Road:wght@200;300;400;500;700;800&family=VT323&family=Wallpoet&display=swap" rel="stylesheet">
     <!-- Link to the fontawesome icons file. -->
     <link
       rel="stylesheet"
@@ -34,6 +37,14 @@
     <!-- Link to the Unicons CSS file. -->
     <script src="script.js" defer></script>
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
+    <style>
+        /* Your existing CSS styles */
+
+        /* Additional CSS for changing the color of footer headings */
+        .footer h4 {
+        color: #ffd700; /* Change this to your desired color */
+         }
+    </style>
   </head>
   <body class="page-leaderboard">
     <!-- Body of the webpage. Background color set inline. -->
@@ -114,9 +125,14 @@
     </div>
 
     <div class="container">
-      <div class="image">
-        <img class="left" src="Fauget.gif" alt="" />
-
+      <div class="image1">
+          <div class="logo_image">
+            <!-- Section for displaying images. -->
+            <img class="center" src="logo.gif" alt="" height="250px"/>
+            <!-- Image element with source set to a GIF file. -->
+          </div>
+          <div class="logo_head press-start-2p-regular">CHROME</div>
+          <div class="logo_head1">GAMING</div>
       </div>
       <div class="text">
         <h1 style="color: brown;text-align: center;">About Us</h1>
@@ -208,7 +224,7 @@
           <!-- Heading for info section. -->
           <ul class="links">
             <!-- Unordered list for links. -->
-            <li><a href="#">About Us</a></li>
+            <li><a href="about.html">About Us</a></li>
             <li><a href="#">Compressions</a></li>
             <li><a href="#">Customers</a></li>
             <li><a href="#">Service</a></li>
@@ -247,7 +263,7 @@
           <!-- Fourth column within the footer. -->
           <h4>Newsletter</h4>
           <!-- Heading for newsletter section. -->
-          <p>
+          <p style="color: #6cb2eb;">
             Subscribe to our newsletter for a weekly dose of news, updates,
             helpful tips, and exclusive offers.
           </p>

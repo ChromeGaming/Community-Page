@@ -19,6 +19,9 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nova+Cut&family=Press+Start+2P&family=Protest+Guerrilla&family=Sixtyfour&family=Stalinist+One&family=Turret+Road:wght@200;300;400;500;700;800&family=VT323&family=Wallpoet&display=swap" rel="stylesheet">
     <!-- Link to Google Fonts for custom font styles. -->
     <link
       rel="stylesheet"
@@ -29,7 +32,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-
+    <link href="/styles.css" rel="stylesheet">
     <!-- Link to the Unicons CSS file. -->
     <script src="script.js" defer></script>
     <!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
@@ -38,20 +41,25 @@
     <!-- Body of the webpage. Background color set inline. -->
     <nav class="nav">
       <!-- Navigation section. -->
-      <i class="uil uil-bars navOpenBtn"></i>
+      <i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
       <!-- Icon for opening navigation menu. -->
-      <a class="logo">Chrome Gaming</a>
+      <a href="index.html" class="logo">Chrome Gaming</a>
       <!-- Logo of the website. -->
+      <br>
 
       <ul class="nav-links">
         <!-- Unordered list for navigation links. -->
         <i class="uil uil-times navCloseBtn"></i>
         <!-- Icon for closing navigation menu. -->
+
+
         <li><a href="index.html">Home</a></li>
         <li><a href="play.html">Play Games</a></li>
         <li><a href="product.html">Products</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="contribute.html">Contribute</a></li>
+
+
       </ul>
 
       <i class="uil uil-search search-icon" id="searchIcon"></i>
@@ -59,7 +67,7 @@
       <div class="search-box">
         <i class="uil uil-search search-icon"></i>
         <!-- Icon for search functionality within the search box. -->
-        <input type="text" id="searchResult" placeholder="Search here..." />
+        <input type="search" id="searchResult" placeholder="Search here..." />
         <!-- Input field for search functionality. -->
         <div class="searching_results"></div>
       </div>
@@ -111,26 +119,32 @@
     </div>
 
     <div class="container">
-      <div class="image">
-        <img class="left" src="Fauget.gif" alt="" />
-      </div>
+      <div class="image1">
+          <div class="logo_image">
+            <!-- Section for displaying images. -->
+            <img class="center" src="logo.gif" alt="" height="250px"/>
+            <!-- Image element with source set to a GIF file. -->
+          </div>
+          <div class="logo_head press-start-2p-regular">CHROME</div>
+          <div class="logo_head1">GAMING</div>
+      </div>      
 
       <div class="text">
         <h1>Our Products</h1>
         <h3>Dot-Box</h3>
         <p>Dot-Box is a game where players take turns drawing lines between dots to create boxes. The player who completes the most boxes wins. It's a simple yet strategic game enjoyed by people of all ages</p>
         <br>
-        <a href="https://gamesphere-multiplayer.github.io/Dot-Box/"><button style="background-color: transparent; color: white;" > Click here to play</button> </a>
+        <a href="https://gamesphere-multiplayer.github.io/Dot-Box/"><button  > Click here to play</button> </a>
         <br>
         <br>
-        <a href="https://github.com/GameSphere-MultiPlayer/Dot-Box"><button style="background-color: transparent; color: white;">Click here to contribute to this game</button></a>
+        <a href="https://github.com/GameSphere-MultiPlayer/Dot-Box"><button >Click here to contribute to this game</button></a>
         <br>
         <br>
         <h3>Car-Racing</h3>
         <p>This is a car racing game made using C# </p>
        
         <br>
-        <a href="https://github.com/Durgesh4993/carracing.github.io"><button style="background-color: transparent; color: white;">Click here to contribute to this game</button></a>
+        <a href="https://github.com/Durgesh4993/carracing.github.io"><button >Click here to contribute to this game</button></a>
       </div>
       
     
