@@ -503,6 +503,10 @@ h3 {
   font-weight: 400;
 }
 
+.footer-row .footer-col h4:hover{
+  cursor: pointer;
+}
+
 .footer-col .links {
   margin-top: 20px;
 }
@@ -516,9 +520,22 @@ h3 {
   text-decoration: none;
   color: #bfbfbf;
 }
+.footer-col .links li a::after{
+  content: '';
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: white;
+  transition: width 0.3s;
+}
+.footer-col .links li a:hover::after{
+  width: 100%;
+}
 
 .footer-col .links li a:hover {
   color: #fff;
+  transition: ease-in 0.5 all;
 }
 
 .footer-col p {
@@ -1228,6 +1245,11 @@ h3 {
 .share-button:hover {
   background-color: var(#00c896);
   transform: scale(1.03);
+  background-color: white;
+}
+
+.share-button:hover #share-icon{
+  filter: invert(100%);
 }
 
 .social {
