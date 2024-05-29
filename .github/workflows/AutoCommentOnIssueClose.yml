@@ -1,0 +1,20 @@
+name: Auto Comment on Issue Close
+
+on:
+  issues:
+    types: [closed]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Post comment on issue close
+        uses: peter-evans/issue-comment@v2
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            Thank you for your contribution! This issue has been closed. If you have any further questions or need assistance, please feel free to open a new issue.
