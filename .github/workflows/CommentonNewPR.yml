@@ -1,4 +1,4 @@
-name: PR Commenter
+name: PR Auto Commenter
 
 on:
   pull_request:
@@ -9,38 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Add PR Comment
-      uses: actions/github-script@v6
+    - name: Add a comment to the PR
+      uses: actions-ecosystem/action-add-comment@v1
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        script: |
-          const issue_number = context.issue.number;
-          const comment = `
-          ### Automated PR Review
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        issue_number: ${{ github.event.pull_request.number }}
+        body: |
+          Thank you for your PR! Please ensure the following before we proceed:
+          - [ ] All tests are passing
+          - [ ] Code follows the project's style guidelines
+          - [ ] Documentation has been updated if necessary
+          - [ ] Changes are properly commented
 
-          Hello @${{ github.actor }},
-
-          Thank you for your contribution! 🎉 Your pull request has been received and is under review. Here are a few preliminary checks and next steps:
-
-          #### Preliminary Checks:
-          - [x] PR title and description are clear and concise.
-          - [x] All necessary labels have been applied.
-          - [x] Associated issue number (if any) is mentioned.
-          - [x] CI/CD checks are passing.
-
-          #### Next Steps:
-          1. **Code Review:** Your changes will be reviewed by the maintainers. They might request modifications or additional information.
-          2. **Testing:** Ensure all tests pass and consider adding new tests if necessary.
-          3. **Documentation:** Verify that any relevant documentation is updated.
-
-          Thank you for your contribution! We look forward to reviewing your PR. 😊
-          `;
-
-          github.rest.issues.createComment({
-            ...context.repo,
-            issue_number,
-            body: comment
-          });
+          We appreciate your contribution!
