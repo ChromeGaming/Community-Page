@@ -18,6 +18,26 @@
   <img src="https://img.shields.io/github/contributors/GameSphere-MultiPlayer/Community-Page?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/GameSphere-MultiPlayer/Community-Page?style=for-the-badge" />
   </div>
+
+   # How to initialise the Project in your local environment
+
+  1. Fork the repo
+  2. Clone it using ``git clone <url>`` command
+  3. Open the terminal and nagivate to the ``server`` folder using
+     ```
+     cd server
+     ```
+  4. Install the dependencies
+     ```
+     npm install
+     ```
+  5. Run the server at ``localhost:3000``
+     ```
+     nodemon index.js
+     ```
+
+     ### If Nodemon is not installed , run 
+          npm install nodemon -g
      
   # How to make a PR in a Project 🟢
 
