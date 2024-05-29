@@ -98,6 +98,13 @@ body {
   font-weight: bold;
 }
 
+#active-page{
+  color: #bb18bb;
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 /* Navigation bar styling. */
 .nav-links {
   list-style-type: none;
