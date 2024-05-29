@@ -1,5 +1,4 @@
-name: PR Auto Commenter
-
+name: PR Comment
 on:
   pull_request:
     types: [opened]
@@ -7,18 +6,25 @@ on:
 jobs:
   comment:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Add a comment to the PR
-      uses: actions-ecosystem/action-add-comment@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        issue_number: ${{ github.event.pull_request.number }}
-        body: |
-          Thank you for your PR! Please ensure the following before we proceed:
-          - [ ] All tests are passing
-          - [ ] Code follows the project's style guidelines
-          - [ ] Documentation has been updated if necessary
-          - [ ] Changes are properly commented
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-          We appreciate your contribution!
+      - name: Comment on PR
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { github, context } = require('@actions/github');
+
+            const prNumber = context.payload.pull_request.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const message = 'Thanks for opening this pull request! We will review it soon.';
+
+            github.rest.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
+              body: message
+            });
