@@ -1,4 +1,4 @@
-name: Comment on New Pull Request
+name: PR Commenter
 
 on:
   pull_request:
@@ -9,26 +9,38 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Comment on New Pull Request
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const response = await github.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: `
-              👋 Hi there! Welcome to our repository! Thank you for your pull request. We appreciate your contribution.
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-              If you have any questions or need assistance, feel free to reach out to us on our Discord server: [Discord](https://discord.gg/rZb46cCMmK). We have created separate channels for all projects.
+    - name: Add PR Comment
+      uses: actions/github-script@v6
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const issue_number = context.issue.number;
+          const comment = `
+          ### Automated PR Review
 
-              Connect with us on social media:
-              - **GitHub**: [GameSphere-MultiPlayer](https://github.com/GameSphere-MultiPlayer)
-              - **LinkedIn**: [ChromeGaming](https://www.linkedin.com/company/chromegaming)
-              - **Instagram**: [@chromegamingon](https://www.instagram.com/chromegamingon/)
+          Hello @${{ github.actor }},
 
-              Happy coding! 🚀
-              `
-            });
-            console.log(response);
+          Thank you for your contribution! 🎉 Your pull request has been received and is under review. Here are a few preliminary checks and next steps:
+
+          #### Preliminary Checks:
+          - [x] PR title and description are clear and concise.
+          - [x] All necessary labels have been applied.
+          - [x] Associated issue number (if any) is mentioned.
+          - [x] CI/CD checks are passing.
+
+          #### Next Steps:
+          1. **Code Review:** Your changes will be reviewed by the maintainers. They might request modifications or additional information.
+          2. **Testing:** Ensure all tests pass and consider adding new tests if necessary.
+          3. **Documentation:** Verify that any relevant documentation is updated.
+
+          Thank you for your contribution! We look forward to reviewing your PR. 😊
+          `;
+
+          github.rest.issues.createComment({
+            ...context.repo,
+            issue_number,
+            body: comment
+          });
