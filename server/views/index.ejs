@@ -7,9 +7,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Chrome Gaming | Home</title>
 		<!-- link for favicon -->
-		<link rel="icon" href="/public/images/logo.PNG" />
+		<link rel="icon" href="/images/logo.PNG" />
 		<!-- Title of the webpage displayed on the browser tab. -->
-		<link rel="stylesheet" href="/public/css/styles.css" />
+		<link rel="stylesheet" href="/css/styles.css" />
 		<!-- Link to an external CSS file for styling. -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,7 +34,7 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
 		<!-- Link to the Unicons CSS file. -->
-		<script src="/public/js/script.js" defer></script>
+		<script src="/js/script.js" defer></script>
 		<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
 		<!-- Preloader Style-->
 		<style>
@@ -65,7 +65,7 @@
 	</head>
 	<body class="page-leaderboard">
 		<div class="preloader">
-			<img class="center" src="/public/images/logo.PNG" alt="" />
+			<img class="center" src="/images/logo.PNG" alt="" />
 		</div>
 		<script>
 			window.addEventListener("load", () => {
@@ -83,7 +83,7 @@
 			<!-- Navigation section. -->
 			<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
 			<!-- Icon for opening navigation menu. -->
-			<a href="/public/index.html" class="logo">Chrome Gaming</a>
+			<a href="./index.ejs" class="logo">Chrome Gaming</a>
 			<!-- Logo of the website. -->
 			<br />
 
@@ -92,11 +92,11 @@
 				<i class="uil uil-times navCloseBtn"></i>
 				<!-- Icon for closing navigation menu. -->
 
-				<li><a href="/public/index.html">Home</a></li>
-				<li><a href="/public/play.html">Play Games</a></li>
-				<li><a href="/public/products.html">Products</a></li>
-				<li><a href="/public/about.html">About Us</a></li>
-				<li><a href="/public/contribute.html">Contribute</a></li>
+				<li><a href="/index">Home</a></li>
+				<li><a href="/play">Play Games</a></li>
+				<li><a href="/products">Products</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contribute">Contribute</a></li>
 			</ul>
 
 			<i class="uil uil-search search-icon" id="searchIcon"></i>
@@ -116,11 +116,7 @@
 		<section class="image">
 			<div class="logo_image">
 				<!-- Section for displaying images. -->
-				<img
-					class="center"
-					src="/public/images/logo.gif"
-					alt=""
-					height="250px" />
+				<img class="center" src="/images/logo.gif" alt="" height="250px" />
 				<!-- Image element with source set to a GIF file. -->
 			</div>
 			<div class="logo_head press-start-2p-regular">CHROME</div>
@@ -182,7 +178,7 @@
 			<!-- Container for content. -->
 			<div class="image-div">
 				<!-- Division for images. -->
-				<img src="/public/images/BANNER.png" alt="Game Upload" />
+				<img src="/images/BANNER.png" alt="Game Upload" />
 				<!-- Image element for uploading a game banner. -->
 				<button
 					id="rotate"
@@ -647,11 +643,11 @@
 					<!-- Heading for info section. -->
 					<ul class="links">
 						<!-- Unordered list for links. -->
-						<li><a href="/public/index.html">Home</a></li>
-						<li><a href="/public/play.html">Play Games</a></li>
-						<li><a href="/public/product.html">Products</a></li>
-						<li><a href="/public/about.html">About Us</a></li>
-						<li><a href="/public/contribute.html">Contribute</a></li>
+						<li><a href="./index.ejs">Home</a></li>
+						<li><a href="./play.ejs">Play Games</a></li>
+						<li><a href="./product.ejs">Products</a></li>
+						<li><a href="./about.ejs">About Us</a></li>
+						<li><a href="./contribute.ejs">Contribute</a></li>
 					</ul>
 				</div>
 				<div class="footer-col">
@@ -812,7 +808,7 @@
 				socialsWrapper.classList.toggle("active");
 
 				if (shareButtonImage.src.includes("share")) {
-					shareButtonImage.src = "/public/images/close.svg";
+					shareButtonImage.src = "/images/close.svg";
 				} else {
 					shareButtonImage.src = "assets/share.svg";
 				}
