@@ -15,14 +15,14 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const { github, context } = require('@actions/github');
+            const { context } = require('@actions/github');
 
             const prNumber = context.payload.pull_request.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const message = 'Thanks for opening this pull request! We will review it soon.';
 
-            github.rest.issues.createComment({
+            context.github.rest.issues.createComment({
               owner: owner,
               repo: repo,
               issue_number: prNumber,
