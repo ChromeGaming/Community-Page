@@ -120,13 +120,19 @@ h1 p {
 a {
   color: #161618;
   text-decoration: none;
+  font-size: 20px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 450;
+  font-style: normal;
 }
 
 /* Styling anchor tags. */
 
 .nav .logo {
-  font-size: 28px;
+  font-size: 30px;
+  font-family: "Silkscreen", sans-serif;
   font-weight: 500;
+  font-style: normal;
 }
 
 /* Styling for the logo in the navigation bar. */
@@ -501,6 +507,7 @@ h3 {
 .footer-row .footer-col h4 {
   font-size: 1.2rem;
   font-weight: 400;
+  font-family: "Silkscreen", sans-serif;
 }
 
 .footer-col .links {
