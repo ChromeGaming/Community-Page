@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Comment on Closed Pull Request
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
@@ -19,7 +19,7 @@ jobs:
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
               body: `
-              Thank you for your contribution! The pull request has been closed. 
+              Thank you for your contribution! The pull request has been closed.
 
               If you have any questions or need further assistance, feel free to reach out to us on our Discord server: [Discord](https://discord.gg/rZb46cCMmK). We have created separate channels for all projects.
 
