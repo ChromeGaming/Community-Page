@@ -1,4 +1,4 @@
-name: Auto Comment on Issue Close
+name: Comment on Issue Close
 
 on:
   issues:
@@ -9,12 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Post comment on issue close
-        uses: peter-evans/issue-comment@v2
+      - name: Comment on Closed Issue
+        uses: actions/github-script@v3
         with:
-          issue-number: ${{ github.event.issue.number }}
-          body: |
-            Thank you for your contribution! This issue has been closed. If you have any further questions or need assistance, please feel free to open a new issue.
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const response = await github.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: 'Thank you for your contribution! If you have any questions or need further assistance, feel free to reach out to us on our Discord server: [Discord](https://discord.gg/rZb46cCMmK). We have separate channels for all projects. Happy coding! 🚀'
+            });
+            console.log(response);
