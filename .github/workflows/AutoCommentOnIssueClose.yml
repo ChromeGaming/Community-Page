@@ -10,14 +10,18 @@ jobs:
 
     steps:
       - name: Comment on Closed Issue
-        uses: actions/github-script@v3
+        uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const response = await github.issues.createComment({
+            const { context, getOctokit } = require('@actions/github');
+            const octokit = getOctokit(process.env.GITHUB_TOKEN);
+
+            const response = await octokit.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
               body: 'Thank you for your contribution! If you have any questions or need further assistance, feel free to reach out to us on our Discord server: [Discord](https://discord.gg/rZb46cCMmK). We have separate channels for all projects. Happy coding! 🚀 \n\n Don't forget to connect with us for open source updates\n ✔️[LinkedIn](https://www.linkedin.com/company/chromegaming) \n ✔️[GitHub](https://github.com/GameSphere-MultiPlayer) \n ✔️[Instagram](https://www.instagram.com/chromegamingon/) '
             });
+
             console.log(response);
