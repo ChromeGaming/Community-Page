@@ -5,6 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Chrome Gaming | Contribute</title>
+		<!-- link for favicon -->
+		<link rel="icon" href="/images/logo.PNG" />
 		<!-- Title of the webpage displayed on the browser tab. -->
 		<link rel="stylesheet" href="/css/styles.css" />
 		<!-- Link to an external CSS file for styling. -->
@@ -30,6 +32,7 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
+
 		<!-- Link to the Unicons CSS file. -->
 		<script src="/js/script.js" defer></script>
 		<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
@@ -38,15 +41,17 @@
 		<!-- Body of the webpage. Background color set inline. -->
 		<nav class="nav">
 			<!-- Navigation section. -->
-			<i class="uil uil-bars navOpenBtn"></i>
+			<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
 			<!-- Icon for opening navigation menu. -->
-			<a class="logo">Chrome Gaming</a>
+			<a href="/" class="logo">Chrome Gaming</a>
 			<!-- Logo of the website. -->
+			<br />
 
 			<ul class="nav-links">
 				<!-- Unordered list for navigation links. -->
 				<i class="uil uil-times navCloseBtn"></i>
 				<!-- Icon for closing navigation menu. -->
+
 				<li><a href="/">Home</a></li>
 				<li><a href="/play">Play Games</a></li>
 				<li><a href="/products">Products</a></li>
@@ -59,7 +64,7 @@
 			<div class="search-box">
 				<i class="uil uil-search search-icon"></i>
 				<!-- Icon for search functionality within the search box. -->
-				<input type="text" id="searchResult" placeholder="Search here..." />
+				<input type="search" id="searchResult" placeholder="Search here..." />
 				<!-- Input field for search functionality. -->
 				<div class="searching_results"></div>
 			</div>
@@ -67,12 +72,7 @@
 				<i class="bi bi-toggle-off" id="theme-toggle"></i>
 			</div>
 		</nav>
-
-		<!-- <section class="image" ">  -->
-		<!-- Section for displaying images. -->
-		<!-- <img class="center" src="Fauget.gif" alt="" />  -->
-		<!-- Image element with source set to a GIF file. -->
-		<!-- </section>  -->
+	
 
 		<div class="social-icons">
 			<!-- Section for social media icons. -->
