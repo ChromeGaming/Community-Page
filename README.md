@@ -92,3 +92,21 @@ ________________________________________________________________________________
 8. Once you're satisfied with your pull request, click the "Create pull request" button to submit it.
 
 **Note:** In order to create a pull request, you must have a fork of the original repository in your GitHub account and you must have made the changes in that forked repository.
+
+<br>
+<br>
+<div>
+<h2><font size="6"><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Red%20Heart.png" alt="Red Heart" width="40" height="40" /> Contributors </font></h2>
+</div>
+<br>
+
+- This project thanking all the contributors for having your valuable contribution to our project
+- Make sure you show some love by giving ⭐ to our repository
+
+<br>
+
+<center>
+<a href="https://github.com/ChromeGaming/Community-Page/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ChromeGaming/Community-Page" />
+</a>
+</center>
