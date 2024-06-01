@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
 
+html {
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 16px !important;
 }
@@ -629,10 +634,6 @@ h3 {
   .text-div h2:nth-child(1) {
     text-align: center;
   }
-  .image {
-    display: none;
-  }
-
   .nav .navOpenBtn,
   .nav .navCloseBtn {
     display: block;
@@ -699,6 +700,17 @@ h3 {
   }
   #menuBarsColor {
     font-size: 25px;
+  }
+  .social-icons {
+    display: none;
+  }
+  .small-screen-social {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 527px) {
