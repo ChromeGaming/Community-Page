@@ -60,7 +60,7 @@
 				height: 200px;
 				width: 200px;
 				border-radius: 1000px;
-			}
+			}			
 		</style>
 	</head>
 	<body class="page-leaderboard">
@@ -150,27 +150,14 @@
 		</section>
 
 		<div class="social-icons">
-			<a
-				href="https://www.youtube.com/@ChromeGamingOn"
-				target="_blank"
-				class="social-icon youtube"></a>
-			<a
-				href="https://www.linkedin.com/company/chromegaming"
-				target="_blank"
-				class="social-icon linkedin"></a>
-			<a
-				href="https://www.facebook.com/profile.php?id=61558763492008"
-				target="_blank"
-				class="social-icon facebook"></a>
-			<a
-				href="https://twitter.com"
-				target="_blank"
-				class="social-icon twitter"></a>
-			<a
-				href="https://www.instagram.com/chromegamingon/"
-				target="_blank"
-				class="social-icon instagram"></a>
+			<button class="toggler"><img src="/images/social1.webp" alt="" ></button>
+			<a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
+			<a href="https://www.linkedin.com/company/chromegaming" target="_blank" class="social-icon linkedin"></a>
+			<a href="https://www.facebook.com/profile.php?id=61558763492008" target="_blank" class="social-icon facebook"></a>
+			<a href="https://twitter.com" target="_blank" class="social-icon twitter"></a>
+			<a href="https://www.instagram.com/chromegamingon/" target="_blank" class="social-icon instagram"></a>
 		</div>
+		
 
 		<!--<div class="alan-btn"></div>-->
 
@@ -801,21 +788,13 @@
 		</footer>
 		<!--Share Button-->
 		<script>
-			const shareButton = document.querySelector(".share-button");
-			const toggleSocials = () => {
-				const socialsWrapper = document.querySelector(".icons");
-				const shareButtonImage = shareButton.querySelector("img");
+		
+			
+  document.querySelector('.toggler').addEventListener('click', function() {
+    document.querySelector('.social-icons').classList.toggle('show-icons');
+  });
 
-				socialsWrapper.classList.toggle("active");
 
-				if (shareButtonImage.src.includes("share")) {
-					shareButtonImage.src = "/images/close.svg";
-				} else {
-					shareButtonImage.src = "assets/share.svg";
-				}
-			};
-
-			shareButton.addEventListener("click", toggleSocials);
 		</script>
 	</body>
 </html>
