@@ -1,6 +1,7 @@
 /* Google Fonts - Poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 /* Importing Google Fonts - Poppins with different font weights. */
+@import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
 body {
   padding: 16px !important;
@@ -135,8 +136,10 @@ a {
 /* Styling anchor tags. */
 
 .nav .logo {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 30px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Styling for the logo in the navigation bar. */
@@ -150,6 +153,10 @@ a {
 
 .nav .nav-links a {
   transition: all 0.2s linear;
+  font-size: 20px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Transition effect for navigation links. */
