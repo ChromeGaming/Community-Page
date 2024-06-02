@@ -412,6 +412,10 @@ body {
   transition: transform 0.2s ease;
 }
 
+.small-screen-social {
+  display: none;
+}
+
 /* Individual social media icons styling. */
 .youtube {
   background-image: url("https://cdn-icons-png.flaticon.com/128/3670/3670147.png");
@@ -750,8 +754,7 @@ h3 {
 
   .small-screen-social {
     display: flex;
-    position: absolute;
-    bottom: 0;
+    margin-top: 30px;
     gap: 10px;
     align-items: center;
     justify-content: center;
