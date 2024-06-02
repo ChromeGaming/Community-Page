@@ -1,56 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Chrome Gaming | about</title>
-		<!-- Title of the webpage displayed on the browser tab. -->
-		<link rel="stylesheet" href="/css/styles.css" />
-		<!-- Link to an external CSS file for styling. -->
 
-		<!-- Unicons CSS -->
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-		<!-- Link to the Bootstrap icons CSS file. -->
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-			rel="stylesheet" />
-		<!-- Link to Google Fonts for custom font styles. -->
-		<link
-			rel="stylesheet"
-			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nova+Cut&family=Press+Start+2P&family=Protest+Guerrilla&family=Sixtyfour&family=Stalinist+One&family=Turret+Road:wght@200;300;400;500;700;800&family=VT323&family=Wallpoet&display=swap"
-			rel="stylesheet" />
-		<!-- Link to the fontawesome icons file. -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Chrome Gaming | about</title>
+	<!-- Title of the webpage displayed on the browser tab. -->
 
-		<!-- Link to the Unicons CSS file. -->
-		<script src="/js/script.js" defer></script>
-		<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
-		<style>
-			/* Your existing CSS styles */
+	<!-- Link for favicon -->
+	<link rel="icon" href="/images/logo.PNG" />
+	<!-- Title of the webpage displayed on the browser tab. -->
+	<link rel="stylesheet" href="/css/styles.css" />
+	<!-- Link to an external CSS file for styling. -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nova+Cut&family=Press+Start+2P&family=Protest+Guerrilla&family=Sixtyfour&family=Stalinist+One&family=Turret+Road:wght@200;300;400;500;700;800&family=VT323&family=Wallpoet&display=swap"
+		rel="stylesheet" />
+	<!-- Unicons CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<!-- Link to the Bootstrap icons CSS file. -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+		rel="stylesheet" />
+	<!-- Link to Google Fonts for custom font styles. -->
+	<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+	<!-- Link to the fontawesome icons file. -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+	<!-- Link to the Unicons CSS file. -->
+	<script src="/js/script.js" defer></script>
+	<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
+	
+</head>
 
-			/* Additional CSS for changing the color of footer headings */
-			.footer h4 {
-				color: #ffd700; /* Change this to your desired color */
-			}
-		</style>
-	</head>
-	<body class="page-leaderboard">
-		<!-- Body of the webpage. Background color set inline. -->
-		<nav class="nav">
-			<!-- Navigation section. -->
-			<i class="uil uil-bars navOpenBtn"></i>
-			<!-- Icon for opening navigation menu. -->
-			<a class="logo">Chrome Gaming</a>
-			<!-- Logo of the website. -->
+<body class="page-leaderboard">
+	<!-- Body of the webpage. Background color set inline. -->
+	<nav class="nav">
+		<!-- Navigation section. -->
+		<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
+		<!-- Icon for opening navigation menu. -->
+		<a href="/" class="logo">Chrome Gaming</a>
+		<!-- Logo of the website. -->
+		<br />
 
 			<ul class="nav-links">
 				<!-- Unordered list for navigation links. -->
@@ -86,155 +78,132 @@
 					</div>
 				</li>
 			</ul>
+		<ul class="nav-links">
+			<!-- Unordered list for navigation links. -->
+			<i class="uil uil-times navCloseBtn"></i>
+			<!-- Icon for closing navigation menu. -->
 
-			<i class="uil uil-search search-icon" id="searchIcon"></i>
-			<!-- Icon for search functionality. -->
-			<div class="search-box">
-				<i class="uil uil-search search-icon"></i>
-				<!-- Icon for search functionality within the search box. -->
-				<input type="text" id="searchResult" placeholder="Search here..." />
-				<!-- Input field for search functionality. -->
-				<div class="searching_results"></div>
-			</div>
-			<div class="toggle-container">
-				<i class="bi bi-toggle-off" id="theme-toggle"></i>
-			</div>
-		</nav>
-		<!-- <section class="image" "> -->
-		<!-- Section for displaying images. -->
-		<!-- <img class="left" src="Fauget.gif" alt="" /> -->
-		<!-- Image element with source set to a GIF file. -->
-		<!-- </section> -->
+			<li><a href="/">Home</a></li>
+			<li><a href="/play">Play Games</a></li>
+			<li><a href="/products">Products</a></li>
+			<li><a href="/about">About Us</a></li>
+			<li><a href="/contribute">Contribute</a></li>
+		</ul>
 
-		<div class="social-icons">
-			<!-- Section for social media icons. -->
-			<a
-				href="https://www.youtube.com/@ChromeGamingOn"
-				target="_blank"
-				class="social-icon youtube"></a>
-			<!-- YouTube icon link. -->
-			<a
-				href="https://www.linkedin.com/company/chromegaming"
-				target="_blank"
-				class="social-icon linkedin"></a>
-			<!-- LinkedIn icon link. -->
-			<a
-				href="https://www.facebook.com/profile.php?id=61558763492008"
-				target="_blank"
-				class="social-icon facebook"></a>
-			<!-- Facebook icon link. -->
-			<a
-				href="https://twitter.com"
-				target="_blank"
-				class="social-icon twitter"></a>
-			<!-- Twitter icon link. -->
-			<a
-				href="https://www.instagram.com/chromegamingon/"
-				target="_blank"
-				class="social-icon instagram"></a>
-			<!-- Instagram icon link. -->
-			<!-- Add more social media icons as needed -->
+		<i class="uil uil-search search-icon" id="searchIcon"></i>
+		<!-- Icon for search functionality. -->
+		<div class="search-box">
+			<i class="uil uil-search search-icon"></i>
+			<!-- Icon for search functionality within the search box. -->
+			<input type="search" id="searchResult" placeholder="Search here..." />
+			<!-- Input field for search functionality. -->
+			<div class="searching_results"></div>
 		</div>
-
-		<div class="container">
-			<div class="image1">
-				<div class="logo_image">
-					<!-- Section for displaying images. -->
-					<img class="center" src="/images/logo.gif" alt="" height="250px" />
-					<!-- Image element with source set to a GIF file. -->
-				</div>
-				<div class="logo_head press-start-2p-regular">CHROME</div>
-				<div class="logo_head1">GAMING</div>
-			</div>
-			<div class="text">
-				<h1 style="color: brown; text-align: center">About Us</h1>
-				<p
-					>Chrome gaming community page is an online space within the Chrome
-					browser where gamers connect, discuss games, share content, get
-					updates, troubleshoot issues, join events and interact with
-					developers. It's a hub for all things gaming-related in the Chrome
-					ecosystem.</p
-				>
-			</div>
+		<div class="toggle-container">
+			<i class="bi bi-toggle-off" id="theme-toggle"></i>
 		</div>
+	</nav>
 
-		<br />
-		<br />
+	<div class="social-icons">
+		<!-- Section for social media icons. -->
+		<a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
+		<!-- YouTube icon link. -->
+		<a href="https://www.linkedin.com/company/chromegaming" target="_blank" class="social-icon linkedin"></a>
+		<!-- LinkedIn icon link. -->
+		<a href="https://www.facebook.com/profile.php?id=61558763492008" target="_blank"
+			class="social-icon facebook"></a>
+		<!-- Facebook icon link. -->
+		<a href="https://twitter.com" target="_blank" class="social-icon twitter"></a>
+		<!-- Twitter icon link. -->
+		<a href="https://www.instagram.com/chromegamingon/" target="_blank" class="social-icon instagram"></a>
+		<!-- Instagram icon link. -->
+		<!-- Add more social media icons as needed -->
+	</div>
 
-		<!-- <div class="line"> -->
-		<div class="line_main">
-			<div class="line1">OUR HISTORY</div>
-			<hr class="line2" />
-			<div class="line3" style="color: rgb(185, 185, 185)"
-				>Since our establishment, we have been working to bring our customers
-				the unique a comfortable website to place bids and win great products.
-				Here is how we became the most successful bidding website on the
-				Web.</div
-			>
-			<div class="line4">
-				<!-- <div class="line41">
+	<div class="container">
+		<div class="image1">
+			<div class="logo_image">
+				<!-- Section for displaying images. -->
+				<img class="center" src="/images/logo.gif" alt="" height="250px" />
+				<!-- Image element with source set to a GIF file. -->
+			</div>
+			<div class="logo_head press-start-2p-regular">CHROME</div>
+			<div class="logo_head1">GAMING</div>
+		</div>
+		<div class="text">
+			<h1 style="color: brown; text-align: center">About Us</h1>
+			<p>Chrome gaming community page is an online space within the Chrome
+				browser where gamers connect, discuss games, share content, get
+				updates, troubleshoot issues, join events and interact with
+				developers. It's a hub for all things gaming-related in the Chrome
+				ecosystem.</p>
+		</div>
+	</div>
+
+	<br />
+	<br />
+
+	<!-- <div class="line"> -->
+	<div class="line_main">
+		<div class="line1">OUR HISTORY</div>
+		<hr class="line2" />
+		<div class="line3">Since our establishment, we have been working to bring our
+			customers
+			the unique a comfortable website to place bids and win great products.
+			Here is how we became the most successful bidding website on the
+			Web.</div>
+		<div class="line4">
+			<!-- <div class="line41">
                   <div style="padding-top: 35px;">April, 2016</div>
                   <div style="padding-top: 175px;">September, 2016</div>
                   <div style="padding-top: 120px;">March, 2017</div>
               </div> -->
-				<div class="timeline">
-					<div class="container1 right">
-						<h1>April, 2016</h1>
-						<p style="font-weight: bold; padding-bottom: 5px"
-							>Our history begins back in 2006, when the first auction was held
-							at our office in LA.</p
-						>
-						<p style="color: rgb(185, 185, 185)"
-							>Online Auction was founded in 2006, and has since been in
-							continuous operation in its current location. In the early years,
-							we offered two auctions each week, and we specialised in art and
-							household auctions.</p
-						>
-					</div>
-					<div class="container1 right">
-						<h1>September, 2016</h1>
-						<p style="font-weight: bold; padding-bottom: 5px"
-							>Continuous innovation and transformation
-						</p>
-						<p style="color: rgb(185, 185, 185)"
-							>Continuous innovation and rapid transformation have been themes
-							throughout our history, which the company traces to 2006 with the
-							website development and providing quality online auctions.</p
-						>
-					</div>
-					<div class="container1 right">
-						<h1>March, 2017</h1>
-						<p style="font-weight: bold; padding-bottom: 5px"
-							>Further development</p
-						>
-						<p style="color: rgb(185, 185, 185)"
-							>Our company has expanded the range of online bidding services
-							provided to our registered and new users, and today everyone who
-							has access to the Internet can place a bid and win a desired
-							product.</p
-						>
-					</div>
+			<div class="timeline">
+				<div class="container1 right">
+					<h1>April, 2016</h1>
+					<p style="font-weight: bold; padding-bottom: 5px">Our history begins back in 2006, when the first
+						auction was held
+						at our office in LA.</p>
+					<p >Online Auction was founded in 2006, and has since been in
+						continuous operation in its current location. In the early years,
+						we offered two auctions each week, and we specialised in art and
+						household auctions.</p>
 				</div>
-				<div class="image_part">
-					<div
-						><img
-							src="https://th.bing.com/th/id/OIP.kcKIOvqiVCMz3yw5GRaJ3AHaEK?w=296&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
-					/></div>
-					<div
-						><img
-							src="https://media.wired.com/photos/61f48f02d0e55ccbebd52d15/3:2/w_1280%2Cc_limit/Gear-Rant-Game-Family-Plans-1334436001.jpg"
-					/></div>
+				<div class="container1 right">
+					<h1>September, 2016</h1>
+					<p style="font-weight: bold; padding-bottom: 5px">Continuous innovation and transformation
+					</p>
+					<p >Continuous innovation and rapid transformation have been themes
+						throughout our history, which the company traces to 2006 with the
+						website development and providing quality online auctions.</p>
+				</div>
+				<div class="container1 right">
+					<h1>March, 2017</h1>
+					<p style="font-weight: bold; padding-bottom: 5px">Further development</p>
+					<p >Our company has expanded the range of online bidding services
+						provided to our registered and new users, and today everyone who
+						has access to the Internet can place a bid and win a desired
+						product.</p>
+				</div>
+			</div>
+			<div class="image_part">
+				<div><img
+						src="https://th.bing.com/th/id/OIP.kcKIOvqiVCMz3yw5GRaJ3AHaEK?w=296&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" />
+				</div>
+				<div><img
+						src="https://media.wired.com/photos/61f48f02d0e55ccbebd52d15/3:2/w_1280%2Cc_limit/Gear-Rant-Game-Family-Plans-1334436001.jpg" />
 				</div>
 			</div>
 		</div>
-		<!-- <div class="line_pic">
+	</div>
+	<!-- <div class="line_pic">
           <div><img src="../images/images/line1.png"></div>
           <div><img src="../images/images/line2.png" style="padding-top: 20px;"></div>
           <div><img src="../images/images/line3.png" style="padding-top: 20px;"></div>
       </div> -->
-		<!-- </div> -->
+	<!-- </div> -->
 
-		<!--<script type="text/javascript"src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+	<!--<script type="text/javascript"src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
   <script>
     var alanBtnInstance = alanBtn({
       key: "23334858fc187b6a3fada2071473cfe92e956eca572e1d8b807a3e2338fdd0dc/stage",
@@ -248,102 +217,97 @@
   </script>
   </script>-->
 
-		<hr />
-		<!-- Horizontal line separator. -->
-		<section class="footer">
-			<!-- Footer section. -->
-			<div class="footer-row">
-				<!-- Row within the footer. -->
-				<div class="footer-col">
-					<!-- Column within the footer. -->
-					<h4>Info</h4>
-					<!-- Heading for info section. -->
-					<ul class="links">
-						<!-- Unordered list for links. -->
-						<li><a href="/about">About Us</a></li>
-						<li><a href="#">Compressions</a></li>
-						<li><a href="#">Customers</a></li>
-						<li><a href="#">Service</a></li>
-						<li><a href="#">Collection</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<!-- Second column within the footer. -->
-					<h4>Explore</h4>
-					<!-- Heading for explore section. -->
-					<ul class="links">
-						<!-- Unordered list for links. -->
-						<li><a href="#">Free Designs</a></li>
-						<li><a href="#">Latest Designs</a></li>
-						<li><a href="#">Themes</a></li>
-						<li><a href="#">Popular Designs</a></li>
-						<li><a href="#">Art Skills</a></li>
-						<li><a href="#">New Uploads</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<!-- Third column within the footer. -->
-					<h4>Legal</h4>
-					<!-- Heading for legal section. -->
-					<ul class="links">
-						<!-- Unordered list for links. -->
-						<li><a href="#">Customer Agreement</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">GDPR</a></li>
-						<li><a href="#">Security</a></li>
-						<li><a href="#">Testimonials</a></li>
-						<li><a href="#">Media Kit</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<!-- Fourth column within the footer. -->
-					<h4>Newsletter</h4>
-					<!-- Heading for newsletter section. -->
-					<p style="color: #6cb2eb">
-						Subscribe to our newsletter for a weekly dose of news, updates,
-						helpful tips, and exclusive offers.
-					</p>
-					<!-- Text for newsletter subscription. -->
-					<form id="subscriptionForm" action="#">
-						<input
-							id="emailInput"
-							type="email"
-							placeholder="Your email"
-							required
-							pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
-						<button id="submitButton" type="submit">SUBSCRIBE</button>
-					</form>
+	<hr />
+	<!-- Horizontal line separator. -->
+	<section class="footer">
+		<!-- Footer section. -->
+		<div class="footer-row">
+			<!-- Row within the footer. -->
+			<div class="footer-col">
+				<!-- Column within the footer. -->
+				<h4>Info</h4>
+				<!-- Heading for info section. -->
+				<ul class="links">
+					<!-- Unordered list for links. -->
+					<li><a href="/about">About Us</a></li>
+					<li><a href="#">Compressions</a></li>
+					<li><a href="#">Customers</a></li>
+					<li><a href="#">Service</a></li>
+					<li><a href="#">Collection</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<!-- Second column within the footer. -->
+				<h4>Explore</h4>
+				<!-- Heading for explore section. -->
+				<ul class="links">
+					<!-- Unordered list for links. -->
+					<li><a href="#">Free Designs</a></li>
+					<li><a href="#">Latest Designs</a></li>
+					<li><a href="#">Themes</a></li>
+					<li><a href="#">Popular Designs</a></li>
+					<li><a href="#">Art Skills</a></li>
+					<li><a href="#">New Uploads</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<!-- Third column within the footer. -->
+				<h4>Legal</h4>
+				<!-- Heading for legal section. -->
+				<ul class="links">
+					<!-- Unordered list for links. -->
+					<li><a href="#">Customer Agreement</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">GDPR</a></li>
+					<li><a href="#">Security</a></li>
+					<li><a href="#">Testimonials</a></li>
+					<li><a href="#">Media Kit</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<!-- Fourth column within the footer. -->
+				<h4>Newsletter</h4>
+				<!-- Heading for newsletter section. -->
+				<p >
+					Subscribe to our newsletter for a weekly dose of news, updates,
+					helpful tips, and exclusive offers.
+				</p>
+				<!-- Text for newsletter subscription. -->
+				<form id="subscriptionForm" action="#">
+					<input id="emailInput" type="email" placeholder="Your email" required
+						pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
+					<button id="submitButton" type="submit">SUBSCRIBE</button>
+				</form>
 
-					<div id="customAlert" class="alert">
-						<span id="alertText"></span>
-						<button id="closeAlert">&times;</button>
-					</div>
+				<div id="customAlert" class="alert">
+					<span id="alertText"></span>
+					<button id="closeAlert">&times;</button>
+				</div>
 
-					<div class="icons">
-						<!-- Icons section. -->
-						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-						<!-- Facebook icon. -->
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<!-- Twitter icon. -->
-						<a href="#"><i class="fa-brands fa-linkedin"></i></a>
-						<!-- LinkedIn icon. -->
-						<a href="#"><i class="fa-brands fa-github"></i></a>
-						<!-- GitHub icon. -->
-					</div>
+				<div class="icons">
+					<!-- Icons section. -->
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<!-- Facebook icon. -->
+					<a href="#"><i class="fa-brands fa-twitter"></i></a>
+					<!-- Twitter icon. -->
+					<a href="#"><i class="fa-brands fa-linkedin"></i></a>
+					<!-- LinkedIn icon. -->
+					<a href="#"><i class="fa-brands fa-github"></i></a>
+					<!-- GitHub icon. -->
 				</div>
 			</div>
-		</section>
-		<footer
-			class="footer-text"
-			style="
+		</div>
+	</section>
+	<footer class="footer-text" style="
 				text-align: center;
 				color: rgba(0, 131, 245, 0.769);
 				margin-bottom: 10px;
 				font-size: 12px;
 			">
-			<!-- Footer section. -->
-			&copy; 2024-All rights reserved.<br />
-			Made with ❤️ of <b>Chrome Gaming</b>
-		</footer>
-	</body>
+		<!-- Footer section. -->
+		&copy; 2024-All rights reserved.<br />
+		Made with ❤️ of <b>Chrome Gaming</b>
+	</footer>
+</body>
+
 </html>
