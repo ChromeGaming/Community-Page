@@ -377,7 +377,7 @@ body {
   height: 40px;
   margin-bottom: 10px;
   background-size: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.4s ease; /* Slower transition duration */
 }
 
 /* Individual social media icons styling. */
@@ -401,9 +401,87 @@ body {
   background-image: url("https://cdn-icons-png.flaticon.com/128/3955/3955024.png");
 }
 
+/* Toggler button styles */
+.toggler {
+  display: block;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  background-color: #0056b3;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  transition: transform 0.4s ease, background 0.4s ease; /* Slower transition duration */
+  border-radius: 15px;
+}
+
+/* Hide social icons initially */
+.social-icons .social-icon {
+  display: none;
+  transform: translateX(-100%);
+  transition: transform 0.7s ease; /* Slower transition duration */
+}
+
+/* Show social icons when toggled */
+.social-icons.show-icons .social-icon {
+  display: block;
+  transform: translateX(0);
+}
+.social-icons.show-icons .social-icon:hover {
+  transform: scale(1.4);
+}
+
+/* Optional: Adjust position of toggler */
+.toggler {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icons.show-icons .toggler {
+  transform: translateY(-50%) translateX(50px);
+}
+
+.toggler img {
+  padding: 5px;
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+}
+
+.toggler:hover {
+  background: linear-gradient(135deg, rgb(64, 176, 228), rgb(87, 43, 190), rgb(223, 8, 212));
+}
+
 .social-icon:hover {
   transform: scale(1.4);
 }
+
+.social-icons.show-icons .social-icon:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.social-icons.show-icons .social-icon:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.social-icons.show-icons .social-icon:nth-child(4) {
+  transition-delay: 0.3s;
+}
+
+.social-icons.show-icons .social-icon:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.social-icons.show-icons .social-icon:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
 /* Styling for rotate button. */
 #rotate {
   vertical-align: top;
