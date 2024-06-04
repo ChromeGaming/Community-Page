@@ -303,10 +303,14 @@ body {
 }
 
 .container {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 5px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* column-gap: 5px; */
+  /* background-color: blue; */
+  margin: 100px 0;
 }
 
 /* Styling for Discord button container. */
@@ -452,6 +456,10 @@ body {
   background-color: #0056b3;
 }
 
+.image1{
+    margin: 0 50px;
+    padding: 0 100px;
+  }
 /* Styling for text div. */
 .text-div {
   flex: 1;
@@ -467,6 +475,10 @@ body {
 .text-div p {
   font-size: 16px;
   line-height: 1.6;
+}
+.text{
+    padding: 50px;
+    padding-top: 180px;
 }
 
 .card {
@@ -1465,6 +1477,9 @@ h3 {
   .right {
     left: 6.5%;
   }
+  .about{
+    margin: 90px 5%;
+}
 }
 @media (max-width: 800px) {
   .right {
@@ -1492,7 +1507,67 @@ h3 {
     margin-left: 1rem;
   }
 }
+.about {
+    margin:170px 10%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
 
+.about1 {
+    margin-left: 110px;
+}
+
+.about1 img {
+    width: 600px;
+    height: 500px;
+  }
+
+.about11 {
+    font-size: 18px;
+    padding-bottom: 15px;
+    /* font-weight: 1500; */
+}
+
+.about12, .line2 {
+    height: 3px;
+    border-radius: 50px;
+    width: 100px;
+    background-color: rgb(255, 0, 72);
+    border: none;
+}
+
+.about13 {
+    padding-top: 20px;
+    font-size: 20px;
+}
+.about23{
+    width: 500px;
+}
+.about14 {
+    margin-top: 25px;
+    width: 250px;
+    height: 40px;
+    background-color: rgb(219, 55, 101);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    cursor: pointer;
+}
+@media (max-width: 1200px){
+    .about1 img{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 1000px){
+    .about1 img{
+        display: none;
+    }
+    .about23{
+        width: 100%;
+    }
 .image1{
   margin: 0 50px;
 }
@@ -1562,4 +1637,5 @@ h3 {
   left: 0;
   top: 0;
   border-radius: 10px;
+}
 }
