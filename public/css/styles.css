@@ -1601,7 +1601,18 @@ section.image {
   height: 270px;
   padding-top: 30px;
   width: 470px;
+  transition: transform 0.3s ease-in-out;
+  border: 0 solid white;
+  padding: 0;
 }
+.image_part img:hover {
+  transform: translateY(-10px);
+  border:5px double rgb(87, 43, 190);
+  padding: 20px;
+  /* border-style: ; */
+  border-radius: 30px;
+}
+
 
 /* .line_pic{
   width: 330px;
