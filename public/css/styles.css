@@ -718,6 +718,22 @@ h3 {
   color: rgb(204, 22, 198);
 }
 
+.border-hover::after {
+  content: '';
+  display: block;
+  margin-top: 0.3rem;
+  width: 0;
+  height: 0.2rem;
+  background:rgba(0, 131, 245, 0.769);
+  transition: width .3s;
+  position: relative;
+  top: 0.7rem;
+}
+.border-hover::after {
+  width: 15%;
+}
+
+
 /* Responsive styling. */
 @media screen and (max-width: 1160px) {
   .nav {
