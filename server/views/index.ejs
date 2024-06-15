@@ -195,7 +195,7 @@ img {
 }
 
 .nav__logo {
-  color: var(--title-color);
+  /* color: var(--title-color); */
   font-weight: var(--font-semi-bold);
   transition: color .4s;
 }
@@ -210,7 +210,7 @@ img {
 .nav__toggle, 
 .nav__close {
   font-size: 2rem;
-  color: var(--title-color);
+  /* color: var(--title-color); */
   cursor: pointer;
   transition: color .4s;
 }
@@ -225,7 +225,7 @@ img {
     position: fixed;
     top: -100%;
     left: 0;
-    background-color: var(--body-color);
+    /* background-color: var(--body-color); */
     box-shadow: 0 8px 16px hsla(230, 75%, 32%, .15);
     width: 100%;
     padding-block: 4.5rem 4rem;
@@ -432,7 +432,21 @@ body {
 .nav__link{
   font-size: 1.3rem;
 }
-
+nav {
+    background-color: #252525 !important;
+    }
+nav a{  
+      color: white !important;
+}
+a:hover{
+  color:#bb18bb !important;
+}
+.light-mode nav{
+  background-color: white !important;
+}
+.light-mode nav a{
+  color: black !important;
+}
 		</style>
 	</head>
 	<body class="page-leaderboard">
@@ -452,7 +466,59 @@ body {
 		</script>
 		<!-- Body of the webpage. Background color set inline. -->
     
-		<nav class="nav">
+		<!-- <nav class="nav">
+			<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
+			<a href="/" class="logo">Chrome Gaming</a>
+			<br />
+
+			<ul class="nav-links">
+				<i class="uil uil-times navCloseBtn"></i>
+
+				<li><a href="/">Home</a></li>
+				<li><a href="/play">Play Games</a></li>
+				<li><a href="/products">Products</a></li>
+				<li><a href="/about">About Us</a></li>
+				<li><a href="/contribute">Contribute</a></li>
+				<li>
+					<div class="small-screen-social">
+						<a
+							href="https://www.youtube.com/@ChromeGamingOn"
+							target="_blank"
+							class="social-icon youtube"></a>
+						<a
+							href="https://www.linkedin.com/company/chromegaming"
+							target="_blank"
+							class="social-icon linkedin"></a>
+						<a
+							href="https://www.facebook.com/profile.php?id=61558763492008"
+							target="_blank"
+							class="social-icon facebook"></a>
+						<a
+							href="https://twitter.com"
+							target="_blank"
+							class="social-icon twitter"></a>
+						<a
+							href="https://www.instagram.com/chromegamingon/"
+							target="_blank"
+							class="social-icon instagram"></a>
+					</div>
+				</li>
+			</ul>
+
+			<i class="uil uil-search search-icon" id="searchIcon"></i>
+			
+			<div class="search-box">
+				<i class="uil uil-search search-icon"></i>
+				
+				<input type="search" id="searchResult" placeholder="Search here..." />
+				
+				<div class="searching_results"></div>
+			</div>
+			<div class="toggle-container">
+				<i class="bi bi-toggle-off" id="theme-toggle"></i>
+			</div>
+		</nav> -->
+    <nav class="nav">
 			<!-- Navigation section. -->
 			<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
 			<!-- Icon for opening navigation menu. -->
@@ -505,60 +571,11 @@ body {
 				<!-- Input field for search functionality. -->
 				<div class="searching_results"></div>
 			</div>
-			<div class="toggle-container">
+			<div class="toggle-container" >
 				<i class="bi bi-toggle-off" id="theme-toggle"></i>
 			</div>
 		</nav>
-
-		<header class="header" id="header">
-			<nav class="nav container">
-			   <a href="#" class="nav__logo">Chrome Gaming</a>
-   
-			   <div class="nav__menu" id="nav-menu">
-				  <ul class="nav__list">
-					 <li class="nav__item">
-						<a href="/" class="nav__link">Home</a>
-					 </li>
-   
-					 <li class="nav__item">
-						<a href="/play" class="nav__link">Play Games</a>
-					 </li>
-   
-					 <li class="nav__item">
-						<a href="/products" class="nav__link">Products</a>
-					 </li>
-   
-					 <li class="nav__item">
-						<a href="/about" class="nav__link">About Us</a>
-					 </li>
-   
-					 <li class="nav__item">
-						<a href="/contribute" class="nav__link">Contribute</a>
-					 </li>
-				  </ul>
-   
-				  <!-- Close button -->
-				  <div class="nav__close" id="nav-close">
-					 <i class="ri-close-line"></i>
-				  </div>
-			   </div>
-   
-			   <div class="nav__actions">
-				  <!-- Search button -->
-				  <i class="ri-search-line nav__search" id="search-btn"></i>
-   
-				  <!-- Dark/Light mode toggle button -->
-				  <div class="toggle-con">
-					<i class="ri-moon-line" id="theme-toggle"></i>
-				 </div>
-   
-				  <!-- Toggle button -->
-				  <div class="nav__toggle" id="nav-toggle">
-					 <i class="ri-menu-line"></i>
-				  </div>
-			   </div>
-			</nav>
-		 </header>
+	
    
 		 <!--==================== SEARCH ====================-->
 		 <div class="search" id="search">
