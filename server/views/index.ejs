@@ -296,6 +296,17 @@ img {
   transform: translateY(0);
 }
 
+/*=============== footer share icon ===============*/
+.share-button{
+right: 10px;
+bottom: 450px;
+left: 1200px;
+}
+
+.icons{
+  display: relative;
+  top: 1670px;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 576px) {
@@ -367,7 +378,8 @@ img {
 				border-radius: 1000px;
 				
 			}
-			/* Default styles */
+
+      
 /* Default styles */
 body {
    background-color: #333333; /* Dark mode background color */
@@ -624,6 +636,18 @@ body {
 				</div>
 			</div>
 		</section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var closeButton = document.getElementById('close-btn');
+      
+          closeButton.addEventListener('click', function() {
+              var popup = document.getElementById('discord-popup');
+              popup.style.display = 'none';
+          });
+      });
+      </script>
+      
 
 		<div class="social-icons">
 			<button class="toggler"><img src="/images/social1.webp" alt="" ></button>
@@ -1145,6 +1169,30 @@ body {
 					<!-- Fourth column within the footer. -->
 					<h4>Newsletter</h4>
 					<!-- Heading for newsletter section. -->
+          <button class="share-button">
+            <svg
+              id="share-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="white"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                stroke="none"
+                d="M0 0h24v24H0z"
+                fill="none"
+                class="box"></path>
+              <path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+              <path d="M8.7 10.7l6.6 -3.4"></path>
+              <path d="M8.7 13.3l6.6 3.4"></path>
+            </svg>
+          </button>
 					<p>
 						Subscribe to our newsletter for a weekly dose of news, updates,
 						helpful tips, and exclusive offers.
@@ -1166,30 +1214,7 @@ body {
 					</div>
 
 					<div class="icons">
-						<button class="share-button">
-							<svg
-								id="share-icon"
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								stroke-width="2"
-								stroke="white"
-								fill="none"
-								stroke-linecap="round"
-								stroke-linejoin="round">
-								<path
-									stroke="none"
-									d="M0 0h24v24H0z"
-									fill="none"
-									class="box"></path>
-								<path d="M6 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-								<path d="M18 6m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-								<path d="M18 18m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-								<path d="M8.7 10.7l6.6 -3.4"></path>
-								<path d="M8.7 13.3l6.6 3.4"></path>
-							</svg>
-						</button>
+						
 						<ul class="socials-menu">
 							<li class="social" id="discord" title="discord">
 								<a href="https://discord.com/">
