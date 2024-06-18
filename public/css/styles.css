@@ -119,17 +119,32 @@ body {
 }
 
 /* navigation bar font size transition styling*/
-.nav-links li a {
-  transition: font-size 0.3s;
-}
+
 
 /* navigation bar hover styling*/
-.nav-links li a:hover {
-  text-decoration: underline;
-  color: #bb18bb;
-  font-size: 20px;
-  font-weight: bold;
+.links-hover:hover::after {
+  content: '';
+  display: block;
+  margin-top: 0.3rem;
+  width: 0;
+  height: 0.2rem;
+  background:rgba(0, 131, 245, 0.769);
+  transition: width .3s;
+  position: relative;
+  top: 0.7rem;
 }
+.links-hover:hover::after {
+  width: 50%;
+}
+.links-hover:hover {
+  color:rgb(204, 22, 198) !important; 
+  text-shadow: .1em .1em 0 hsl(200 50% 30%) !important;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: start;
+  
+}
+
 
 /* Navigation bar styling. */
 .nav-links {
@@ -179,10 +194,10 @@ a {
 
 .nav .nav-links a {
   transition: all 0.2s linear;
-  font-size: 15px;
-  font-family: "Silkscreen", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  /* font-size: 15px; */
+  /* font-family: "Silkscreen", sans-serif; */
+  /* font-weight: 400; */
+  /* font-style: normal;  */
 }
 
 /* Transition effect for navigation links. */
