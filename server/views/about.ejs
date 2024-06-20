@@ -31,7 +31,11 @@
 	<!-- Link to the Unicons CSS file. -->
 	<script src="/js/script.js" defer></script>
 	<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
-
+<style>
+	.social a{
+		color: black;
+	}
+</style>
 </head>
 
 <body class="page-leaderboard">
@@ -306,7 +310,7 @@
 						</li>
 						<li class="social" title="Github" id="github">
 							<a href="https://github.com/GameSphere-MultiPlayer">
-								<i class="fa-brands fa-github" style="color: white"></i>
+								<i class="fa-brands fa-github" style="color: black"></i>
 							</a>
 						</li>
 						<li class="social" title="reddit" id="reddit">
@@ -405,5 +409,26 @@ const coords = { x: 0, y: 0 };
 	});
 
 </script>
+<script>
+    const shareButton = document.querySelector(".share-button");
+			const toggleSocials = () => {
+				const socialsWrapper = document.querySelector(".icons");
+				const shareButtonImage = shareButton.querySelector("img");
+
+				socialsWrapper.classList.toggle("active");
+
+				if (shareButtonImage.src.includes("share")) {
+					shareButtonImage.src = "/images/close.svg";
+				} else {
+					shareButtonImage.src = "assets/share.svg";
+				}
+			};
+
+			shareButton.addEventListener("click", toggleSocials);
+			
+  document.querySelector('.toggler').addEventListener('click', function() {
+    document.querySelector('.social-icons').classList.toggle('show-icons');
+  });
+  </script>
 
 </html>
