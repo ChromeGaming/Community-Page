@@ -31,12 +31,45 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="/css/styles.css" rel="stylesheet">
 
-  <style>
-    .button-85 {
-      font-size: 0.8rem !important;
-    }
-  </style>
-</head>
+
+<style>
+  .button-85{
+    font-size: 0.8rem !important;
+  }
+
+
+  /* social */
+  .share-button {
+  position: absolute;
+  left: 2rem;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--background);
+  border-radius: 50%;
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
+.social a {
+  color: black !important;
+}
+.active .share-button{
+  outline: 2px solid white !important;
+  outline-offset: 3px !important;
+}
+.active .share-button,
+.share-button:hover {
+  /* background-color: var(#00c896); */
+  transform: scale(1.03);
+}
+</style>
+  </head>
 
 <body style="background-color: #161618 ;" class="page-leaderboard">
   <!-- Body of the webpage. Background color set inline. -->
@@ -415,7 +448,7 @@
             </li>
             <li class="social" title="Github" id="github">
               <a href="https://github.com/GameSphere-MultiPlayer">
-                <i class="fa-brands fa-github" style="color: white"></i>
+                <i class="fa-brands fa-github" style="color: black"></i>
               </a>
             </li>
             <li class="social" title="reddit" id="reddit">
@@ -455,46 +488,29 @@
     crossorigin="anonymous"></script>
 
   <script src="/js/vanilla-tilt.js"></script>
+
+  <script>
+    const shareButton = document.querySelector(".share-button");
+			const toggleSocials = () => {
+				const socialsWrapper = document.querySelector(".icons");
+				const shareButtonImage = shareButton.querySelector("img");
+
+				socialsWrapper.classList.toggle("active");
+
+				if (shareButtonImage.src.includes("share")) {
+					shareButtonImage.src = "/images/close.svg";
+				} else {
+					shareButtonImage.src = "assets/share.svg";
+				}
+			};
+
+			shareButton.addEventListener("click", toggleSocials);
+			
+  document.querySelector('.toggler').addEventListener('click', function() {
+    document.querySelector('.social-icons').classList.toggle('show-icons');
+  });
+  </script>
 </body>
 
-</html>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="./logo.PNG" type="image/x-icon">
-<title>Document</title>
-<link rel="stylesheet" href="/public/css/styles.css">
-
-</head>
-
-<body>
-  <!-- <nav class="nav">
-        Navigation section.
-        <i class="uil uil-bars navOpenBtn"></i>
-        Icon for opening navigation menu.
-        <a href="#" class="logo">Chrome Gaming</a>
-        Logo of the website.
-    
-        <ul class="nav-links">
-          Unordered list for navigation links.
-          <i class="uil uil-times navCloseBtn"></i>
-          Icon for closing navigation menu.
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="./playgames.html">Play Games</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./Certificate.html">Certificate</a></li>
-        </ul>
-    
-        <i class="uil uil-search search-icon" id="searchIcon"></i>
-        Icon for search functionality.
-        <div class="search-box">
-          <i class="uil uil-search search-icon"></i>
-          Icon for search functionality within the search box.
-          <input type="text" placeholder="Search here..." />
-          Input field for search functionality.
-        </div>
-      </nav> -->
-</body>
 
 </html>
