@@ -41,43 +41,47 @@
 
 =========
 <style>
-  .button-85{
+  .button-85 {
     font-size: 0.8rem !important;
   }
 
 
   /* social */
   .share-button {
-  position: absolute;
-  left: 2rem;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  transition: all 0.4s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--background);
-  border-radius: 50%;
-  outline: 2px solid white;
-  outline-offset: 3px;
-}
-.social a {
-  color: black !important;
-}
-.active .share-button{
-  outline: 2px solid white !important;
-  outline-offset: 3px !important;
-}
-.active .share-button,
-.share-button:hover {
-  /* background-color: var(#00c896); */
-  transform: scale(1.03);
-}
+    position: absolute;
+    left: 2rem;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--background);
+    border-radius: 50%;
+    outline: 2px solid white;
+    outline-offset: 3px;
+  }
+
+  .social a {
+    color: black !important;
+  }
+
+  .active .share-button {
+    outline: 2px solid white !important;
+    outline-offset: 3px !important;
+  }
+
+  .active .share-button,
+  .share-button:hover {
+    /* background-color: var(#00c896); */
+    transform: scale(1.03);
+  }
 </style>
-  </head>
+</head>
+
 <body style="background-color: #161618 ;" class="page-leaderboard">
   <div class="circle-container">
     <div class="circle" style="background-color: #55a5ea; left: 504px; top: 59px; scale: 1;"></div>
@@ -149,7 +153,7 @@
 
 
     .card {
-      
+
       position: relative;
       width: 290px;
       height: 354px;
@@ -199,7 +203,7 @@
 
     .card p:not(.heading) {
       font-size: 14px;
-      
+
     }
 
     .card p:last-child {
@@ -226,126 +230,94 @@
         </h1>
         <!-- <h2 class="text-white">Products</h2> -->
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col mb-5">
-          <div class="card">
+      <div class="row ">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 d-flex justify-content-center">
+          <div class="card m-1 ">
             <p class="heading">
               PACKABUNCHAS
             </p>
-            <p style="text-align: center;">
-              You are Spacey, from the PACKABUNCHAS, a group of space rangers specialized in packing and rescuing creatures around the galaxy!
+            <p class="text-center">
+              You are Spacey, from the PACKABUNCHAS, a group of space rangers specialized in packing and rescuing
+              creatures around the galaxy!
             </p>
-            <a href="https://github.com/ChromeGaming/PACKABUNCHAS"
-            ><button class=" button-85">See More</button></a>
+            <a href="https://github.com/ChromeGaming/PACKABUNCHAS">
+              <button class="button-85">See More</button>
+            </a>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 d-flex justify-content-center">
+          <div class="card m-1">
             <p class="heading">
-             DOT BOX
+              DOT BOX
             </p>
-            <p style="text-align: center;">
-              Dot-Box is a game where players take turns drawing lines between dots to create boxes. The player who completes the most boxes wins. It's a simple yet strategic game enjoyed by people of all ages.
+            <p class="text-center">
+              Dot-Box is a game where players take turns drawing lines between dots to create boxes. The player who
+              completes the most boxes wins. It's a simple yet strategic game enjoyed by people of all ages.
             </p>
-            <a href="https://github.com/ChromeGaming/Dot-Box"
-                            ><button class=" button-85">See More</button></a>
+            <a href="https://github.com/ChromeGaming/Dot-Box">
+              <button class="button-85">See More</button>
+            </a>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card">
-            <p class="heading ">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-4 d-flex justify-content-center">
+          <div class="card m-1">
+            <p class="heading">
               SPACESHIP ESCORT
             </p>
-            <p style="text-align: center;">
-              "Spaceship Escort" is a game where players protect spacecraft from threats in space. Players control escort ships, defend against attacks, and complete missions involving navigation, combat, and strategic decisions.
+            <p class="text-center">
+              "Spaceship Escort" is a game where players protect spacecraft from threats in space. Players control
+              escort ships, defend against attacks, and complete missions involving navigation, combat, and strategic
+              decisions.
             </p>
-            
-            <a href="https://github.com/ChromeGaming/Spaceship-escort"
-            ><button class=" button-85">See More</button></a>
+            <a href="https://github.com/ChromeGaming/Spaceship-escort">
+              <button class="button-85">See More</button>
+            </a>
           </div>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col mb-5">
-          <div class="card">
+      <div class="row ">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 d-flex justify-content-center mb-5">
+          <div class="card m-1">
             <p class="heading">
               PHYSI-C-TECH
             </p>
             <p style="text-align: center;">
-              "Physi-c-Tech" seems to be a play on words combining "physics" and "technology," , Where we create elements after adding two different elements.
+              "Physi-c-Tech" seems to be a play on words combining "physics" and "technology," , Where we create
+              elements after adding two different elements.
             </p>
-            <a href="https://github.com/ChromeGaming/Physi-c-Tech"
-            ><button class=" button-85">See More</button></a>
+            <a href="https://github.com/ChromeGaming/Physi-c-Tech"><button class=" button-85">See More</button></a>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-12 mb-4 d-flex justify-content-center mb-5">
+          <div class="card m-1">
             <p class="heading">
-             SQUARD LINE
+              SQUARD LINE
             </p>
             <p style="text-align: center;">
-              Squard line is a puzzle game where players match candies to solve puzzles and progress through multiple of levels. It features various objectives, boosters, and social features, making it highly addictive and enjoyable for players of all ages.
+              Squard line is a puzzle game where players match candies to solve puzzles and progress through multiple of
+              levels. It features various objectives, boosters, and social features, making it highly addictive and
+              enjoyable for players of all ages.
             </p>
-            <a href="https://github.com/ChromeGaming/Squard-line"
-            ><button class=" button-85 ">See More</button></a>
+            <a href="https://github.com/ChromeGaming/Squard-line"><button class=" button-85 ">See More</button></a>
           </div>
         </div>
-        <div class="col mb-5">
-          <div class="card">
+        <div class="col-lg-4 col-md-12 col-sm-12 col-12 mb-4 d-flex justify-content-center mb-5">
+          <div class="card m-1">
             <p class="heading ">
               FORMATION ABSENT
             </p>
             <p style="text-align: center;">
-              Formation Absent is a turn-based puzzle - an abstract representation of a battle. In each of the 13 stages two armies are colliding. As a member of the Green side, you'll have to restore the lost battle formation of the Green party. Move through the battlefield..
+              Formation Absent is a turn-based puzzle - an abstract representation of a battle. In each of the 13 stages
+              two armies are colliding. As a member of the Green side, you'll have to restore the lost battle formation
+              of the Green party. Move through the battlefield..
             </p>
-            
-            <a href="https://github.com/ChromeGaming/Formation-Absent"
-                          ><button class=" button-85">See More</button></a>
+
+            <a href="https://github.com/ChromeGaming/Formation-Absent"><button class=" button-85">See More</button></a>
           </div>
-        </div>
-      </div>
-      <!-- <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="card">
-            <p class="heading">
-              PHYSI-C-TECH
-            </p>
-            <p style="text-align: center;">
-              "Physi-c-Tech" seems to be a play on words combining "physics" and "technology," , Where we create elements after adding two different elements.
-            </p>
-            <a href="https://github.com/ChromeGaming/Physi-c-Tech"
-            ><button class=" button-85">See More</button></a>
-          </div>
-        </div>
-        <div class="col mb-5"> -->
-          <!-- <div class="card grow" data-tilt style="transform-style: preserve-3d; transform: perspective(1000px); ">
-                  
-                  <div class="card-body" style="transform: translateZ(20px)">
-                      <h5 class="card-title my-3">Formation-Absent</h5>
-                      <p class="card-text text-secondary">Lorem ipsum dolor sit amet consectetur
-                          adipisicin
-                          Lorem ipsum dolor
-                          sit amet. Rerum, nulla.</p>
-                      <a href="https://github.com/ChromeGaming/Formation-Absent"
-                          ><button class=" button-85">See More</button></a>
-                  </div>
-              </div> -->
-         
-          <!-- <div class="card grow" data-tilt style="transform-style: preserve-3d; transform: perspective(1000px); ">
-                  
-                  <div class="card-body" style="transform: translateZ(20px)">
-                      <h5 class="card-title my-3 font1">Squard-line</h5>
-                      <p class="card-text text-secondary font2">Lorem ipsum dolor sit amet consectetur
-                          adipisicin
-                          Lorem ipsum dolor
-                          sit amet. Rerum, nulla.</p>
-                      <a href="https://github.com/ChromeGaming/Squard-line"
-                          ><button class=" button-85 ">See More</button></a>
-                  </div>
-              </div> -->
-        
         </div>
       </div>
     </div>
+
   </section>
   <div class="social-icons">
     <!-- Section for social media icons. -->
@@ -511,28 +483,27 @@
   <script src="/js/vanilla-tilt.js"></script>
   <script>
     const shareButton = document.querySelector(".share-button");
-			const toggleSocials = () => {
-				const socialsWrapper = document.querySelector(".icons");
-				const shareButtonImage = shareButton.querySelector("img");
+    const toggleSocials = () => {
+      const socialsWrapper = document.querySelector(".icons");
+      const shareButtonImage = shareButton.querySelector("img");
 
-				socialsWrapper.classList.toggle("active");
+      socialsWrapper.classList.toggle("active");
 
 
-				if (shareButtonImage.src.includes("share")) {
-					shareButtonImage.src = "/images/close.svg";
-				} else {
-					shareButtonImage.src = "assets/share.svg";
-				}
-			};
+      if (shareButtonImage.src.includes("share")) {
+        shareButtonImage.src = "/images/close.svg";
+      } else {
+        shareButtonImage.src = "assets/share.svg";
+      }
+    };
 
-			shareButton.addEventListener("click", toggleSocials);
-			
-  document.querySelector('.toggler').addEventListener('click', function() {
-    document.querySelector('.social-icons').classList.toggle('show-icons');
-  });
+    shareButton.addEventListener("click", toggleSocials);
+
+    document.querySelector('.toggler').addEventListener('click', function () {
+      document.querySelector('.social-icons').classList.toggle('show-icons');
+    });
   </script>
 </body>
 
 
 </html>
-
