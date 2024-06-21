@@ -117,7 +117,27 @@ body {
   height: 5rem;
   z-index: 1000;
 }
+ /* cursor */
+.circle {
+  z-index: 10000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: colors 5s infinite;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
 
+.circle::before {
+  content: "";
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
 /* navigation bar font size transition styling*/
 
 
@@ -1382,8 +1402,9 @@ h3 {
   width: 4rem;
   height: 4rem;
   border-radius: 50%;
-  outline: 2px solid white;
-  outline-offset: 3px;
+  outline: none;
+  transition: outline ;
+  transition-duration: 5s;
 }
 
 .social a {
@@ -1395,7 +1416,10 @@ h3 {
 .social li a {
   transition: font-size 0.3s;
 }
-
+.active .social:hover{
+  outline: 2px solid white;
+  outline-offset: 3px;
+}
 .active .social:nth-child(1) {
   transform: translateX(-5rem);
 }
@@ -1403,13 +1427,20 @@ h3 {
 .active .social:nth-child(1) {
   background: #7289da !important;
 }
+.active .social:nth-child(1):hover {
+  background: #2246c8 !important;
+  color: white !important;
+}
 
 .active .social:nth-child(2) {
   transform: translateY(-5rem);
 }
 
 .active .social:nth-child(2) {
-  background-color: #3a76f0 !important;
+  background-color: rgb(229, 229, 126) !important;
+}
+.active .social:nth-child(2):hover {
+  background-color: rgb(198, 198, 68) !important;
 }
 
 .active .social:nth-child(3) {
@@ -1417,7 +1448,10 @@ h3 {
 }
 
 .active .social:nth-child(3) {
-  background: grey !important;
+  background: rgb(103, 221, 103) !important;
+}
+.active .social:nth-child(3):hover {
+  background: rgb(65, 212, 65) !important;
 }
 
 .active .social:nth-child(4) {
@@ -1425,7 +1459,11 @@ h3 {
 }
 
 .active .social:nth-child(4) {
-  background-color: #ff4500 !important;
+  background-color: #e1734b !important;
+}
+
+.active .social:nth-child(4):hover {
+  background-color: #d15022 !important;
 }
 
 .light-mode .social {
