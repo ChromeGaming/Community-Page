@@ -1307,14 +1307,14 @@ h3 {
 
 .page-leaderboard .ranking .ranking-table-data {
   align-self: center;
-  color: #525c65;
+  color: #525c65 !important;
   font-size: 1em;
 }
 
 .page-leaderboard .ranking .ranking-table-data:nth-child(1) {
   justify-content: center;
   width: 20%;
-  color: #525c65;
+  color: #525c65 !important;
   font-weight: 600;
 }
 
@@ -1331,7 +1331,7 @@ h3 {
 }
 
 .page-leaderboard .ranking .ranking-table-data:nth-child(2) {
-  color: #2e3d49;
+  color: #2e3d49 !important;
   width: 55%;
   font-size: 0.875em;
   padding-left: 9%;
