@@ -16,7 +16,9 @@ body.page-leaderboard {
   padding: 0 !important;
   /* Ensures padding is removed for .page-leaderboard for full width navbar */
 }
-
+*{
+  /* border: 2px solid red; */
+}
 .alert {
   opacity: 0;
   visibility: hidden;
@@ -1540,7 +1542,10 @@ h3 {
     position: absolute;
   }
 }
-
+.about-para{
+  font-size: 1rem;
+  margin:0 200px ;
+}
 @media (max-width: 480px) {
   .icons {
     position: absolute;
@@ -1551,9 +1556,14 @@ h3 {
   .logo_image {
     overflow: hidden;
   }
-
+  .logo_image{
+    margin-top: 1rem;
+  }
   .logo_head1 {
-    font-size: 20px;
+    font-size: 20px !important;
+  }
+  .logo_head {
+    font-size: 2rem !important;
   }
   .complete{
     position: relative;
@@ -1606,6 +1616,12 @@ section.image {
   .about-para{
     margin: 1.5rem;
   }
+  .container1{
+    padding: 1px !important;
+  }
+  .line3{
+    font-size: 15px;
+  }
 }
 
 /* .line{
@@ -1618,8 +1634,9 @@ section.image {
 } */
 .line_main {
   /* width: 1050px; */
-  margin: 0 50px;
-  margin-bottom: 50px;
+  /* margin: 0 50px; */
+  margin: 1.5rem;
+  /* margin-bottom: 50px; */
   /* margin-right: 170px; */
   /* background-color: red; */
 }
