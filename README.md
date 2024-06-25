@@ -19,6 +19,17 @@
   <img src="https://img.shields.io/github/last-commit/GameSphere-MultiPlayer/Community-Page?style=for-the-badge" />
   </div>
 
+# 💻 Tech Stack Uses
+<!-- jQuery -->
+<img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery logo">
+
+<!-- Bootstrap -->
+<img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap logo">
+
+<!-- JavaScript -->
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript logo">
+
+
    # How to initialise the Project in your local environment
 
   1. Fork the repo
