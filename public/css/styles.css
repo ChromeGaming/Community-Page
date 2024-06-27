@@ -469,12 +469,35 @@ body {
   background-size: cover;
   transition: transform 0.4s ease; /* Slower transition duration */
 }
-
+.social-links {
+  font-size: 2rem; /* Adjust initial size here */
+}
 .small-screen-social {
   display: none;
 }
+.social-links {
+  display: flex; 
+  gap: 15px; 
+}
 
-/* Individual social media icons styling. */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-size: contain; 
+  background-repeat: no-repeat;
+}
+.footer-column {
+position: absolute; 
+bottom: 3rem; 
+right: 8rem; 
+}
+.social-links a {
+margin-top: 1rem; 
+}
+.gmail-icon {
+  position: relative; 
+  top: -5px;
+}
 .youtube {
   background-image: url("https://cdn-icons-png.flaticon.com/128/3670/3670147.png");
 }
@@ -494,7 +517,9 @@ body {
 .instagram {
   background-image: url("https://cdn-icons-png.flaticon.com/128/3955/3955024.png");
 }
-
+.discord {
+  background-image: url("https://cdn.discordapp.com/brand/logos/Discord_Logo_Color.png");
+}
 /* Toggler button styles */
 .toggler {
   display: block;
@@ -1437,7 +1462,7 @@ h3 {
 }
 
 .share-button {
-  position: absolute;
+  position: fixed;
   border: none;
   cursor: pointer;
   z-index: 2;
@@ -1455,7 +1480,7 @@ h3 {
 
 .active .share-button,
 .share-button:hover {
-  background-color: var(#00c896);
+  background-color: var(--green);
   transform: scale(1.03);
 }
 
