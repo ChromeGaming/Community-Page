@@ -296,3 +296,47 @@ subscriptionForm.addEventListener("submit", function (event) {
     success();
   }
 });
+
+// Function to update the displayed slider value
+function updateSliderValue(value) {
+  document.getElementById('slider-value').textContent = value;
+  const slider = document.getElementById('rating');
+  const color = `linear-gradient(90deg, #ffcc00 ${value * 20}%, #ddd ${value * 20}%)`;
+  slider.style.background = color;
+}
+
+// Function to handle feedback submission
+function submitFeedback(event) {
+  event.preventDefault(); // Prevent form submission from refreshing the page
+
+  const rating = document.getElementById('rating').value;
+  const feedback = document.getElementById('feedback').value;
+  const feedbackMessage = document.getElementById('feedback-message');
+
+  if (rating && feedback) {
+      // Show feedback message
+      feedbackMessage.textContent = "You have submitted the rating";
+      feedbackMessage.style.display = 'block';
+
+      // Close the Rate Us modal after submission
+      closeRateUs();
+
+      // Optional: Reset form fields
+      document.getElementById('feedback').value = '';
+      document.getElementById('rating').value = 3; // Reset slider to default value
+      updateSliderValue(3); // Reset displayed value
+
+  } else {
+      feedbackMessage.textContent = "Please select a rating and provide feedback before submitting.";
+      feedbackMessage.style.display = 'block';
+  }
+}
+
+function openRateUs() {
+  document.getElementById('rateus-modal').style.display = 'block';
+}
+
+// Function to close the Rate Us modal
+function closeRateUs() {
+  document.getElementById('rateus-modal').style.display = 'none';
+}

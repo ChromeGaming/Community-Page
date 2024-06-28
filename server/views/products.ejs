@@ -119,6 +119,7 @@
       <li><a href="/about" class=" links-hover">About Us</a></li>
       <li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/" class=" links-hover">Certificate</a>
       </li>
+      <li><a class="links-hover" onclick="openRateUs()">Rate Us</a></li>
       <li>
         <div class="small-screen-social">
           <a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
@@ -146,6 +147,8 @@
       <i class="bi bi-toggle-off" id="theme-toggle"></i>
     </div>
   </nav>
+  <%- include('partials/rateus') %>
+        <script src="/js/script.js"></script>
   <style>
     .border-hover::after {
       width: 45%;
