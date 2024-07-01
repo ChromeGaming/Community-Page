@@ -75,6 +75,7 @@
 				<li><a href="/products" class=" links-hover">Products</a></li>
 				<li><a href="/about" class=" links-hover">About Us</a></li>
 				<li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/" class=" links-hover">Certificate</a></li>
+				<li><a class="links-hover" onclick="openRateUs()">Rate Us</a></li>
 				<li>
 					<div class="small-screen-social">
 						<a
@@ -114,6 +115,9 @@
 				<i class="bi bi-toggle-off" id="theme-toggle"></i>
 			</div>
 		</nav>
+
+		<%- include('partials/rateus') %>
+        <script src="/js/script.js"></script>
 
 		<div class="social-icons">
 			<button class="toggler"><img src="/images/social1.webp" alt="" ></button>
@@ -273,7 +277,18 @@
 							pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
 						<button id="submitButton" type="submit">SUBSCRIBE</button>
 					</form>
-		
+
+					<div class="footer-column">
+						<h4>Follow us</h4>
+						<div class="social-links">
+							<a href="mailto:durgeshkumar4993@gmail.com" target="_blank" class="gmail-icon"><i class="fab fa-google"></i></a>
+							<a href="https://www.linkedin.com/company/chromegaming" target="_blank" <i class="fab fa-linkedin"></i></a>
+							<a href="https://discord.com/" target="_blank" class="discord-icon fab fa-discord"></a>
+							<a href="https://www.medium.com/" target="_blank" class="fab fa-medium"></a>
+							<a href="https://www.instagram.com/chromegamingon/" target="_blank" class="fab fa-instagram"></a>
+						</div>
+					</div>
+					
 					<div id="customAlert" class="alert">
 						<span id="alertText"></span>
 						<button id="closeAlert">&times;</button>
