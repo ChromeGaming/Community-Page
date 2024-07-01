@@ -1644,6 +1644,9 @@ section.image {
     font-size: 50px;
     text-align: center;
   }
+  .about-para{
+    margin: 1.5rem;
+  }
 }
 
 /* .line{
@@ -1764,9 +1767,7 @@ section.image {
 }
 
 
-/* .line_pic{
-  width: 330px;
-} */
+
 .line_img {
   width: 100%;
   height: auto;
@@ -1776,7 +1777,9 @@ section.image {
   .image_part {
     display: none;
   }
-
+  .about-para{
+    margin: 2rem;
+  }
   .container1 {
     width: auto;
   }
@@ -1796,6 +1799,7 @@ section.image {
   .right {
     left: 8.7%;
   }
+ 
 }
 
 @media screen and (max-width: 768px) {
