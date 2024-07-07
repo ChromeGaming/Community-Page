@@ -1,5 +1,5 @@
 ![Community](https://github.com/GameSphere-MultiPlayer/Physi-c-Tech/assets/98798977/e79af9da-814e-487e-8a9a-85947384d3b2)
-
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 # About Our Project 💻
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -18,8 +18,21 @@
   <img src="https://img.shields.io/github/contributors/GameSphere-MultiPlayer/Community-Page?style=for-the-badge" />
   <img src="https://img.shields.io/github/last-commit/GameSphere-MultiPlayer/Community-Page?style=for-the-badge" />
   </div>
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-   # How to initialise the Project in your local environment
+# 💻 Tech Stack Uses
+<!-- jQuery -->
+<img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery logo">
+
+<!-- Bootstrap -->
+<img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap logo">
+
+<!-- JavaScript -->
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript logo">
+
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+
+ # How to initialise the Project in your local environment
 
   1. Fork the repo
   2. Clone it using ``git clone <url>`` command
@@ -38,8 +51,10 @@
 
      ### If Nodemon is not installed , run 
           npm install nodemon -g
-     
-  # How to make a PR in a Project 🟢
+
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />     
+
+# How to make a PR in a Project 🟢
 
 If you are interested to contribute in this project how to start contribute
 <!-- in detail -->
@@ -92,8 +107,9 @@ To push your changes, run the following command in your terminal:
 9. Create a PR.
 
 __________________________________________________________________________________________________________________________________________________________________
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
 
-## Alternatively Using GitHub Desktop
+# Alternatively Using GitHub Desktop
 
 1. Open GitHub Desktop and log in to your GitHub account.
 
@@ -113,6 +129,8 @@ ________________________________________________________________________________
 
 **Note:** In order to create a pull request, you must have a fork of the original repository in your GitHub account and you must have made the changes in that forked repository.
 
+ <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="1920" />
+ 
 <br>
 <br>
 <div>
