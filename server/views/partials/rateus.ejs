@@ -1,0 +1,43 @@
+<!-- Rate Us modal -->
+<style>
+    .submit-button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ffe066;
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: #ffcc00;
+    transform: scale(0.95);
+}
+
+.submit-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #ffcc00;
+}
+
+</style>
+<div id="rateus-modal" class="rateus-modal">
+    <div class="rateus-container">
+        <span class="close" onclick="closeRateUs()">&times;</span>
+        <h1>Rate Us</h1>
+        <p>We would love to hear your feedback!</p>
+        <div class="rating-slider">
+            <input type="range" name="rating" id="rating" min="1" max="5" step="1" value="3" oninput="updateSliderValue(this.value)">
+            <span id="slider-value">3</span>
+        </div>
+        <textarea name="feedback" id="feedback" cols="30" rows="5" placeholder="Tell us more about your experience"></textarea>
+        <button class="submit-button" onclick="submitFeedback(event)">Submit</button>
+        <p id="feedback-message" style="display: none;"></p><!-- Message container -->
+    </div>
+</div>
