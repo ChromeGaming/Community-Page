@@ -9,8 +9,20 @@
 		<link rel="icon" href="/images/logo.PNG" type="image/x-icon" />
 		
 		<link rel="stylesheet" href="/css/styles.css" />
+		<style>
+			#progress-bar1{
+			--progress: 0;
+			height: 12px;
+			width: var(--progress);
+			position: fixed;
+			z-index: 1001;
+			background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+			margin-top: -100px;
+			}
+		</style>
 	</head>
 	<body>
+		<div id="progress-bar"></div>
 		<nav class="nav">
 			<!-- Navigation section. -->
 			<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
@@ -71,5 +83,12 @@
 		</nav>
 		<%- include('partials/rateus') %>
         <script src="/js/script.js"></script>
+		<script>
+			  const updateProgress = () =>{
+    const {scrollTop,scrollHeight} = document.documentElement;
+    const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
+    document.querySelector('#progress-bar1').style.setProperty('--progress',scrollPercent);
+}
+		</script>
 	</body>
 </html>

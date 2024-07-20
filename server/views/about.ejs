@@ -38,6 +38,15 @@
 		.social a {
 			color: black;
 		}
+		#progress-bar4{
+			--progress: 0;
+			height: 12px;
+			width: var(--progress);
+			position: fixed;
+			z-index: 1001;
+			background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+			margin-top: -83px;
+		}
 	</style>
 </head>
 
@@ -57,6 +66,7 @@
 		<div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
 	</div>
 	<!-- Body of the webpage. Background color set inline. -->
+	<div id="progress-bar4"></div>
 	<nav class="nav">
 		<!-- Navigation section. -->
 		<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
@@ -341,6 +351,12 @@
 </body>
 
 <script>
+	const updateProgress = () =>{
+		const {scrollTop,scrollHeight} = document.documentElement;
+		const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
+		document.querySelector('#progress-bar4').style.setProperty('--progress',scrollPercent);
+    }
+	document.addEventListener('scroll',updateProgress);
 
 	 document.querySelector('.toggler').addEventListener('click', function () {
       document.querySelector('.social-icons').classList.toggle('show-icons');
@@ -462,6 +478,7 @@
 	};
 
 	shareButton.addEventListener("click", toggleSocials);
+
 
 	
 </script>
