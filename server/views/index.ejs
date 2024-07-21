@@ -214,6 +214,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 999;
     }
 
     .nav__logo {
@@ -389,8 +390,8 @@
     }
 
     .preloader img {
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
       border-radius: 1000px;
 
     }
@@ -531,17 +532,26 @@
 
 <body class="page-leaderboard">
   <div class="preloader">
-    <img class="center" src="https://c.tenor.com/XasjKGMk_wAAAAAC/tenor.gif" alt="" />
+   <img class="center" id="loader-img" src="/images/loader.gif" alt="" />
   </div>
   <script>
     window.addEventListener("load", () => {
-      const loader = document.querySelector(".preloader");
-
-      loader.classList.add("preloader--hidden");
-
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
+        const loader = document.querySelector(".preloader");
+        // to check if the page was reloaded
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            const loaderImg = document.getElementById("loader-img");
+            //to force reload
+            loaderImg.src = `${loaderImg.src}?t=${new Date().getTime()}`;
+            setTimeout(() => {
+                loader.classList.add("preloader--hidden");
+            }, 8000);
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        } else {
+            //to remove the preloader if it is not a reload
+            document.body.removeChild(loader);
+        }
     });
   </script>
   <!-- Body of the webpage. Background color set inline. -->
