@@ -110,7 +110,6 @@
       border: none;
       outline: none;
     }
-
     ul {
       list-style: none;
     }
@@ -412,7 +411,15 @@
       color: #333333;
       /* Light mode text color */
     }
-
+    #progress-bar{
+  --progress: 0;
+  height: 12px;
+  width: var(--progress);
+  position: fixed;
+  z-index: 1001;
+  background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+  /* margin-top: -100px; */
+  }
 
     /* Styles for specific elements */
     .nav__logo {
@@ -540,7 +547,7 @@
   <!-- Body of the webpage. Background color set inline. -->
 
  
-			
+	<div id="progress-bar"></div>
   <div class="circle-container">
     <div class="circle" style="background-color: #55a5ea; left: 504px; top: 59px; scale: 1;"></div>
     <div class="circle" style="background-color: #55a5ea; left: 504px; top: 59px; scale: 0.95;"></div>
@@ -555,6 +562,7 @@
     <div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
     <div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
   </div>
+  
   <nav class="nav">
     <!-- Navigation section. -->
     <i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
