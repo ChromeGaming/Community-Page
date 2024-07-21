@@ -12,7 +12,7 @@
   <!-- Title of the webpage displayed on the browser tab. -->
   <link rel="stylesheet" href="/css/styles.css" />
   <!-- Link to an external CSS file for styling. -->
-  <script src="/public/js/script.js" defer></script>
+<!--  <script src="/public/js/script.jsz" defer></script>-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -527,7 +527,7 @@
       /* background-color: black; */
     }
   </style>
-  <script src="/js/script.js" defer></script>
+<!--  <script src="/js/script.js" defer></script>-->
 </head>
 
 <body class="page-leaderboard">
@@ -591,7 +591,7 @@
         <li><a href="/about" class="links-hover">About Us</a></li>
         <li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/" class="links-hover">Certificate</a></li>
         <li><a class="links-hover" onclick="openRateUs()">Rate Us</a></li>
-        <script src="/js/script.js" defer></script>
+<!--        <script src="/js/script.js" defer></script>-->
         <li>
             <div class="small-screen-social">
                 <a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
@@ -617,7 +617,7 @@
     </div>
 </nav>
  <%- include('partials/rateus') %>
- <script src="/js/script.js"></script>
+<!-- <script src="/js/script.js"></script>-->
   <!--==================== SEARCH ====================-->
   <div class="search" id="search">
     <form action="" class="search__form">
@@ -1052,6 +1052,10 @@
 //   { place: 50, name: "Sana" },
 // ];
 
+/*
+
+I commented this becoz this script is already being called in script.js (line 39) - Ayush-may
+
 function compare(a, b) {
   if (a.contributions < b.contributions) {
     return 1;
@@ -1311,7 +1315,7 @@ subscriptionForm.addEventListener("submit", function (event) {
     success();
   }
 });
-    
+*/
 
   </script>
 
