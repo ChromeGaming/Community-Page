@@ -110,7 +110,6 @@
       border: none;
       outline: none;
     }
-
     ul {
       list-style: none;
     }
@@ -215,6 +214,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 999;
     }
 
     .nav__logo {
@@ -390,8 +390,8 @@
     }
 
     .preloader img {
-      height: 200px;
-      width: 200px;
+      height: 250px;
+      width: 250px;
       border-radius: 1000px;
 
     }
@@ -412,7 +412,15 @@
       color: #333333;
       /* Light mode text color */
     }
-
+    #progress-bar{
+  --progress: 0;
+  height: 12px;
+  width: var(--progress);
+  position: fixed;
+  z-index: 1001;
+  background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+  /* margin-top: -100px; */
+  }
 
     /* Styles for specific elements */
     .nav__logo {
@@ -524,23 +532,32 @@
 
 <body class="page-leaderboard">
   <div class="preloader">
-    <img class="center" src="https://c.tenor.com/XasjKGMk_wAAAAAC/tenor.gif" alt="" />
+   <img class="center" id="loader-img" src="/images/loader.gif" alt="" />
   </div>
   <script>
     window.addEventListener("load", () => {
-      const loader = document.querySelector(".preloader");
-
-      loader.classList.add("preloader--hidden");
-
-      loader.addEventListener("transitionend", () => {
-        document.body.removeChild(loader);
-      });
+        const loader = document.querySelector(".preloader");
+        // to check if the page was reloaded
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            const loaderImg = document.getElementById("loader-img");
+            //to force reload
+            loaderImg.src = `${loaderImg.src}?t=${new Date().getTime()}`;
+            setTimeout(() => {
+                loader.classList.add("preloader--hidden");
+            }, 8000);
+            loader.addEventListener("transitionend", () => {
+                document.body.removeChild(loader);
+            });
+        } else {
+            //to remove the preloader if it is not a reload
+            document.body.removeChild(loader);
+        }
     });
   </script>
   <!-- Body of the webpage. Background color set inline. -->
 
  
-			
+	<div id="progress-bar"></div>
   <div class="circle-container">
     <div class="circle" style="background-color: #55a5ea; left: 504px; top: 59px; scale: 1;"></div>
     <div class="circle" style="background-color: #55a5ea; left: 504px; top: 59px; scale: 0.95;"></div>
@@ -555,6 +572,7 @@
     <div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
     <div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
   </div>
+  
   <nav class="nav">
     <!-- Navigation section. -->
     <i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
@@ -685,7 +703,7 @@
       <br />
       <!-- Placeholder text. -->
       <div style="display: flex">
-        <i style="font-size: 30px; color: rgb(0, 0, 0)" class="bi bi-tv-fill"></i>
+        <i style="font-size: 30px; color: rgb(255, 255, 255)" class="bi bi-tv-fill"></i>
         &nbsp;&nbsp;
         <!-- Icon for TV display. -->
 
@@ -698,7 +716,7 @@
       </p>
       <!-- Placeholder text. -->
       <div style="display: flex">
-        <i style="font-size: 30px; color: rgb(0, 0, 0)" class="bi bi-tv-fill"></i>
+        <i style="font-size: 30px; color: rgb(255, 255, 255)" class="bi bi-tv-fill"></i>
         &nbsp;&nbsp;
         <!-- Icon for TV display. -->
         <h3 style="margin-top: 10px;font-size: 18px;">Code and Upload it..</h3>
@@ -710,9 +728,9 @@
       <!-- Placeholder text. -->
     </div>
   </div>
-
-  <div style="text-align: center">
-    <img style="margin-left: 45%;" alt="Leaderboard" class="mb-2"
+  
+  <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <img alt="Leaderboard" class="mb-2"
       src="https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_trophy_leaderboard-3442a4b2312e6cdd02aa9870e636dc082890277a6267c4ed986a750fef7cbb35.svg" />
     <h2 style="color: white;">Top 50 Contributors Leaderboard</h2>
   </div>
@@ -973,6 +991,12 @@
     }
 
     animateCircles();
+    document.querySelector('.toggler').addEventListener('click', function () {
+    document.querySelector('.social-icons').classList.toggle('show-icons');
+    });
+  
+  </script>
+<script>
 
 
    // const data = [

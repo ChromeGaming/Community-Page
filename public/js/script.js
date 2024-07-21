@@ -317,4 +317,3 @@ function openRateUs() {
 function closeRateUs() {
   document.getElementById('rateus-modal').style.display = 'none';
 }
-

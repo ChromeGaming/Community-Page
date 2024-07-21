@@ -7,19 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Chrome Gaming | about</title>
 	<!-- Title of the webpage displayed on the browser tab. -->
-
-	<!-- Link for favicon -->
-	<link rel="icon" href="/images/logo.PNG" type="image/x-icon" />
-	<!-- Title of the webpage displayed on the browser tab. -->
 	<link rel="stylesheet" href="/css/styles.css" />
 	<!-- Link to an external CSS file for styling. -->
+
+	<link rel="icon" href="/images/logo.PNG" type="image/x-icon" />
+	<!-- Link for favicon -->
+	<!-- Unicons CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<!-- Title of the webpage displayed on the browser tab. -->
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
 		href="https://fonts.googleapis.com/css2?family=Micro+5&family=Nova+Cut&family=Press+Start+2P&family=Protest+Guerrilla&family=Sixtyfour&family=Stalinist+One&family=Turret+Road:wght@200;300;400;500;700;800&family=VT323&family=Wallpoet&display=swap"
 		rel="stylesheet" />
-	<!-- Unicons CSS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
 	<!-- Link to the Bootstrap icons CSS file. -->
 	<link
 		href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -29,13 +30,24 @@
 	<!-- Link to the fontawesome icons file. -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 	<!-- Link to the Unicons CSS file. -->
+	<link href="/css/styles.css" rel="stylesheet">
+
 	<script src="/js/script.js" defer></script>
 	<!-- Link to an external JavaScript file with the 'defer' attribute, meaning it will be executed after the document has been parsed. -->
-<style>
-	.social a{
-		color: black;
-	}
-</style>
+	<style>
+		.social a {
+			color: black;
+		}
+		#progress-bar4{
+			--progress: 0;
+			height: 12px;
+			width: var(--progress);
+			position: fixed;
+			z-index: 1001;
+			background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+			margin-top: -83px;
+		}
+	</style>
 </head>
 
 <body class="page-leaderboard">
@@ -52,8 +64,9 @@
 		<div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
 		<div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
 		<div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
-	  </div>
+	</div>
 	<!-- Body of the webpage. Background color set inline. -->
+	<div id="progress-bar4"></div>
 	<nav class="nav">
 		<!-- Navigation section. -->
 		<i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
@@ -67,11 +80,13 @@
 			<i class="uil uil-times navCloseBtn"></i>
 			<!-- Icon for closing navigation menu. -->
 			<li><a href="/" class=" links-hover">Home</a></li>
-			<li><a href="/play" class=" links-hover" >Play Games</a></li>
+			<li><a href="/play" class=" links-hover">Play Games</a></li>
 			<li><a href="/products" class=" links-hover">Products</a></li>
+
 			<li><a href="/about" class=" links-hover-currentpage">About Us</a></li>
 			<li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/" class=" links-hover">Certificate</a></li>
 			<li><a class="links-hover" onclick="openRateUs()">Rate Us</a></li>
+
 			<li>
 				<div class="small-screen-social">
 					<a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
@@ -334,95 +349,138 @@
 		Made with ❤️ of <b>Chrome Gaming</b>
 	</footer>
 </body>
+
 <script>
-//Custom Cursor
-
-const coords = { x: 0, y: 0 };
-    const circles = document.querySelectorAll(".circle");
-
-    const colors = [
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#55a5ea",
-      "#3fbcc0c6",
-      "#3fbcc0c6",
-      "#3fbcc0c6",
-      "#3fbcc0c6",
-      "#3fbcc0c6",
-      "#3fbcc0c6",
-      "fff",
-      "fff",
-      "fff",
-      "fff",
-      "fff",
-      "fff",
-      "fff",
-    ];
-
-    circles.forEach(function (circle, index) {
-      circle.x = 0;
-      circle.y = 0;
-      circle.style.backgroundColor = colors[index % colors.length];
-    });
-
-    window.addEventListener("mousemove", function (e) {
-      coords.x = e.clientX;
-      coords.y = e.clientY;
-    });
-
-    function animateCircles() {
-      let x = coords.x;
-      let y = coords.y;
-
-      circles.forEach(function (circle, index) {
-        circle.style.left = x - 12 + "px";
-        circle.style.top = y - 12 + "px";
-
-        circle.style.scale = (circles.length - index) / circles.length;
-
-        circle.x = x;
-        circle.y = y;
-
-        const nextCircle = circles[index + 1] || circles[0];
-        x += (nextCircle.x - x) * 0.3;
-        y += (nextCircle.y - y) * 0.3;
-      });
-
-      requestAnimationFrame(animateCircles);
+	const updateProgress = () =>{
+		const {scrollTop,scrollHeight} = document.documentElement;
+		const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
+		document.querySelector('#progress-bar4').style.setProperty('--progress',scrollPercent);
     }
+	document.addEventListener('scroll',updateProgress);
 
-    animateCircles();
+	 document.querySelector('.toggler').addEventListener('click', function () {
+      document.querySelector('.social-icons').classList.toggle('show-icons');
+    });
+</script>
+<script>
 
-	document.querySelector('.toggler').addEventListener('click', function () {
-		document.querySelector('.social-icons').classList.toggle('show-icons');
+	//Custom Cursor
+
+	const coords = { x: 0, y: 0 };
+	const circles = document.querySelectorAll(".circle");
+
+	const colors = [
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#55a5ea",
+		"#3fbcc0c6",
+		"#3fbcc0c6",
+		"#3fbcc0c6",
+		"#3fbcc0c6",
+		"#3fbcc0c6",
+		"#3fbcc0c6",
+		"fff",
+		"fff",
+		"fff",
+		"fff",
+		"fff",
+		"fff",
+		"fff",
+	];
+
+	circles.forEach(function (circle, index) {
+		circle.x = 0;
+		circle.y = 0;
+		circle.style.backgroundColor = colors[index % colors.length];
 	});
+
+
+	window.addEventListener("mousemove", function (e) {
+		coords.x = e.clientX;
+		coords.y = e.clientY;
+	});
+
+	function animateCircles() {
+		let x = coords.x;
+		let y = coords.y;
+
+		circles.forEach(function (circle, index) {
+			circle.style.left = x - 12 + "px";
+			circle.style.top = y - 12 + "px";
+
+			circle.style.scale = (circles.length - index) / circles.length;
+
+			circle.x = x;
+			circle.y = y;
+
+			const nextCircle = circles[index + 1] || circles[0];
+			x += (nextCircle.x - x) * 0.3;
+			y += (nextCircle.y - y) * 0.3;
+		});
+
+		requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	
+
+
+	window.addEventListener("mousemove", function (e) {
+		coords.x = e.clientX;
+		coords.y = e.clientY;
+	});
+
+	function animateCircles() {
+		let x = coords.x;
+		let y = coords.y;
+
+		circles.forEach(function (circle, index) {
+			circle.style.left = x - 12 + "px";
+			circle.style.top = y - 12 + "px";
+
+			circle.style.scale = (circles.length - index) / circles.length;
+
+			circle.x = x;
+			circle.y = y;
+
+			const nextCircle = circles[index + 1] || circles[0];
+			x += (nextCircle.x - x) * 0.3;
+			y += (nextCircle.y - y) * 0.3;
+		});
+
+		requestAnimationFrame(animateCircles);
+	}
+
+	animateCircles();
+
+	
 
 </script>
 <script>
-    const shareButton = document.querySelector(".share-button");
-			const toggleSocials = () => {
-				const socialsWrapper = document.querySelector(".icons");
-				const shareButtonImage = shareButton.querySelector("img");
+	const shareButton = document.querySelector(".share-button");
+	const toggleSocials = () => {
+		const socialsWrapper = document.querySelector(".icons");
+		const shareButtonImage = shareButton.querySelector("img");
 
-				socialsWrapper.classList.toggle("active");
+		socialsWrapper.classList.toggle("active");
 
-				if (shareButtonImage.src.includes("share")) {
-					shareButtonImage.src = "/images/close.svg";
-				} else {
-					shareButtonImage.src = "assets/share.svg";
-				}
-			};
+		if (shareButtonImage.src.includes("share")) {
+			shareButtonImage.src = "/images/close.svg";
+		} else {
+			shareButtonImage.src = "assets/share.svg";
+		}
+	};
 
-			shareButton.addEventListener("click", toggleSocials);
-			
-  document.querySelector('.toggler').addEventListener('click', function() {
-    document.querySelector('.social-icons').classList.toggle('show-icons');
-  });
-  </script>
+	shareButton.addEventListener("click", toggleSocials);
+
+
+	
+</script>
 
 </html>

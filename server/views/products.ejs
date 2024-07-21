@@ -49,8 +49,6 @@
   .button-85 {
     font-size: 0.8rem ;
   }
-
-
   /* social */
   .share-button {
     position: absolute;
@@ -84,6 +82,16 @@
     /* background-color: var(#00c896); */
     transform: scale(1.03);
   }
+  #progress-bar{
+  --progress: 0;
+  height: 12px;
+  width: var(--progress);
+  position: fixed;
+  z-index: 1001;
+  background: linear-gradient(45deg,rgb(41, 187, 203),rgb(181, 8, 155));
+  /* margin-top: -100px; */
+}
+
 </style>
 </head>
 
@@ -103,6 +111,7 @@
     <div class="circle" style="background-color: #fff; left: 504px; top: 59px; scale: 0.8;"></div>
   </div>
   <!-- Body of the webpage. Background color set inline. -->
+  <div id="progress-bar"></div>
   <nav class="nav">
     <!-- Navigation section. -->
     <i id="menuBarsColor" class="uil uil-bars navOpenBtn"></i>
@@ -151,8 +160,10 @@
       <i class="bi bi-toggle-off" id="theme-toggle"></i>
     </div>
   </nav>
+
   <%- include('partials/rateus') %>
         <script src="/js/script.js"></script>
+
   <style>
     .border-hover::after {
       width: 45%;
@@ -508,6 +519,12 @@
 
   <script src="/js/vanilla-tilt.js"></script>
   <script>
+    const updateProgress = () =>{
+      const {scrollTop,scrollHeight} = document.documentElement;
+      const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
+      document.querySelector('#progress-bar').style.setProperty('--progress',scrollPercent);
+    }
+    document.addEventListener('scroll',updateProgress);
     const shareButton = document.querySelector(".share-button");
     const toggleSocials = () => {
       const socialsWrapper = document.querySelector(".icons");
@@ -528,6 +545,78 @@
     document.querySelector('.toggler').addEventListener('click', function () {
       document.querySelector('.social-icons').classList.toggle('show-icons');
     });
+
+  </script>
+
+  
+<script>
+  //Custom Cursor
+  
+  const coords = { x: 0, y: 0 };
+      const circles = document.querySelectorAll(".circle");
+  
+      const colors = [
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#55a5ea",
+        "#3fbcc0c6",
+        "#3fbcc0c6",
+        "#3fbcc0c6",
+        "#3fbcc0c6",
+        "#3fbcc0c6",
+        "#3fbcc0c6",
+        "fff",
+        "fff",
+        "fff",
+        "fff",
+        "fff",
+        "fff",
+        "fff",
+      ];
+  
+      circles.forEach(function (circle, index) {
+        circle.x = 0;
+        circle.y = 0;
+        circle.style.backgroundColor = colors[index % colors.length];
+      });
+  
+      window.addEventListener("mousemove", function (e) {
+        coords.x = e.clientX;
+        coords.y = e.clientY;
+      });
+  
+      function animateCircles() {
+        let x = coords.x;
+        let y = coords.y;
+  
+        circles.forEach(function (circle, index) {
+          circle.style.left = x - 12 + "px";
+          circle.style.top = y - 12 + "px";
+  
+          circle.style.scale = (circles.length - index) / circles.length;
+  
+          circle.x = x;
+          circle.y = y;
+  
+          const nextCircle = circles[index + 1] || circles[0];
+          x += (nextCircle.x - x) * 0.3;
+          y += (nextCircle.y - y) * 0.3;
+        });
+  
+        requestAnimationFrame(animateCircles);
+      }
+  
+      animateCircles();
+  
+    document.querySelector('.toggler').addEventListener('click', function () {
+      document.querySelector('.social-icons').classList.toggle('show-icons');
+    });
+  
   </script>
 </body>
 
