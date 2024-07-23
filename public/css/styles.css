@@ -1079,6 +1079,7 @@ h3 {
   border: solid 2px purple;
   max-height: 24.625em;
   overflow: scroll;
+  overflow-x:  hidden;
   -webkit-overflow-scrolling: touch;
 }
 
