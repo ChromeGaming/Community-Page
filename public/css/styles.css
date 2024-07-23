@@ -16,7 +16,7 @@ body.page-leaderboard {
   padding: 0 !important;
   /* Ensures padding is removed for .page-leaderboard for full width navbar */
 }
-*{
+* {
   /* border: 2px solid red; */
 }
 .alert {
@@ -70,7 +70,6 @@ body.page-leaderboard {
   /* Add a dark-grey background on hover */
 }
 
-
 .alert.show {
   opacity: 1;
   visibility: visible;
@@ -119,7 +118,7 @@ body {
   height: 5rem;
   z-index: 1000;
 }
- /* cursor */
+/* cursor */
 .circle {
   z-index: 10000;
   width: 20px;
@@ -142,16 +141,15 @@ body {
 }
 /* navigation bar font size transition styling*/
 
-
 /* navigation bar hover styling*/
 .links-hover:hover::after {
-  content: '';
+  content: "";
   display: block;
   margin-top: 0.3rem;
   width: 0;
   height: 0.2rem;
-  background:rgba(0, 131, 245, 0.769);
-  transition: width .3s;
+  background: rgba(0, 131, 245, 0.769);
+  transition: width 0.3s;
   position: relative;
   top: 0.7rem;
 }
@@ -159,29 +157,28 @@ body {
   width: 50%;
 }
 .links-hover:hover {
-  color:rgb(204, 22, 198) !important; 
-  text-shadow: .1em .1em 0 hsl(200 50% 30%) !important;
-  font-size: 17px;
-  font-weight: bold;
-  text-align: start;
-  
-}
-.links-hover-currentpage{
   color: rgb(204, 22, 198) !important;
-  text-shadow: .1em .1em 0 hsl(200 50% 30%) !important;
+  text-shadow: 0.1em 0.1em 0 hsl(200 50% 30%) !important;
   font-size: 17px;
   font-weight: bold;
   text-align: start;
 }
-.links-hover-currentpage::after{
-  content: '';
+.links-hover-currentpage {
+  color: rgb(204, 22, 198) !important;
+  text-shadow: 0.1em 0.1em 0 hsl(200 50% 30%) !important;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: start;
+}
+.links-hover-currentpage::after {
+  content: "";
   display: block;
   width: 50%;
   height: 0.2rem;
-  background:rgba(0, 131, 245, 0.769);
-  transition: width .3s;
+  background: rgba(0, 131, 245, 0.769);
+  transition: width 0.3s;
   position: relative;
-  top:0.7rem;
+  top: 0.7rem;
 }
 
 /* Navigation bar styling. */
@@ -478,26 +475,26 @@ body {
   display: none;
 }
 .social-links {
-  display: flex; 
-  gap: 15px; 
+  display: flex;
+  gap: 15px;
 }
 
 .social-icon {
   width: 40px;
   height: 40px;
-  background-size: contain; 
+  background-size: contain;
   background-repeat: no-repeat;
 }
 .footer-column {
-position: absolute; 
-bottom: 3rem; 
-right: 8rem; 
+  position: absolute;
+  bottom: 3rem;
+  right: 8rem;
 }
 .social-links a {
-margin-top: 1rem; 
+  margin-top: 1rem;
 }
 .gmail-icon {
-  position: relative; 
+  position: relative;
   top: -5px;
 }
 .youtube {
@@ -576,14 +573,17 @@ margin-top: 1rem;
 }
 
 .toggler:hover {
-  background: linear-gradient(135deg, rgb(64, 176, 228), rgb(87, 43, 190), rgb(223, 8, 212));
+  background: linear-gradient(
+    135deg,
+    rgb(64, 176, 228),
+    rgb(87, 43, 190),
+    rgb(223, 8, 212)
+  );
 }
 
 .social-icon:hover {
   transform: scale(1.4);
 }
-
-
 
 .social-icons.show-icons .social-icon:nth-child(2) {
   transition-delay: 0.1s;
@@ -604,7 +604,6 @@ margin-top: 1rem;
 .social-icons.show-icons .social-icon:nth-child(6) {
   transition-delay: 0.5s;
 }
-
 
 /* Styling for rotate button. */
 #rotate {
@@ -797,20 +796,19 @@ h3 {
 }
 
 .border-hover::after {
-  content: '';
+  content: "";
   display: block;
   margin-top: 0.3rem;
   width: 0;
   height: 0.2rem;
-  background:rgba(0, 131, 245, 0.769);
-  transition: width .3s;
+  background: rgba(0, 131, 245, 0.769);
+  transition: width 0.3s;
   position: relative;
   top: 0.7rem;
 }
 .border-hover::after {
   width: 15%;
 }
-
 
 /* Responsive styling. */
 @media screen and (max-width: 1160px) {
@@ -949,7 +947,6 @@ h3 {
 }
 
 @media screen and (min-width: 48rem) {
-
   h2,
   h3,
   .h6 {
@@ -1026,7 +1023,8 @@ h3 {
   cursor: pointer;
   position: absolute;
   transition: opacity 0.3s ease;
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_close_dark-c7c6a31cb37c841e14b44a8c1a7b5e81447b9442d94fdea8bcf66cfea18d1a13.svg) no-repeat center;
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/svgs/icon_close_dark-c7c6a31cb37c841e14b44a8c1a7b5e81447b9442d94fdea8bcf66cfea18d1a13.svg)
+    no-repeat center;
 }
 
 .remodal-close:hover {
@@ -1048,6 +1046,13 @@ h3 {
 /* .page-leaderboard .leaderboard-progress .contain {
   padding: 3em 1.5em 2em 1.5em;
 } */
+
+.avatar-img {
+  width: 42px; /* Adjust the size as needed */
+  height: 42px; /* Adjust the size as needed */
+  border-radius: 50%; /* Make the image round */
+  margin-right: 20px;
+}
 
 @media (min-width: 70em) {
   .page-leaderboard .leaderboard-progress .contain {
@@ -1200,7 +1205,6 @@ h3 {
   transition: background-color 1s, font-weight 1s, font-size 1s;
 }
 
-
 .ranking-table {
   width: 100%;
   border-collapse: collapse;
@@ -1249,8 +1253,6 @@ h3 {
   margin-right: 10px;
 }
 
-
-
 .page-leaderboard .ranking .ranking-table-row-leader-1:hover {
   background-color: gold;
   height: 6vw;
@@ -1276,7 +1278,6 @@ h3 {
 }
 
 @media (min-width: 33em) {
-
   .page-leaderboard .ranking .ranking-table-row-leader-1,
   .page-leaderboard .ranking .ranking-table-row-leader-2,
   .page-leaderboard .ranking .ranking-table-row-leader-3 {
@@ -1285,36 +1286,76 @@ h3 {
   }
 }
 
-.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
-.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
-.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-1
+  .ranking-table-data-leader-1,
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-2
+  .ranking-table-data-leader-2,
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-3
+  .ranking-table-data-leader-3 {
   display: flex;
   justify-content: end;
   width: 20%;
 }
 
 @media (min-width: 48em) {
-
-  .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1,
-  .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2,
-  .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 {
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-1
+    .ranking-table-data-leader-1,
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-2
+    .ranking-table-data-leader-2,
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-3
+    .ranking-table-data-leader-3 {
     width: 15%;
   }
 }
 
-.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
-.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
-.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-1
+  .ranking-table-data-leader-1
+  .medal-gold,
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-2
+  .ranking-table-data-leader-2
+  .medal-silver,
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-3
+  .ranking-table-data-leader-3
+  .medal-bronze {
   margin-top: -1.313em;
   height: 2.875em;
   width: 2.875em;
 }
 
 @media (min-width: 33em) {
-
-  .page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold,
-  .page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver,
-  .page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-1
+    .ranking-table-data-leader-1
+    .medal-gold,
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-2
+    .ranking-table-data-leader-2
+    .medal-silver,
+  .page-leaderboard
+    .ranking
+    .ranking-table-row-leader-3
+    .ranking-table-data-leader-3
+    .medal-bronze {
     margin-top: -1.563em;
     height: 3.875em;
     width: 3.875em;
@@ -1325,8 +1366,13 @@ h3 {
   border: solid 0.125em #ecc81a;
 }
 
-.page-leaderboard .ranking .ranking-table-row-leader-1 .ranking-table-data-leader-1 .medal-gold {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-gold-c49052bfa07f36621f16dbe77f7fc36cbafd72ff088ea970256ff998be05687b.svg) no-repeat;
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-1
+  .ranking-table-data-leader-1
+  .medal-gold {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-gold-c49052bfa07f36621f16dbe77f7fc36cbafd72ff088ea970256ff998be05687b.svg)
+    no-repeat;
   background-size: contain;
 }
 
@@ -1334,8 +1380,13 @@ h3 {
   border: solid 0.125em #dbe2e8;
 }
 
-.page-leaderboard .ranking .ranking-table-row-leader-2 .ranking-table-data-leader-2 .medal-silver {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-silver-d099c5dd916c167c3ba4716c8968a819f317daaef1901c8e8bae6c6932852faa.svg) no-repeat;
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-2
+  .ranking-table-data-leader-2
+  .medal-silver {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-silver-d099c5dd916c167c3ba4716c8968a819f317daaef1901c8e8bae6c6932852faa.svg)
+    no-repeat;
   background-size: contain;
 }
 
@@ -1343,8 +1394,13 @@ h3 {
   border: solid 0.125em #dfdfd1;
 }
 
-.page-leaderboard .ranking .ranking-table-row-leader-3 .ranking-table-data-leader-3 .medal-bronze {
-  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-bronze-d0f15d413800257442c8d4b2d5239cfe28c9fd9594f863ab1fad5258f8d1d5eb.svg) no-repeat;
+.page-leaderboard
+  .ranking
+  .ranking-table-row-leader-3
+  .ranking-table-data-leader-3
+  .medal-bronze {
+  background: url(https://d125fmws0bore1.cloudfront.net/assets/pages/leaderboard/medal-bronze-d0f15d413800257442c8d4b2d5239cfe28c9fd9594f863ab1fad5258f8d1d5eb.svg)
+    no-repeat;
   background-size: contain;
 }
 
@@ -1417,7 +1473,8 @@ h3 {
 .page-leaderboard .ranking .ranking-table-data:nth-child(3) .complete {
   margin: -1.25em auto;
   transform: translateY(18%);
-  background: url(https://github.com/GameSphere-MultiPlayer/GameSphere/assets/98798977/fe253e0d-b619-477e-a8de-b10b785f0bd1) no-repeat;
+  background: url(https://github.com/GameSphere-MultiPlayer/GameSphere/assets/98798977/fe253e0d-b619-477e-a8de-b10b785f0bd1)
+    no-repeat;
   background-size: contain;
   width: 3em;
   height: 3em;
@@ -1459,7 +1516,7 @@ h3 {
   transition: opacity 0.5s;
 }
 
-.active>.socials-menu {
+.active > .socials-menu {
   opacity: 1;
 }
 
@@ -1497,7 +1554,7 @@ h3 {
   height: 4rem;
   border-radius: 50%;
   outline: none;
-  transition: outline ;
+  transition: outline;
   transition-duration: 5s;
 }
 
@@ -1510,7 +1567,7 @@ h3 {
 .social li a {
   transition: font-size 0.3s;
 }
-.active .social:hover{
+.active .social:hover {
   outline: 2px solid white;
   outline-offset: 3px;
 }
@@ -1583,9 +1640,9 @@ h3 {
     position: absolute;
   }
 }
-.about-para{
+.about-para {
   font-size: 1rem;
-  margin:0 200px ;
+  margin: 0 200px;
 }
 @media (max-width: 480px) {
   .icons {
@@ -1597,7 +1654,7 @@ h3 {
   .logo_image {
     overflow: hidden;
   }
-  .logo_image{
+  .logo_image {
     margin-top: 1rem;
   }
   .logo_head1 {
@@ -1606,10 +1663,9 @@ h3 {
   .logo_head {
     font-size: 2rem !important;
   }
-  .complete{
+  .complete {
     position: relative;
     left: 2rem;
-
   }
 }
 
@@ -1654,13 +1710,13 @@ section.image {
     font-size: 50px;
     text-align: center;
   }
-  .about-para{
+  .about-para {
     margin: 1.5rem;
   }
-  .container1{
+  .container1 {
     padding: 1px !important;
   }
-  .line3{
+  .line3 {
     font-size: 15px;
   }
 }
@@ -1777,13 +1833,11 @@ section.image {
 }
 .image_part img:hover {
   transform: translateY(-10px);
-  border:5px double rgb(87, 43, 190);
+  border: 5px double rgb(87, 43, 190);
   padding: 20px;
   /* border-style: ; */
   border-radius: 30px;
 }
-
-
 
 .line_img {
   width: 100%;
@@ -1794,7 +1848,7 @@ section.image {
   .image_part {
     display: none;
   }
-  .about-para{
+  .about-para {
     margin: 2rem;
   }
   .container1 {
@@ -1816,7 +1870,6 @@ section.image {
   .right {
     left: 8.7%;
   }
- 
 }
 
 @media screen and (max-width: 768px) {
@@ -1908,9 +1961,9 @@ section.image {
   top: 0;
   border-radius: 10px;
 }
-.button-85:hover{
+.button-85:hover {
   font-size: 14px;
-  box-shadow:0px 2px 10px 6px #999999;
+  box-shadow: 0px 2px 10px 6px #999999;
 }
 
 .rateus-modal {
@@ -1949,8 +2002,8 @@ section.image {
   border-radius: 10px;
   outline: none;
   opacity: 0.9;
-  -webkit-transition: opacity .15s ease-in-out;
-  transition: opacity .15s ease-in-out;
+  -webkit-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
 }
 
 .rating-slider input[type="range"]::-webkit-slider-thumb {
@@ -1982,7 +2035,6 @@ textarea {
   background-color: #444; /* Darker background */
   color: white; /* Text color */
 }
-
 
 .close {
   color: white;

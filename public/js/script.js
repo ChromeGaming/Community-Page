@@ -60,58 +60,83 @@ function compare(a, b) {
   }
   return 0;
 }
-async function getContributors(repoName, page = 1) {
-  let request = await fetch(`https://api.github.com/repos/GameSphere-MultiPlayer/Community-Page/contributors?page=1&anon=true`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-  const updateProgress = () =>{
-    const {scrollTop,scrollHeight} = document.documentElement;
-    const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
-    document.querySelector('#progress-bar').style.setProperty('--progress',scrollPercent);
-}
-document.addEventListener('scroll',updateProgress);
 
-  // print data from the fetch on screen
+async function getContributors(repoName, page = 1) {
+  let request = await fetch(
+    `https://api.github.com/repos/GameSphere-MultiPlayer/Community-Page/contributors?page=1&anon=true`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  const updateProgress = () => {
+    const { scrollTop, scrollHeight } = document.documentElement;
+    const scrollPercent = `${
+      (scrollTop / (scrollHeight - window.innerHeight)) * 100
+    }%`;
+    document
+      .querySelector("#progress-bar")
+      .style.setProperty("--progress", scrollPercent);
+  };
+  document.addEventListener("scroll", updateProgress);
+
   let contributorsList = await request.json();
   contributorsList.sort(compare);
-  var data = []
-  var size = contributorsList.length
+
+  var data = [];
+  var size = contributorsList.length;
   for (var i = 0; i < size; i++) {
-    data.push({ place: i + 1, name: (contributorsList[i].login==undefined)? contributorsList[i].name : contributorsList[i].login});
+    data.push({
+      place: i + 1,
+      name:
+        contributorsList[i].login == undefined
+          ? contributorsList[i].name
+          : contributorsList[i].login,
+      avatar_url: contributorsList[i].avatar_url,
+    });
   }
-  console.log(data)
 
+  console.log(data);
   return data;
-};
+}
 
-var medals = ['medal-gold', 'medal-silver', 'medal-bronze']
+var medals = ["medal-gold", "medal-silver", "medal-bronze"];
 window.onload = async function () {
-  const data = await getContributors("Community-Page")
+  const data = await getContributors("Community-Page");
 
-  console.log(data.length)
+  console.log(data.length);
   var i = 0;
-  data.forEach(item => {
+  data.forEach((item) => {
     if (i > 2) {
-      const rankingTable = document.getElementById('rankingTableBody');
-      const row = document.createElement('div');
-      row.className = 'ranking-table-row';
+      const rankingTable = document.getElementById("rankingTableBody");
+      const row = document.createElement("div");
+      row.className = "ranking-table-row";
 
-      const placeCell = document.createElement('div');
-      placeCell.className = 'ranking-table-data';
+      const placeCell = document.createElement("div");
+      placeCell.className = "ranking-table-data";
       placeCell.textContent = item.place;
 
-      const nameCell = document.createElement('div');
-      nameCell.className = 'ranking-table-data';
-      nameCell.textContent = item.name;
+      const nameCell = document.createElement("div");
+      nameCell.className = "ranking-table-data";
 
-      const completeCell = document.createElement('div');
-      completeCell.className = 'ranking-table-data';
+      // Create img element for avatar
+      const avatarImg = document.createElement("img");
+      avatarImg.src = item.avatar_url;
+      avatarImg.className = "avatar-img";
+      nameCell.appendChild(avatarImg);
 
-      const completeIndicator = document.createElement('div');
-      completeIndicator.className = 'complete';
+      // Append name
+      const nameText = document.createTextNode(item.name);
+      nameCell.appendChild(nameText);
+
+      const completeCell = document.createElement("div");
+      completeCell.className = "ranking-table-data";
+
+      const completeIndicator = document.createElement("div");
+      completeIndicator.className = "complete";
       completeCell.appendChild(completeIndicator);
 
       row.appendChild(placeCell);
@@ -120,28 +145,37 @@ window.onload = async function () {
 
       rankingTable.appendChild(row);
     } else {
-      const rankingTable = document.getElementById("top3")
-      const row = document.createElement('div');
-      row.className = 'ranking-table-row-leader-' + (i + 1);
+      const rankingTable = document.getElementById("top3");
+      const row = document.createElement("div");
+      row.className = "ranking-table-row-leader-" + (i + 1);
 
-      const placeCell = document.createElement('div');
-      placeCell.className = 'ranking-table-data-leader-' + (i + 1);
+      const placeCell = document.createElement("div");
+      placeCell.className = "ranking-table-data-leader-" + (i + 1);
 
-      const medalcell = document.createElement('div')
-      console.log(medals[i])
+      const medalcell = document.createElement("div");
+      console.log(medals[i]);
       medalcell.className = medals[i];
 
       placeCell.appendChild(medalcell);
 
-      const nameCell = document.createElement('div');
-      nameCell.className = 'ranking-table-data';
-      nameCell.textContent = item.name;
+      const nameCell = document.createElement("div");
+      nameCell.className = "ranking-table-data";
 
-      const completeCell = document.createElement('div');
-      completeCell.className = 'ranking-table-data';
+      // Create img element for avatar
+      const avatarImg = document.createElement("img");
+      avatarImg.src = item.avatar_url;
+      avatarImg.className = "avatar-img";
+      nameCell.appendChild(avatarImg);
 
-      const completeIndicator = document.createElement('div');
-      completeIndicator.className = 'complete';
+      // Append name
+      const nameText = document.createTextNode(item.name);
+      nameCell.appendChild(nameText);
+
+      const completeCell = document.createElement("div");
+      completeCell.className = "ranking-table-data";
+
+      const completeIndicator = document.createElement("div");
+      completeIndicator.className = "complete";
       completeCell.appendChild(completeIndicator);
 
       row.appendChild(placeCell);
@@ -152,8 +186,8 @@ window.onload = async function () {
     }
     i++;
   });
-  console.log("RUNNED")
-}
+  console.log("RUNNED");
+};
 
 const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
@@ -171,7 +205,7 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
-    console.log(result)
+    console.log(result);
     resultContainer.innerHTML = "";
     if (result.length !== 0) {
       result.forEach((item, index) => {
@@ -184,8 +218,7 @@ searchResult.addEventListener("input", () => {
         div.appendChild(span);
         resultContainer.appendChild(div);
       });
-    }
-    else {
+    } else {
       resultContainer.style.display = "none";
     }
   }
@@ -219,12 +252,16 @@ toggleButton.addEventListener("click", () => {
     toggleButton.classList.remove("bi-toggle-off");
     toggleButton.classList.add("bi-toggle-on");
     document.getElementById("menuBarsColor").style.color = "black";
-    document.querySelectorAll("a").forEach((link) => link.style.color = "black");
+    document
+      .querySelectorAll("a")
+      .forEach((link) => (link.style.color = "black"));
   } else {
     toggleButton.classList.remove("bi-toggle-on");
     toggleButton.classList.add("bi-toggle-off");
     document.getElementById("menuBarsColor").style.color = "white";
-    document.querySelectorAll("a").forEach((link) => link.style.color = "white");
+    document
+      .querySelectorAll("a")
+      .forEach((link) => (link.style.color = "white"));
   }
 });
 
@@ -303,9 +340,11 @@ subscriptionForm.addEventListener("submit", function (event) {
 
 // Function to update the displayed slider value
 function updateSliderValue(value) {
-  document.getElementById('slider-value').textContent = value;
-  const slider = document.getElementById('rating');
-  const color = `linear-gradient(90deg, #ffcc00 ${value * 20}%, #ddd ${value * 20}%)`;
+  document.getElementById("slider-value").textContent = value;
+  const slider = document.getElementById("rating");
+  const color = `linear-gradient(90deg, #ffcc00 ${value * 20}%, #ddd ${
+    value * 20
+  }%)`;
   slider.style.background = color;
 }
 
@@ -313,34 +352,34 @@ function updateSliderValue(value) {
 function submitFeedback(event) {
   event.preventDefault(); // Prevent form submission from refreshing the page
 
-  const rating = document.getElementById('rating').value;
-  const feedback = document.getElementById('feedback').value;
-  const feedbackMessage = document.getElementById('feedback-message');
+  const rating = document.getElementById("rating").value;
+  const feedback = document.getElementById("feedback").value;
+  const feedbackMessage = document.getElementById("feedback-message");
 
   if (rating && feedback) {
-      // Show feedback message
-      feedbackMessage.textContent = "You have submitted the rating";
-      feedbackMessage.style.display = 'block';
+    // Show feedback message
+    feedbackMessage.textContent = "You have submitted the rating";
+    feedbackMessage.style.display = "block";
 
-      // Close the Rate Us modal after submission
-      closeRateUs();
+    // Close the Rate Us modal after submission
+    closeRateUs();
 
-      // Optional: Reset form fields
-      document.getElementById('feedback').value = '';
-      document.getElementById('rating').value = 3; // Reset slider to default value
-      updateSliderValue(3); // Reset displayed value
-
+    // Optional: Reset form fields
+    document.getElementById("feedback").value = "";
+    document.getElementById("rating").value = 3; // Reset slider to default value
+    updateSliderValue(3); // Reset displayed value
   } else {
-      feedbackMessage.textContent = "Please select a rating and provide feedback before submitting.";
-      feedbackMessage.style.display = 'block';
+    feedbackMessage.textContent =
+      "Please select a rating and provide feedback before submitting.";
+    feedbackMessage.style.display = "block";
   }
 }
 
 function openRateUs() {
-  document.getElementById('rateus-modal').style.display = 'block';
+  document.getElementById("rateus-modal").style.display = "block";
 }
 
 // Function to close the Rate Us modal
 function closeRateUs() {
-  document.getElementById('rateus-modal').style.display = 'none';
+  document.getElementById("rateus-modal").style.display = "none";
 }
