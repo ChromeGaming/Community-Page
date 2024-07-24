@@ -1087,7 +1087,6 @@ async function getContributors(repoName, page = 1) {
       profileUrl: contributorsList[i].html_url
     });
   }
-  console.log(data);
 
   return data;
 }
@@ -1096,7 +1095,6 @@ var medals = ['medal-gold', 'medal-silver', 'medal-bronze'];
 window.onload = async function () {
   const data = await getContributors("GameSphere-MultiPlayer/Community-Page");
 
-  console.log(data.length);
   var i = 0;
   data.forEach(item => {
     const avatarImg = document.createElement('img');
@@ -1166,7 +1164,6 @@ window.onload = async function () {
     }
     i++;
   });
-  console.log("RUNNED");
 };
 
 
@@ -1187,7 +1184,6 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
-    console.log(result)
     resultContainer.innerHTML = "";
     if (result.length !== 0) {
       result.forEach((item, index) => {

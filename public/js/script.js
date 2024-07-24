@@ -95,7 +95,6 @@ let data = [];
 window.onload = async function () {
   data = await getAllContributors("GameSphere-MultiPlayer/Community-Page");
 
-  console.log(data.length);
   var i = 0;
   const top3Fragment = document.createDocumentFragment();
   const rankingFragment = document.createDocumentFragment();
@@ -141,7 +140,6 @@ window.onload = async function () {
 
   document.getElementById('top3').appendChild(top3Fragment);
   document.getElementById('rankingTableBody').appendChild(rankingFragment);
-  console.log("RUNNED");
 };
 
 const nav = document.querySelector(".nav"),
@@ -160,7 +158,6 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
-    console.log(result);
     resultContainer.innerHTML = "";
     if (result.length !== 0) {
       result.forEach((item) => {
