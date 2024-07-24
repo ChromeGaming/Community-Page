@@ -60,103 +60,96 @@ function compare(a, b) {
   }
   return 0;
 }
+
 async function getContributors(repoName, page = 1) {
-  let request = await fetch(`https://api.github.com/repos/GameSphere-MultiPlayer/Community-Page/contributors?page=1&anon=true`, {
+  let request = await fetch(`https://api.github.com/repos/${repoName}/contributors?page=${page}&anon=true`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     }
   });
-  const updateProgress = () =>{
-    const {scrollTop,scrollHeight} = document.documentElement;
-    const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
-    document.querySelector('#progress-bar').style.setProperty('--progress',scrollPercent);
-}
-document.addEventListener('scroll',updateProgress);
 
-  // print data from the fetch on screen
   let contributorsList = await request.json();
-  contributorsList.sort(compare);
-  var data = []
-  var size = contributorsList.length
-  for (var i = 0; i < size; i++) {
-    data.push({ place: i + 1, name: (contributorsList[i].login==undefined)? contributorsList[i].name : contributorsList[i].login});
+  return contributorsList;
+}
+
+async function getAllContributors(repoName) {
+  let allContributors = [];
+  let page = 1;
+  while (true) {
+    let contributors = await getContributors(repoName, page);
+    if (contributors.length === 0) break;
+    allContributors = allContributors.concat(contributors);
+    page++;
   }
-  console.log(data)
+  allContributors.sort(compare);
+  return allContributors.map((contributor, index) => ({
+    place: index + 1,
+    name: contributor.login ? contributor.login : contributor.name,
+  }));
+}
 
-  return data;
-};
+var medals = ['medal-gold', 'medal-silver', 'medal-bronze'];
+let data = [];
 
-var medals = ['medal-gold', 'medal-silver', 'medal-bronze']
 window.onload = async function () {
-  const data = await getContributors("Community-Page")
+  data = await getAllContributors("GameSphere-MultiPlayer/Community-Page");
 
+<<<<<<< HEAD
   if(document.getElementById('rankingTableBody') == null)
     return;
 
   console.log(data.length)
+=======
+  console.log(data.length);
+>>>>>>> upstream/main
   var i = 0;
-  data.forEach(item => {
-    if (i > 2) {
-      const rankingTable = document.getElementById('rankingTableBody');
-      const row = document.createElement('div');
-      row.className = 'ranking-table-row';
+  const top3Fragment = document.createDocumentFragment();
+  const rankingFragment = document.createDocumentFragment();
 
-      const placeCell = document.createElement('div');
+  data.forEach(item => {
+    const row = document.createElement('div');
+    const placeCell = document.createElement('div');
+    const nameCell = document.createElement('div');
+    const completeCell = document.createElement('div');
+    const completeIndicator = document.createElement('div');
+
+    if (i > 2) {
+      row.className = 'ranking-table-row';
       placeCell.className = 'ranking-table-data';
       placeCell.textContent = item.place;
-
-      const nameCell = document.createElement('div');
       nameCell.className = 'ranking-table-data';
       nameCell.textContent = item.name;
-
-      const completeCell = document.createElement('div');
       completeCell.className = 'ranking-table-data';
-
-      const completeIndicator = document.createElement('div');
       completeIndicator.className = 'complete';
       completeCell.appendChild(completeIndicator);
-
       row.appendChild(placeCell);
       row.appendChild(nameCell);
       row.appendChild(completeCell);
-
-      rankingTable.appendChild(row);
+      rankingFragment.appendChild(row);
     } else {
-      const rankingTable = document.getElementById("top3")
-      const row = document.createElement('div');
       row.className = 'ranking-table-row-leader-' + (i + 1);
-
-      const placeCell = document.createElement('div');
       placeCell.className = 'ranking-table-data-leader-' + (i + 1);
-
-      const medalcell = document.createElement('div')
-      console.log(medals[i])
+      const medalcell = document.createElement('div');
       medalcell.className = medals[i];
-
       placeCell.appendChild(medalcell);
-
-      const nameCell = document.createElement('div');
       nameCell.className = 'ranking-table-data';
       nameCell.textContent = item.name;
-
-      const completeCell = document.createElement('div');
       completeCell.className = 'ranking-table-data';
-
-      const completeIndicator = document.createElement('div');
       completeIndicator.className = 'complete';
       completeCell.appendChild(completeIndicator);
-
       row.appendChild(placeCell);
       row.appendChild(nameCell);
       row.appendChild(completeCell);
-
-      rankingTable.appendChild(row);
+      top3Fragment.appendChild(row);
     }
     i++;
   });
-  console.log("RUNNED")
-}
+
+  document.getElementById('top3').appendChild(top3Fragment);
+  document.getElementById('rankingTableBody').appendChild(rankingFragment);
+  console.log("RUNNED");
+};
 
 let nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
@@ -174,10 +167,10 @@ searchResult.addEventListener("input", () => {
     let result = data.filter((item) =>
       item.name.toLowerCase().includes(searchResult.value.toLowerCase())
     );
-    console.log(result)
+    console.log(result);
     resultContainer.innerHTML = "";
     if (result.length !== 0) {
-      result.forEach((item, index) => {
+      result.forEach((item) => {
         const div = document.createElement("div");
         const p = document.createElement("p");
         const span = document.createElement("span");
@@ -187,8 +180,7 @@ searchResult.addEventListener("input", () => {
         div.appendChild(span);
         resultContainer.appendChild(div);
       });
-    }
-    else {
+    } else {
       resultContainer.style.display = "none";
     }
   }
@@ -209,10 +201,7 @@ searchIcon.addEventListener("click", () => {
   searchIcon.classList.replace("uil-times", "uil-search");
 });
 
-// page start with dark mode
-
 body.classList.add("dark-mode");
-// Toggle between "toggle off and toggle on"//
 
 toggleButton.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
@@ -257,22 +246,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const discordPopup = document.getElementById("discord-popup");
-  const closeBtn = document.getElementById("close-btn");
-  const discordButton = document.getElementById("discord-button");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const discordPopup = document.getElementById("discord-popup");
+//   const closeBtn = document.getElementById("close-btn");
+//   const discordButton = document.getElementById("discord-button");
+//
+//   if(discordButton == null)
+//     return;
+//
+//   discordButton.addEventListener("click", function () {
+//     discordPopup.style.display = "block";
+//   });
+//
+//   closeBtn.addEventListener("click", function () {
+//     discordPopup.style.display = "none";
+//   });
+// });
 
-  if(discordButton == null)
-    return;
-
-  discordButton.addEventListener("click", function () {
-    discordPopup.style.display = "block";
-  });
-
-  closeBtn.addEventListener("click", function () {
-    discordPopup.style.display = "none";
-  });
-});
 const success = () => {
   showAlert("You have successfully subscribed!", "success");
 };
@@ -302,7 +292,7 @@ const subscriptionForm = document.getElementById("subscriptionForm");
 const emailInput = document.getElementById("emailInput");
 
 subscriptionForm.addEventListener("submit", function (event) {
-  if (!emailInput.checkValidity()) {
+  if (!emailInput.validity.valid) {
     showAlert("Please enter a valid email address.", "error");
     emailInput.focus();
     event.preventDefault();
