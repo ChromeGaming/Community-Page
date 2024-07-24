@@ -95,14 +95,9 @@ let data = [];
 window.onload = async function () {
   data = await getAllContributors("GameSphere-MultiPlayer/Community-Page");
 
-<<<<<<< HEAD
   if(document.getElementById('rankingTableBody') == null)
     return;
 
-  console.log(data.length)
-=======
-  console.log(data.length);
->>>>>>> upstream/main
   var i = 0;
   const top3Fragment = document.createDocumentFragment();
   const rankingFragment = document.createDocumentFragment();
