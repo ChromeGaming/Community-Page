@@ -16,9 +16,7 @@ body.page-leaderboard {
   padding: 0 !important;
   /* Ensures padding is removed for .page-leaderboard for full width navbar */
 }
-* {
-  /* border: 2px solid red; */
-}
+
 .alert {
   opacity: 0;
   visibility: hidden;
@@ -478,7 +476,30 @@ body {
   display: flex;
   gap: 15px;
 }
+/* Hover effects */
+.social-links a:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
 
+.social-links .fa-google:hover {
+  color: #ea4335; /* Google color */
+}
+
+.social-links .fa-linkedin:hover {
+  color: #0a66c2; /* LinkedIn color */
+}
+
+.social-links .fa-discord:hover {
+  color: #5865f2; /* Discord color */
+}
+
+.social-links .fa-medium:hover {
+  color: #02b875; /* Medium color */
+}
+
+.social-links .fa-instagram:hover {
+  color: #c32aa3; /* Instagram color */
+}
 .social-icon {
   width: 40px;
   height: 40px;
@@ -777,7 +798,7 @@ h3 {
 }
 
 .footer-col form button:hover {
-  background: #cecccc;
+  background: linear-gradient(#743db8, #c535db);
 }
 
 .footer-col .icons {
@@ -1084,7 +1105,7 @@ h3 {
   border: solid 2px purple;
   max-height: 24.625em;
   overflow: scroll;
-  overflow-x:  hidden;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 
