@@ -12,7 +12,7 @@
   <!-- Title of the webpage displayed on the browser tab. -->
   <link rel="stylesheet" href="/css/styles.css" />
   <!-- Link to an external CSS file for styling. -->
-  <script src="/public/js/script.js" defer></script>
+<!--  <script src="/public/js/script.jsz" defer></script>-->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -532,7 +532,7 @@
       /* background-color: black; */
     }
   </style>
-  <script src="/js/script.js" defer></script>
+<!--  <script src="/js/script.js" defer></script>-->
 </head>
 
 <body class="page-leaderboard">
@@ -596,7 +596,7 @@
         <li><a href="/about" class="links-hover">About Us</a></li>
         <li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/" class="links-hover">Certificate</a></li>
         <li><a class="links-hover" onclick="openRateUs()">Rate Us</a></li>
-        <script src="/js/script.js" defer></script>
+<!--        <script src="/js/script.js" defer></script>-->
         <li>
             <div class="small-screen-social">
                 <a href="https://www.youtube.com/@ChromeGamingOn" target="_blank" class="social-icon youtube"></a>
@@ -608,21 +608,23 @@
         </li>
     </ul>
 
-    <i class="uil uil-search search-icon" id="searchIcon"></i>
-    <!-- Icon for search functionality. -->
-    <div class="search-box">
+      <i class="uil uil-search search-icon search-close-cross-btn" id="searchIcon"></i>
+      <!-- Icon for search functionality. -->
+      <div class="search-box">
         <i class="uil uil-search search-icon"></i>
         <!-- Icon for search functionality within the search box. -->
         <input type="search" id="searchResult" placeholder="Search here..." />
         <!-- Input field for search functionality. -->
         <div class="searching_results"></div>
-    </div>
+      </div>
+
+
     <div class="toggle-container">
         <i class="bi bi-toggle-off" id="theme-toggle"></i>
     </div>
 </nav>
  <%- include('partials/rateus') %>
- <script src="/js/script.js"></script>
+<!-- <script src="/js/script.js"></script>-->
   <!--==================== SEARCH ====================-->
   <div class="search" id="search">
     <form action="" class="search__form">
@@ -742,7 +744,7 @@
   <section class="ranking" style="display: inline">
     <div class="contain" style="margin-bottom: 10px">
       <div class="ranking-table">
-        <div class="ranking-table-header-row">
+        <div class="ranking-table-header-row" style="border:none">
           <div class="ranking-table-header-data h6">Rank</div>
           <div class="ranking-table-header-data h6">GitHub</div>
           <div class="ranking-table-header-data h6">Profile Link</div>
@@ -1057,6 +1059,10 @@
 //   { place: 50, name: "Sana" },
 // ];
 
+/*
+
+I commented this becoz this script is already being called in script.js (line 39) - Ayush-may
+
 function compare(a, b) {
   if (a.contributions < b.contributions) {
     return 1;
@@ -1316,7 +1322,7 @@ subscriptionForm.addEventListener("submit", function (event) {
     success();
   }
 });
-    
+*/
 
   </script>
 
