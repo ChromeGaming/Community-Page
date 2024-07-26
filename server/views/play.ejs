@@ -127,7 +127,7 @@
 		</nav>
 
 		<%- include('partials/rateus') %>
-        <script src="/js/script.js"></script>
+<!--        <script src="/js/script.js"></script>-->
 
 		<div class="social-icons">
 			<button class="toggler"><img src="/images/social1.webp" alt=""></button>
@@ -450,10 +450,10 @@ const coords = { x: 0, y: 0 };
 			};
 
 			shareButton.addEventListener("click", toggleSocials);
-			
-  document.querySelector('.toggler').addEventListener('click', function() {
-    document.querySelector('.social-icons').classList.toggle('show-icons');
-  });
+	// no toggler class
+  // document.querySelector('.toggler').addEventListener('click', function() {
+  //   document.querySelector('.social-icons').classList.toggle('show-icons');
+  // });
   const updateProgress = () =>{
     const {scrollTop,scrollHeight} = document.documentElement;
     const scrollPercent = `${(scrollTop/(scrollHeight-window.innerHeight)) * 100}%`;
