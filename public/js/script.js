@@ -107,8 +107,6 @@ var medals = ["medal-gold", "medal-silver", "medal-bronze"];
 window.onload = async function () {
   const data = await getContributors("Community-Page");
 
-  if (document.getElementById("rankingTableBody") == null) return;
-
   console.log(data.length);
   var i = 0;
   data.forEach((item) => {
@@ -191,7 +189,7 @@ window.onload = async function () {
   console.log("RUNNED");
 };
 
-let nav = document.querySelector(".nav"),
+const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
   navCloseBtn = document.querySelector(".navCloseBtn"),
@@ -299,22 +297,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   closeBtn.addEventListener("click", function () {
-    discordPopup.remove();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const discordPopup = document.getElementById("discord-popup");
-  const closeBtn = document.getElementById("close-btn");
-
-  if (discordButton == null) return;
-
-  discordButton.addEventListener("click", function () {
-    discordPopup.style.display = "block";
-  });
-
-  closeBtn.addEventListener("click", function () {
-    discordPopup.remove();
+    discordPopup.style.display = "none";
   });
 });
 const success = () => {
