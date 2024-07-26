@@ -256,7 +256,8 @@ a {
 
 .nav .search-box {
   position: absolute;
-  right: 250px;
+  /*right: 250px;*/
+  right: 10rem;
   height: 45px;
   max-width: 555px;
   width: 100%;
@@ -278,14 +279,19 @@ a {
 
 .search-box .search-icon {
   position: absolute;
-  left: 15px;
   top: 50%;
-  left: 15px;
+  left: 2rem;
   /* color: #000000; */
   color: white;
   transform: translateY(-50%);
 }
 
+.search-close-cross-btn{
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right:7rem;
+}
 /* Styling for search icon within search box. */
 
 .search-box input {
@@ -946,6 +952,9 @@ h3 {
     width: 90%;
     margin: auto;
   }
+  .search-close-cross-btn{
+    right: 4rem;
+  }
 }
 
 @media screen and (min-width: 48rem) {
@@ -994,6 +1003,10 @@ h3 {
     transform: translateY(-50%);
     width: 0.875rem;
     height: 0.875rem;
+  }
+
+  .search-close-cross-btn{
+    right: 7rem;
   }
 }
 
