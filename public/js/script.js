@@ -95,7 +95,9 @@ let data = [];
 window.onload = async function () {
   data = await getAllContributors("GameSphere-MultiPlayer/Community-Page");
 
-  console.log(data.length);
+  if(document.getElementById('rankingTableBody') == null)
+    return;
+
   var i = 0;
   const top3Fragment = document.createDocumentFragment();
   const rankingFragment = document.createDocumentFragment();
@@ -144,7 +146,7 @@ window.onload = async function () {
   console.log("RUNNED");
 };
 
-const nav = document.querySelector(".nav"),
+let nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
   navCloseBtn = document.querySelector(".navCloseBtn"),
@@ -227,14 +229,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const discordPopup = document.getElementById("discord-popup");
   const closeBtn = document.getElementById("close-btn");
 
+  if(discordButton == null)
+    return;
+
   discordButton.addEventListener("click", function () {
     discordPopup.style.display = "block";
   });
 
   closeBtn.addEventListener("click", function () {
-    discordPopup.style.display = "none";
+    discordPopup.remove();
   });
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const discordPopup = document.getElementById("discord-popup");
+//   const closeBtn = document.getElementById("close-btn");
+//   const discordButton = document.getElementById("discord-button");
+//
+//   if(discordButton == null)
+//     return;
+//
+//   discordButton.addEventListener("click", function () {
+//     discordPopup.style.display = "block";
+//   });
+//
+//   closeBtn.addEventListener("click", function () {
+//     discordPopup.style.display = "none";
+//   });
+// });
 
 const success = () => {
   showAlert("You have successfully subscribed!", "success");
