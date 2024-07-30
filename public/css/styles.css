@@ -16,9 +16,7 @@ body.page-leaderboard {
   padding: 0 !important;
   /* Ensures padding is removed for .page-leaderboard for full width navbar */
 }
-* {
-  /* border: 2px solid red; */
-}
+
 .alert {
   opacity: 0;
   visibility: hidden;
@@ -478,7 +476,30 @@ body {
   display: flex;
   gap: 15px;
 }
+/* Hover effects */
+.social-links a:hover {
+  transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
 
+.social-links .fa-google:hover {
+  color: #ea4335; /* Google color */
+}
+
+.social-links .fa-linkedin:hover {
+  color: #0a66c2; /* LinkedIn color */
+}
+
+.social-links .fa-discord:hover {
+  color: #5865f2; /* Discord color */
+}
+
+.social-links .fa-medium:hover {
+  color: #02b875; /* Medium color */
+}
+
+.social-links .fa-instagram:hover {
+  color: #c32aa3; /* Instagram color */
+}
 .social-icon {
   width: 40px;
   height: 40px;
@@ -777,7 +798,7 @@ h3 {
 }
 
 .footer-col form button:hover {
-  background: #cecccc;
+  background: linear-gradient(#743db8, #c535db);
 }
 
 .footer-col .icons {
@@ -1046,6 +1067,13 @@ h3 {
 /* .page-leaderboard .leaderboard-progress .contain {
   padding: 3em 1.5em 2em 1.5em;
 } */
+
+.avatar-img {
+  width: 42px; /* Adjust the size as needed */
+  height: 42px; /* Adjust the size as needed */
+  border-radius: 50%; /* Make the image round */
+  margin-right: 20px;
+}
 
 @media (min-width: 70em) {
   .page-leaderboard .leaderboard-progress .contain {
@@ -1755,6 +1783,7 @@ section.image {
 .line4 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .line41 {
@@ -1885,7 +1914,9 @@ section.image {
   }
 }
 
-
+.image1 {
+  margin: 0 50px;
+}
 /* CSS */
 .button-85 {
   padding: 0.6em 2em;
@@ -1894,15 +1925,12 @@ section.image {
   color: rgb(255, 255, 255);
   background: #111;
   cursor: pointer;
-  position: absolute;
-  z-index: 2;
+  position: relative;
+  z-index: 0;
   border-radius: 10px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  opacity: 0;
-  bottom: 50%;
-  transition: all .3s ease;
 }
 
 .button-85:before {
@@ -1951,14 +1979,14 @@ section.image {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: transparent;
+  background: #222;
   left: 0;
   top: 0;
   border-radius: 10px;
 }
 .button-85:hover {
-  transform: scale(1.2);
-  transition: all 0.3s ease;
+  font-size: 14px;
+  box-shadow: 0px 2px 10px 6px #999999;
 }
 
 .rateus-modal {
