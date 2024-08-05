@@ -1325,7 +1325,44 @@ subscriptionForm.addEventListener("submit", function (event) {
 */
 
   </script>
+<script>
+  const content = [
+    "Dot box",
+     "Packabunchas",
+     "Spaceship Escort",
+     "Physi-c-tech",
+     "Squard Line",
+     "Formation absent"
+  
+];
 
+document.getElementById('searchResult').addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  filterContent(query);
+});
+
+function filterContent(query) {
+  const results = content.filter(item => item.toLowerCase().includes(query));
+  displayResults(results);
+}
+
+function displayResults(results) {
+  const resultsContainer = document.querySelector('.searching_results');
+  resultsContainer.innerHTML = ''; // Clear previous results
+
+  if (results.length === 0) {
+      resultsContainer.innerHTML = '<p>No results found</p>';
+      return;
+  }
+
+  results.forEach(result => {
+      const resultItem = document.createElement('div');
+      resultItem.textContent = result;
+      resultsContainer.appendChild(resultItem);
+  });
+}
+
+</script>
 </body>
 
 </html>
