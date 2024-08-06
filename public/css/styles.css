@@ -33,41 +33,26 @@ body.page-leaderboard {
 }
 
 /* scroll to top button */
-#myBtn {
+.top-btn {
   display: none;
-  /* Hidden by default */
+  width: 50px;
+  height: 50px;
   position: fixed;
-  /* Fixed/sticky position */
   bottom: 10px;
-  /* Place the button at the bottom of the page */
-  right: 10px;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
+  right: 0px;
+  background-color: #ab45e7;
+  color: #fff;
+  padding: 2px;
   border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: #c535db;
-  /* Set a background color */
-  color: white;
-  /* Text color */
+  margin-right: 36px;
+  border-radius: 50%;
   cursor: pointer;
-  /* Add a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 12px;
-  /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
+  z-index: 1000;
 }
 
-#myBtn:hover {
-  background-color: #af2929;
-  color: #efeff3;
-  /* Add a dark-grey background on hover */
+.top-btn:hover {
+  background-color: #0056b3;
 }
-
 .alert.show {
   opacity: 1;
   visibility: visible;
