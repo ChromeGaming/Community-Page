@@ -230,7 +230,7 @@ a {
 
 .nav .nav-links a {
   transition: all 0.2s linear;
-  font-size: 14px;
+  font-size: 1rem;
   /* font-family: "Silkscreen", sans-serif; */
   /* font-weight: 400; */
   /* font-style: normal;  */
