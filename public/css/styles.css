@@ -530,9 +530,7 @@ body {
 }
 
 .footer-column {
-  position: absolute;
-  bottom: 3rem;
-  right: 8rem;
+  margin: 3rem 0rem;
 }
 
 .social-links a {
