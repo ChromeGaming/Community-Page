@@ -3,6 +3,8 @@
 /* Importing Google Fonts - Poppins with different font weights. */
 @import url("https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap");
 
+
+
 html {
   user-select: none;
   scroll-behavior: smooth;
@@ -219,7 +221,8 @@ a {
 /* Styling for the logo in the navigation bar. */
 
 .nav .nav-links {
-  column-gap: 20px;
+  /* margin: 0 1rem; */
+  /* column-gap: 20px; */
   list-style: none;
 }
 
@@ -227,7 +230,7 @@ a {
 
 .nav .nav-links a {
   transition: all 0.2s linear;
-  /* font-size: 15px; */
+  font-size: 14px;
   /* font-family: "Silkscreen", sans-serif; */
   /* font-weight: 400; */
   /* font-style: normal;  */
@@ -892,7 +895,7 @@ h3 {
     top: 0;
     left: -100%;
     height: 100%;
-    max-width: 280px;
+    /* max-width: 280px; */
     width: 100%;
     padding-top: 100px;
     row-gap: 30px;
@@ -1014,7 +1017,11 @@ h3 {
     height: 0.875rem;
   }
 }
-
+/* @media screen and (max-width: 1024px) {
+.nav-links{
+  display: none;
+}
+} */
 @media screen and (min-width: 48rem) {
   .remodal {
     padding-top: 4.5rem;
