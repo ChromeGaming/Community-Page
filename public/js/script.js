@@ -243,7 +243,33 @@ searchIcon.addEventListener("click", () => {
 
 // page start with dark mode
 
-body.classList.add("dark-mode");
+let mode = localStorage.getItem("themeMode");  // getting user's previously selected theme mode
+
+let darkMode = mode == "Light" ? false : true; // setting theme mode for site on basis of user's selection
+
+if(darkMode){
+  body.classList.add("dark-mode");
+} else {
+  body.classList.add("light-mode");
+}
+
+// initially setting values for toggle switch ( on website load )  Line no. 257 - 271
+if (body.classList.contains("light-mode")) {
+  toggleButton.classList.remove("bi-toggle-off");
+  toggleButton.classList.add("bi-toggle-on");
+  document.getElementById("menuBarsColor").style.color = "black";
+  document
+  .querySelectorAll("a")
+  .forEach((link) => (link.style.color = "black"));
+} else {
+  toggleButton.classList.remove("bi-toggle-on");
+  toggleButton.classList.add("bi-toggle-off");
+  document.getElementById("menuBarsColor").style.color = "white";
+  document
+    .querySelectorAll("a")
+    .forEach((link) => (link.style.color = "white"));
+}
+
 // Toggle between "toggle off and toggle on"//
 
 toggleButton.addEventListener("click", () => {
@@ -254,6 +280,7 @@ toggleButton.addEventListener("click", () => {
     toggleButton.classList.remove("bi-toggle-off");
     toggleButton.classList.add("bi-toggle-on");
     document.getElementById("menuBarsColor").style.color = "black";
+    localStorage.setItem("themeMode", "Light")
     document
       .querySelectorAll("a")
       .forEach((link) => (link.style.color = "black"));
@@ -261,6 +288,7 @@ toggleButton.addEventListener("click", () => {
     toggleButton.classList.remove("bi-toggle-on");
     toggleButton.classList.add("bi-toggle-off");
     document.getElementById("menuBarsColor").style.color = "white";
+    localStorage.setItem("themeMode", "Dark")
     document
       .querySelectorAll("a")
       .forEach((link) => (link.style.color = "white"));
