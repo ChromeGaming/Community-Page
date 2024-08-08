@@ -28,6 +28,10 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <!-- Link to the fontawesome icons file. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
 
   <!-- Link to the Unicons CSS file. -->
 
@@ -134,6 +138,7 @@
     }
 
     /*=============== REUSABLE CSS CLASSES ===============*/
+    
     .container {
       max-width: 1120px;
       margin-inline: 1.5rem;
@@ -750,6 +755,91 @@
         <!-- Placeholder text. -->
       </div>
     </div>
+  </section>
+  <button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
+    style="color: #ffffff;"></i></button>
+  
+
+ 
+ 
+
+
+  
+  
+
+
+  <!-- Horizontal line separator. -->
+  <section class="footer">
+    <!-- Footer section. -->
+    <div class="footer-row">
+      <!-- Row within the footer. -->
+      <div class="footer-col">
+        <!-- Column within the footer. -->
+        <h4>Info</h4>
+        <!-- Heading for info section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="/index">Home</a></li>
+          <li><a href="/play">Play Games</a></li>
+          <li><a href="/product">Products</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="https://chromegaming.github.io/Chrome-Gaming-Certification/">Certificate</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Second column within the footer. -->
+        <h4>Explore</h4>
+        <!-- Heading for explore section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Free Designs</a></li>
+          <li><a href="#">Latest Designs</a></li>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Popular Designs</a></li>
+          <li><a href="#">Art Skills</a></li>
+          <li><a href="#">New Uploads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Third column within the footer. -->
+        <h4>Legal</h4>
+        <!-- Heading for legal section. -->
+        <ul class="links">
+          <!-- Unordered list for links. -->
+          <li><a href="#">Customer Agreement</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">GDPR</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Media Kit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <!-- Fourth column within the footer. -->
+        <h4>Newsletter</h4>
+        <!-- Heading for newsletter section. -->
+        <p>
+          Subscribe to our newsletter for a weekly dose of news, updates,
+          helpful tips, and exclusive offers.
+        </p>
+        <!-- Text for newsletter subscription. -->
+        <form id="subscriptionForm" action="#">
+          <input id="emailInput" type="email" placeholder="Your email" required pattern="[^\s@]+@[^\s@]+\.[^\s@]+" />
+          <button id="submitButton" type="submit">SUBSCRIBE</button>
+        </form>
+        <div class="footer-column">
+					<h4>Follow us</h4>
+					<div class="social-links">
+						<a href="mailto:durgeshkumar4993@gmail.com" target="_blank" class="gmail-icon"><i class="fab fa-google"></i></a>
+						<a href="https://www.linkedin.com/company/chromegaming" target="_blank" <i class="fab fa-linkedin"></i></a>
+						<a href="https://discord.com/" target="_blank" class="discord-icon fab fa-discord"></a>
+						<a href="https://www.medium.com/" target="_blank" class="fab fa-medium"></a>
+						<a href="https://www.instagram.com/chromegamingon/" target="_blank" class="fab fa-instagram"></a>
+					</div>
+				</div>
+        <div id="customAlert" class="alert">
+          <span id="alertText"></span>
+          <button id="closeAlert">&times;</button>
 
     <div style="text-align: center; display: flex; flex-direction: column; align-items: center;">
       <img alt="Leaderboard" class="mb-2"
