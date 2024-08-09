@@ -1,0 +1,146 @@
+/* game container styles */
+.playgames-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3em;
+    width: 100%;
+    padding: 3em;
+  }
+  
+  .image1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+  }
+  
+  .show-games {
+    width: 100%;
+  }
+  
+  .game-card {
+    min-width: 100%;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#7cffff, #f054f3);
+  }
+  
+  .game-card:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  
+  .game-card:hover .game-img {
+    filter: blur(7px);
+    transition: all 0.5s ease;
+  }
+  
+  .game-card:hover .game-title {
+    transform: translateY(-150px);
+    transition: all 0.5s ease;
+  }
+  
+  .game-card:hover .game-desc {
+    transform: translateY(0);
+    display: block;
+    transition: all 0.5s ease;
+  }
+  
+  .game-card:hover .game-btn {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  
+  .game-img {
+    width: 96%;
+    height: 96%;
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+    position: absolute;
+  }
+  
+  .game-title {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    z-index: 2;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(#7cffff, #f054f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: bolder; /* Adjust font weight as needed */
+  }
+  
+  .game-desc {
+    width: 80%;
+    font-size: 15px;
+    display: none;
+    font-weight: bold;
+    background: linear-gradient(#7cffff, #f054f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .game-btn {
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(#7cffff, #f054f3);
+    font-weight: bold;
+    bottom: 10%;
+    right: 10%;
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  
+  .game-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(#f054f3, #7cffff);
+  }
+  
+  @media (max-width: 1920px) {
+    .game-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 1460px) {
+    .playgames-container {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 740px) {
+    .game-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .game-card {
+      min-height: 350px;
+    }
+  
+    .gradient-text {
+      font-size: 20px;
+    }
+  
+    .game-card:hover .game-desc {
+      display: none;
+    }
+  }
+  
