@@ -1527,7 +1527,7 @@ h3 {
 }
 
 .share-button {
-  position: fixed;
+  margin-bottom: 1rem;
   border: none;
   cursor: pointer;
   z-index: 2;
