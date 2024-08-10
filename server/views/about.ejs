@@ -208,8 +208,110 @@
 			</div>
 		</div>
 	</div>
-	<button class="top-btn" id="goToTopBtn" onclick="goToTop()"><i class="fa-solid fa-chevron-up"
-		style="color: #ffffff;"></i></button>
+
+
+<style>
+	  .contact-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .contact-section h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+
+        .contact-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            font-size: 16px;
+            line-height: 1.6;
+			margin-bottom: 1rem;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form input[type="submit"] {
+			background: linear-gradient(135deg,
+      rgb(64, 176, 228),
+      rgb(87, 43, 190),
+      rgb(223, 8, 212));
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+			background: linear-gradient(135deg,
+      rgb(64, 176, 228),
+      rgb(87, 43, 190),
+      rgb(223, 8, 212));
+        }
+
+        @media (max-width: 768px) {
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .contact-info, .contact-form {
+                margin-right: 0;
+            }
+        }
+    </style>
+</style>
+
+
+<div class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-content">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis lorem ut libero malesuada feugiat. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</div>
+
+
 	<!-- Horizontal line separator. -->
 	<section class="footer">
 		<!-- Footer section. -->
