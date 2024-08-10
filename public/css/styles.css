@@ -694,7 +694,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 990;
+  
 }
 
 .download-button:hover {
@@ -2009,8 +2009,12 @@ section.image {
   background-color: rgba(0, 0, 0, 0.8);
   /* Black background with transparency */
 }
-
+.light-mode .rateus-container{
+  background-color: #333;
+  border: 2px solid rgb(45,44,44);
+}
 .rateus-container {
+  color: white;
   max-width: 600px;
   margin: 100px auto;
   /* Position the container a bit lower */
