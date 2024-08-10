@@ -694,7 +694,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  z-index: 990;
+  
 }
 
 .download-button:hover {
