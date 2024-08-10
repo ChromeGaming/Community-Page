@@ -32,6 +32,9 @@ app.get("/playgames", (req, res) => {
 app.get("/products", (req, res) => {
 	res.render("products.ejs");
 });
+app.get("/privacy", (req, res) => {
+	res.render("privacy.ejs");
+});
 
 app.listen(3000, () => {
 	console.log("Server is running on http://localhost:3000");
