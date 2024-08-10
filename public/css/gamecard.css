@@ -24,6 +24,7 @@
   }
   
   .game-card {
+    border-radius: 2rem;
     min-width: 100%;
     min-height: 450px;
     display: flex;
@@ -63,6 +64,7 @@
   }
   
   .game-img {
+    border-radius: 2rem;
     width: 96%;
     height: 96%;
     transition: all 0.3s ease-in-out;
@@ -74,14 +76,16 @@
     width: 100%;
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 5%;
     z-index: 2;
   }
   
   .gradient-text {
-    background: linear-gradient(#7cffff, #f054f3);
+    background: linear-gradient(#f054f3, #7cffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+   
+   
     font-size: 35px;
     font-weight: bolder; /* Adjust font weight as needed */
   }
@@ -90,8 +94,8 @@
     width: 80%;
     font-size: 15px;
     display: none;
-    font-weight: bold;
-    background: linear-gradient(#7cffff, #f054f3);
+    font-weight: bolder;
+    background: linear-gradient(#743db8, #c535db);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -101,7 +105,8 @@
     padding: 10px;
     border-radius: 10px;
     border: none;
-    background: linear-gradient(#7cffff, #f054f3);
+    background: linear-gradient(#743db8, #c535db);
+    color: white;
     font-weight: bold;
     bottom: 10%;
     right: 10%;
@@ -111,7 +116,7 @@
   
   .game-btn:hover {
     cursor: pointer;
-    background: linear-gradient(#f054f3, #7cffff);
+    background: linear-gradient(#743db8, #c535db);
   }
   
   @media (max-width: 1920px) {
